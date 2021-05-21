@@ -1,3 +1,5 @@
+import { MaterialModule } from './material/material.module';
+import { OrderListModule } from './order-list/order-list.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +12,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
