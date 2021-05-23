@@ -1,0 +1,5 @@
+{
+  "BACKEND_URL_PROD": "https://resapi.rigil.rocks",
+  "BACKEND_URL_DEV": "https://resapi.rigil.us",
+  "BACKEND_URL_TEST": "https://resapi-test.rigil.us" 
+}
