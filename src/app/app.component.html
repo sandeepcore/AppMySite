@@ -1,17 +1,16 @@
-<!-- <div>angular 10 loaded....</div> -->
-<!-- <router-outlet></router-outlet> -->
-
-<div class="container-fluid" >
-    <div class="row">
-        <div class="column left">
-                <app-side-bar ></app-side-bar>
-        </div>
-        <div class="column right">
-            <!-- <div class="fl-wd">
-                        <app-header [ngClass]="{'pdl-pd':isOpen}"></app-header>
-                </div> -->
-                <router-outlet></router-outlet>
+<div class="container-fluid">
+        <div class="row">
+                <div class="col-md-2 no-pd">
+                        <app-side-bar ></app-side-bar>
+                </div>
+                <div class=" no-pd full-hd full-wd col-md-10" >
+                    
+                    <div class="fl-wd">
+                        <router-outlet class="pdl-pd"></router-outlet>
+                        <h1 class="pdl-pd">hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</h1>
+                        <app-header class="pdl-pd" ></app-header>
+                        
+                        <!-- <app-spinner></app-spinner> -->
+                </div></div>
         </div>
 </div>
-    </div>
-    
