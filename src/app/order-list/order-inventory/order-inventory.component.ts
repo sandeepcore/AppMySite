@@ -18,14 +18,11 @@ export class OrderInventoryComponent implements OnInit {
 
   ngOnInit() {
     this.iCols = [
-      { field: "Name", header: "Name", show: true, type: "String" },
-      { field: "Address", header: "Address", show: true, type: "String" },
-      {
-          field: "Description",
-          header: "Description",
-          show: true,
-          type: "String",
-      },
+      { field: "name", header: "Name", show: true, type: "String" },
+      { field: "username", header: "User Name", show: true, type: "String" },
+      { field: "website", header: "Website", show: true, type: "String" },
+      { field: "phone", header: "Phone", show: true, type: "String" },
+      { field: "email", header: "Email", show: true, type: "String" },      
       { field: "Action", header: "", show: true, type: "String" },
   ];
 

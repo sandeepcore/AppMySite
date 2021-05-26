@@ -255,7 +255,7 @@ export class TableComponent implements OnInit, OnChanges {
     else{
     this.searchField = field;
     setTimeout(()=>{ 
-      this.searchElement.nativeElement.focus();
+    //  this.searchElement.nativeElement.focus();
     },0);
   }
     
