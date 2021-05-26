@@ -1,0 +1,243 @@
+table {
+    width: 100%;
+}
+
+.mat-tab-group {
+    margin-bottom: 0px;
+}
+
+.form-control {
+    width: 100% !important;
+}
+
+label {
+    width: 100%;
+    display: block;
+}
+
+
+.required:after {
+    content:" *";
+    color: red;
+  }
+
+.infoBox {
+    margin: 0 0; 
+    border: 1px solid rgba(0, 0, 0, 0.12); 
+
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.infoBox.opened {
+    display: block;
+    visibility: visible;
+    opacity: 1;    
+}
+  
+.infoBox:after {
+    content: " ";
+    position: absolute;
+    left: 86px;
+    top: 56px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid black;
+}
+
+.rtable th {
+    padding: 2px;
+    text-align: left !important;
+}
+
+.rtable tr {
+    border-bottom:1px solid rgba(0, 0, 0, 0.12) !important; 
+}
+
+.rtable td {
+    padding: 2px;
+    border-top:1px solid rgba(0, 0, 0, 0.12) !important; 
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.tableScrollContainer {
+    max-height: 300px;
+    overflow: auto;
+}
+
+
+#main1 {
+    margin: 0;
+    padding: 0;
+    vertical-align:top;
+    height: 100%;
+    overflow-y: scroll;
+}
+#container {
+    width: 100%;
+    padding-bottom: 75px;
+}
+#wrap {min-height: 100%;}
+#header {
+    height: 100px;
+    width: 100%;
+}
+#content {
+    height: 100%;
+    width: 100%;
+}
+#footer {
+    position: relative;
+    margin-top: -75px;
+    clear:both;
+    height: 75px;
+    width: 100%;
+}
+input.top_inp {
+    font-size: 12px;
+    outline: none;
+    display: block;
+    margin-bottom: 5px;
+    border: solid 1px #005080;
+    width: 100%;
+    border-radius: 2px;
+}
+::ng-deep.mat-select-panel{
+    margin-top: 27% !important;
+}
+app-inventory{
+    &.partner_width{
+        width: 100%;
+    }
+}
+
+.no-pd{ 
+    .mat-icon {
+    padding: 0px;
+}
+}
+.dsp_name{
+    font-size: 16px;
+    margin: 0 15px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.Comment_only{ 
+    display: flex;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    width: 320px;
+    height: 100%;
+    right: 0px;
+    background: #fff;
+    padding: 0px 0px;
+    box-shadow: -2px 0px 10px rgb(0 0 0 / 20%);
+    .ful_wdth {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgb(119 119 119 / 12%);
+        content: '';
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+    }
+    app-notes {
+        position: absolute;
+        z-index: 999;
+        background: #fff;
+        height: 100%;
+    }
+}
+.fl_rslt{
+.lbl_st {
+    display: block;
+    margin: 5px 15px;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+::ng-deep.mat-form-field-infix{
+width: 500px !important;
+
+}
+::ng-deep.mat-checkbox-layout{
+white-space: normal;
+}
+.hgt_adj {
+    max-height: 350px;
+    overflow: auto;
+}
+}
+.nomr{
+    margin: 0px;
+}
+span.fltr {
+    position: absolute;
+    right: -20px;
+    top: 3px;
+    z-index: 999;
+    i.material-icons {
+        color: #0076bb;
+        font-size: 18px;
+        &.filterColor {
+            color: #f00 ;
+        }
+    }
+}
+mat-datepicker-toggle {
+    display: inline-block;
+    margin-left: 50px;
+}
+.srch_inp {
+    position: absolute;
+    top: 150%;
+    padding: 15px 10px;
+    width: 100%;
+    background: #fff;
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 6px;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 999;
+    left: 0px;
+    padding-bottom: 10px;
+    input{
+        width: 100%;
+        height: 24px;
+        border-radius: 4px;
+        border: solid 1px #0076bb;
+        &:focus{
+            outline: none;
+        }
+    }
+&:before{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #ac26ff;
+    position: absolute;
+    content: "";
+    top: -9px;
+    left: 15px;
+}
+}
+.wd100{
+    width: 100%;
+    overflow: auto;
+}
+.clr_fltr{
+    position: absolute;
+    top: -48px;
+    left: 240px
+}
+
+.wht_clr{
+    background: #fff;
+}
