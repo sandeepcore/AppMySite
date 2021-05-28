@@ -13,7 +13,8 @@ export class OrderInventoryComponent implements OnInit {
     iColAll: any[];
     iCols1: any;
     iColsAll: any[]; 
-
+ 
+    
   constructor() { }
 
   ngOnInit() {
