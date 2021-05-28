@@ -2,7 +2,7 @@
 .main {
     height: 100%;
     overflow-x: hidden;
-    background: #000;
+    background: #fff;
     color: #cccccc;
     font-size: 0.65rem;
     letter-spacing: 0.1rem;
@@ -10,6 +10,7 @@
     padding-top: 45px;
     position: fixed;
     width: 15%;
+    box-shadow: rgb(0 0 0 / 50%) 0px 0px 4px;
     
 
 .hdr-wrap {
@@ -56,15 +57,16 @@ span.ap-nm {
 .list-item {
     padding: 0rem 0px;
     border-bottom: 1px solid #446585;
-    background: transparent !important;
+    background: #fff !important;
     border-radius: 0px;
+    margin: 0px 0px;
     h4.sec-nm {
     display: inline-block;
     font-weight: 400;
     font-size: .85rem;
     margin: 0px;
     margin-top: 5px;
-    color:#f3f3f3;
+    color:#000;
     }
     ul.side-list {
         list-style: none;
@@ -83,13 +85,13 @@ span.ap-nm {
                 display: none;
             }
             &:hover,&.act{
-                background-color: #ffffff;
+                background-color: #2196f3;
                 color: $white;
                 span.categ{
-                    color: #000 !important;
+                    color: #fff !important;
                 }
                 i.material-icons.icons-hem{
-                    color: #2196f3 !important;
+                    color: #fff !important;
                 }
                 &::before{
                     content: '';
@@ -114,7 +116,7 @@ span.ap-nm {
 }
 }
 span.categ {
-    color: #cccccc;
+    color: #000;
     font-size: .70rem;
     outline: none;
     font-weight: 600;
@@ -131,10 +133,23 @@ span.categ {
     height: auto !important;
     padding: 5px !important;
 }
-::ng-deep .mat-expansion-indicator::after{
-    border-color: #fff !important;
-}
+
 ::ng-deep .mat-expansion-indicator {
     right: 10px;
     position: absolute;
+}
+.icn_hm {
+    vertical-align: middle;
+    color: #2196f3;
+}
+i.icn_tgl {
+    position: absolute;
+    top: 0px;
+    font-size: 35px;
+    left: 0px;
+    background: #000;
+    height: 100%;
+    padding-top: 5px;
+    color: #2196f3;
+    cursor: pointer;
 }

@@ -1,4 +1,9 @@
 @import '../../../scss/theme.scss';
+
+nav.navbar{
+    padding-top: 3px !important;
+    padding-bottom: 1px !important;
+}
 .navbar-hem{
     justify-content: flex-end;
     width: 100%;

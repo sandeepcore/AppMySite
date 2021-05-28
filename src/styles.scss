@@ -769,3 +769,9 @@ div.mrt-min {
       .full_hight{
           height: 100%;
       }
+      .mat-cell, .mat-footer-cell {
+        color: rgba(0,0,0,1) !important;
+        font-weight: 100 !important;
+        font-size: 12px !important;
+        letter-spacing: .5px !important;
+    }

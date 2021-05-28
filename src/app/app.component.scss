@@ -1,6 +1,7 @@
 @import './scss/theme.scss';
 .fl-wd {
     box-shadow: rgba(110,110,110,.5) 0px 0px 2px;
+    height: 100%;
 }
 .row{
     .col-md-2{
@@ -39,4 +40,12 @@ i.bars {
     &.cust-width{
         width: 85%;
     }
+}
+section.card.card-hem {
+    background: #fff;
+    width: auto;
+    height: calc(100% - 65px);
+    margin: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 4px;
+    overflow: auto;
 }
