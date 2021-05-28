@@ -30,3 +30,13 @@ i.bars {
     top: 12px;
     z-index: 99;
 }
+.col-md-2{
+    &.cust-width{
+        width: 15%;
+    }
+}
+.col-md-10{
+    &.cust-width{
+        width: 85%;
+    }
+}

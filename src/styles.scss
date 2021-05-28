@@ -8,7 +8,7 @@
 body{
     margin: 0px auto;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: .85rem;
     background: #f3f3f3;
     height: 100vh;
     position: relative;
@@ -449,94 +449,7 @@ i.material-icons.zoom_ui {
     background: #7f63f4;
     color: #e6fbff;
     border-left: solid 4px transparent ;
-    // &.clr-lvl-2{
-    //     background:darken($violet, 5%);
-    //     color:#fff;
-    //     border-color:darken($violet, 55%) ;
-    // }
-    // &.clr-lvl-3{
-    //     background:darken($violet, 15%);
-    //     color: #fff;
-    //     border-color:darken($violet, 15%) ;
-
-    // }
-    // &.clr-lvl-4{
-    //     background:darken($tb-indigo, 5%);
-    //     color: #fff;
-    //     border-color:darken($tb-indigo, 5%) ;
-
-    // }
-    // &.clr-lvl-8{
-    //     background:darken($tb-green, 5%);
-    //     color: #333;
-    //     border-color:darken($tb-green, 5%) ;
-
-    // }
-    // &.clr-lvl-9{
-    //     background:darken($tb-green, 25%);
-    //     color: #fff;
-    //     border-color:darken($tb-green, 25%) ;
-
-    // }
-    // &.clr-lvl-10{
-    //     background:darken($tb-green, 35%);
-    //     color: #fff;
-    //     border-color:darken($tb-green, 35%) ;
-
-    // }
-    // &.clr-lvl-5{
-    //     background:darken($tb-blue, 5%);
-    //     color: #fff;
-    //     border-color:darken($tb-blue, 5%) ;
-    // }
-    // &.clr-lvl-6{
-    //     background:darken($tb-blue, 25%);
-    //     color: #fff;
-    //     border-color:darken($tb-blue, 25%) ;
-
-    // }
-    // &.clr-lvl-7{
-    //     background:darken($tb-blue, 35%);
-    //     color: #fff;
-    //     border-color:darken($tb-blue, 35%) ;
-
-    // }
-    // &.clr-lvl-11{
-    //     background:darken($green, 15%);
-    //     color: #fff;
-    //     border-color:darken($green, 15%) ;
-
-    // }
-    // &.clr-lvl-12{
-    //     background:darken($green, 30%);
-    //     color: #fff;
-    //     border-color:darken($green, 30%) ;
-
-    // }
-    // &.clr-lvl-13{
-    //     background:darken($tb-orange, 10%);
-    //     color: #fff;
-    //     border-color:darken($tb-orange, 10%) ;
-
-    // }
-    // &.clr-lvl-14{
-    //     background:darken($tb-orange, 15%);
-    //     color: #fff;
-    //     border-color:darken($tb-orange, 15%) ;
-
-    // }
-    // &.clr-lvl-15{
-    //     background:darken($red-color, 10%);
-    //     color: #fff;
-    //     border-color:darken($red-color, 10%) ;
-
-    // }
-    // &.clr-lvl-16{
-    //     background:darken($red-color, 20%);
-    //     color: #fff;
-    //     border-color:darken($red-color, 20%) ;
-
-    // }
+   
 }
 .txt-ea{
     .mat-form-field{
@@ -851,4 +764,8 @@ div.mrt-min {
       }
       .mat-tab-header{
           background: #fff;
+      }
+
+      .full_hight{
+          height: 100%;
       }
