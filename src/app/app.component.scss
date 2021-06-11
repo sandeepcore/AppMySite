@@ -49,3 +49,36 @@ section.card.card-hem {
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 4px;
     overflow: auto;
 }
+
+.dashboardheader {
+    background-color: $white;
+    box-shadow: $app-shadow;
+    margin-bottom: 4px;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+#root{
+    background-color: #fcfdff;
+    display: flex;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+    .left_panel {
+        width: 240px;
+        background: $white;
+        box-shadow: $app-shadow;
+        position: fixed;
+        height: 100%;
+        margin-top: 60px;
+        z-index: 1;
+    }
+    .transparent_background {
+        background-color: transparent;
+        padding: 30px;
+        width: calc(100% - 240px);
+        margin-left: 240px;
+        margin-top: 60px;
+        position: relative;
+    }
+}

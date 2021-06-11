@@ -13,8 +13,11 @@ export class SideBarComponent implements OnInit {
   // constructor(private loginService:LoginService) {
   //   this.loginUser=loginService.getUserDetails();
   //  }
-
+  clickFlag: boolean;
   ngOnInit(): void {
+  }
+  classClick() {
+    this.clickFlag = !this.clickFlag;
   }
 
 }

@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="container-fluid full_hight">
         <div class="row full_hight">
                 <div class="col-md-2 cust-width no-pd full_hight">
@@ -14,4 +14,24 @@
                 </div>
         </div>
         </div>
-</div>
+</div> -->
+
+<section id="root" class="full_height" *ngIf="islogin; else nologin">
+        <header class="dashboardheader">
+                <app-header></app-header>
+        </header>
+        <div class="left_panel">
+                <app-side-bar class="left_bar"></app-side-bar>
+        </div>
+        <div class="transparent_background ">
+                <router-outlet class="pdl-pd"></router-outlet>
+        </div>
+
+</section>
+
+<ng-template #nologin>
+
+        <section  class="lgn full_height">
+                <router-outlet></router-outlet>
+        </section>
+</ng-template>

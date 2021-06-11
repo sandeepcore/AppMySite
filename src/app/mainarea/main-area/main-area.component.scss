@@ -1,0 +1,19 @@
+@import '../../scss/theme.scss';
+.right_panel {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgb(36 116 249 / 15%);
+    height: auto;
+    min-height: 100%;
+    margin-bottom: 30px;
+    padding: 0 30px 30px;
+    position: relative;
+}
+.innerfoot {
+    position: relative;
+    margin-top: -30px;
+    p {
+        color: #bdc0c5!important;
+        font-size: 12px;
+    }
+}

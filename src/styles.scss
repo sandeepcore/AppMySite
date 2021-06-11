@@ -2,16 +2,27 @@
 @import 'ngx-toastr/toastr.css';  
 @import 'app/scss/theme.scss';
 
+
 .material-icons{
     font-family: 'Material Icons' !important;
+}
+*, :after, :before, html {
+    box-sizing: border-box!important;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
 }
 body{
     margin: 0px auto;
     font-family: 'Poppins', sans-serif;
-    font-size: .85rem;
-    background: #f3f3f3;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: #fcfdff;
     height: 100vh;
     position: relative;
+    color: #212529;
 }
 
 .pop-bdy {
@@ -774,4 +785,25 @@ div.mrt-min {
         font-weight: 100 !important;
         font-size: 12px !important;
         letter-spacing: .5px !important;
+    }
+    .mat-expansion-panel:not([class*=mat-elevation-z]){
+        box-shadow:none !important;
+        width: 11vw;
+    }
+    .mat-expansion-panel-header{
+        &:hover,&:focus{
+            background: transparent !important;
+        }
+    }
+    .footer {
+        position: absolute;
+        font-size: 14px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9;
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
     }
