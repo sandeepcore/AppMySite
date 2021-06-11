@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FindValueSubscriber } from 'rxjs/internal/operators/find';
 // import { LoginService } from 'src/app/login-form/login.service';
 import { SpinnerService } from 'src/app/spinner/spinner.service';
+import { LoginService } from 'src/app/service/login.service';
 // import { UserModel } from 'src/app/user-management/component/user-management-form/usermodel';
 
 @Component({
@@ -13,11 +14,12 @@ import { SpinnerService } from 'src/app/spinner/spinner.service';
 })
 export class HeaderComponent implements OnInit {
 
-  //loginUser: UserModel = new UserModel();
+  loginUser: any = {};
   constructor(
    // private toast: ToastrService,
+   private loginService:LoginService,
     private route: Router) {
-    //this.loginUser = loginService.getUserDetails();
+    this.loginUser = loginService.getCurrentUser();
 
   }
 
@@ -25,7 +27,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-   // this.loginService.logoutUser();
+   this.loginService.logoutUser();
     //this.toast.success('Logged out successfully');
   }
   about(){

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { LoginService } from './service/login.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AppMySite';
-  islogin:boolean=false;
+  islogin$:Observable<boolean>=new BehaviorSubject<boolean>(false);
+  constructor(private loginService:LoginService){
+    this.islogin$=loginService.isLoggedIn;
+  }
 }

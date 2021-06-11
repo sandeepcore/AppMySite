@@ -16,7 +16,7 @@
         </div>
 </div> -->
 
-<section id="root" class="full_height" *ngIf="islogin; else nologin">
+<section id="root" class="full_height" *ngIf="(islogin$ | async); else nologin">
         <header class="dashboardheader">
                 <app-header></app-header>
         </header>
@@ -31,7 +31,7 @@
 
 <ng-template #nologin>
 
-        <section  class="lgn full_height">
+        <section  class="lgn full_height" >
                 <router-outlet></router-outlet>
         </section>
 </ng-template>
