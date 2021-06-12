@@ -40,6 +40,9 @@ $app-shadow:0 0 6px rgb(112 155 250 / 20%);
 .justify-content-between {
   justify-content: space-between!important;
 }
+.flex-wrap{
+  flex-wrap: wrap !important;
+}
 .d-block {
   display: block!important;
 }
@@ -54,6 +57,12 @@ $app-shadow:0 0 6px rgb(112 155 250 / 20%);
 }
 .p-md-4 {
   padding: 1.5rem!important;
+}
+.mt-4, .my-4 {
+  margin-top: 1.5rem!important;
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem!important;
 }
 .w100 {
   width: 100%;

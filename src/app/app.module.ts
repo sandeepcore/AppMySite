@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { MainareaModule } from './mainarea/mainarea.module';
 import { LoginModule } from './login/login.module';
+import { StepModule } from './step/step.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LoginModule } from './login/login.module';
     BrowserAnimationsModule,
     LayoutModule,
     MainareaModule,
-    LoginModule
+    LoginModule,
+    StepModule,
+    NgbModule
     
   ],
   providers: [
