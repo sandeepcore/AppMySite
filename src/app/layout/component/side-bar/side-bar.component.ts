@@ -14,6 +14,7 @@ export class SideBarComponent implements OnInit {
   //   this.loginUser=loginService.getUserDetails();
   //  }
   clickFlag: boolean;
+  appName:string='abc';
   ngOnInit(): void {
   }
   classClick() {
