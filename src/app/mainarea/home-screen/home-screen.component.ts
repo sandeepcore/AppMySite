@@ -15,6 +15,11 @@ export class HomeScreenComponent implements OnInit {
   appName:string='abc';
   headerText:string='abc';
   
+    //section
+    sectionColour:string='#fff';
+    sectionHeadingColour:string='#444';
+    sectionTextColour:string='#444';
+    sectionButtonColour:string='#444';
 
   //banner
   isBanner:boolean=true;
