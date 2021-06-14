@@ -126,7 +126,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="mainBanner"><input type="checkbox" class="toplogo" id="mainBanner" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="mainBanner"><input type="checkbox" class="toplogo" id="mainBanner" name="mainBanner" [(ngModel)]="isBanner"><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -136,24 +136,24 @@
                                 <div class="frm_style mb-4">
                                     <h4 class="lbl_nm">Select Solid Color <i class="material-icons tt">help_outline</i></h4>
                                     <section class="form-group clr_cnrfm">
-                                        <input type="color" class="clr_inp" name="sscolor"
-                                            [(ngModel)]="sscolor" />
+                                        <input type="color" class="clr_inp" name="bannerColour"
+                                            [(ngModel)]="bannerColour" />
                                         <span class="color_code">
-                                            {{sscolor}}
+                                            {{bannerColour}}
                                         </span>
                                     </section>
                                 </div>
                                 <div class="frm_style mb-4">
                                     <h4 class="lbl_nm">Banner text<i class="material-icons tt">help_outline</i></h4>
                                     <div class="form-group">
-                                        <input type="text" class="form-control text_inp " maxlength="3" name="bannerText"
+                                        <input type="text" class="form-control text_inp " name="bannerText"
                                             [(ngModel)]="bannerText" />
                                     </div>
                                 </div>
                                 <div class="frm_style mb-4">
                                     <h4 class="lbl_nm">Font <i class="material-icons tt">help_outline</i></h4>
                                     <div class="form-group">
-                                        <select class=" form-control slct_inp" name="fontFamily" [(ngModel)]="fontFamily">
+                                        <select class=" form-control slct_inp" name="bannerFamily" [(ngModel)]="bannerFamily">
                                             <option *ngFor="let family of fontFamilyList" [value]="family">{{family}}</option>
                                         </select>
                                     </div>
@@ -161,7 +161,7 @@
                                 <div class="frm_style mb-4">
                                     <h4 class="lbl_nm">Font Size <i class="material-icons tt">help_outline</i></h4>
                                     <div class="form-group">
-                                        <select class=" form-control slct_inp" name="fontSize" [(ngModel)]="fontSize">
+                                        <select class=" form-control slct_inp" name="bannerSize" [(ngModel)]="bannerSize">
                                             <option *ngFor="let size of sizeList" [value]="size">{{size}}</option>
                                         </select>
                                     </div>
@@ -170,7 +170,7 @@
                                 <div class="frm_style full">
                                     <h4 class="lbl_nm">Align <i class="material-icons tt">help_outline</i></h4>
             
-                                    <mat-button-toggle-group #group="matButtonToggleGroup">
+                                    <mat-button-toggle-group #group="matButtonToggleGroup" name="contentJustify" [(ngModel)]="contentJustify">
                                         <mat-button-toggle value="left" aria-label="Text align left">
                                           <mat-icon>format_align_left</mat-icon>
                                         </mat-button-toggle>
@@ -205,7 +205,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="prd-ctg"><input type="checkbox" class="toplogo" id="prd-ctg" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="prd-ctg"><input type="checkbox" name="productMain" [(ngModel)]="isProduct" class="toplogo" id="prd-ctg" checked=""><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -217,18 +217,18 @@
                                 <div class="frm_style mb-4">
                                     <h4 class="lbl_nm">Column <i class="material-icons tt">help_outline</i></h4>
                                     <div class="form-group">
-                                        <select class=" form-control slct_inp" name="fontFamily" [(ngModel)]="Column">
-                                            <option *ngFor="let Column of columnList" [value]="family">{{Column}}</option>
+                                        <select class=" form-control slct_inp" name="fontFamily" [(ngModel)]="productCount">
+                                            <option *ngFor="let Column of columnList" [value]="Column">{{Column}}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="frm_style mb-4">
                                     <h4 class="lbl_nm">Text Color <i class="material-icons tt">help_outline</i></h4>
                                     <section class="form-group clr_cnrfm">
-                                        <input type="color" class="clr_inp" name="prdcolor"
-                                            [(ngModel)]="prdcolor" />
+                                        <input type="color" class="clr_inp" name="productFontColour"
+                                            [(ngModel)]="productFontColour" />
                                         <span class="color_code">
-                                            {{prdcolor}}
+                                            {{productFontColour}}
                                         </span>
                                     </section>
                                 </div>
@@ -236,7 +236,7 @@
                                 <div class="frm_style full">
                                     <h4 class="lbl_nm">Shapes <i class="material-icons tt">help_outline</i></h4>
             
-                                    <mat-button-toggle-group #group="matButtonToggleGroup">
+                                    <mat-button-toggle-group #group="matButtonToggleGroup" name="productShape" [(ngModel)]="productShape">
                                         <mat-button-toggle value="left" aria-label="Text align left">
                                           <mat-icon>format_align_left</mat-icon>
                                         </mat-button-toggle>
@@ -273,7 +273,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="sale-ctg"><input type="checkbox" class="toplogo" id="sale-ctg" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="sale-ctg"><input type="checkbox" class="toplogo" id="sale-ctg" name="isSaleProduct" [(ngModel)]="isSaleProduct" checked=""><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -293,7 +293,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="rcnt-ctg"><input type="checkbox" class="toplogo" id="rcnt-ctg" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="rcnt-ctg"><input type="checkbox"  class="toplogo" name="isRecentyProduct" [(ngModel)]="isRecentyProduct" id="rcnt-ctg" checked=""><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -313,7 +313,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="ftr-ctg"><input type="checkbox" class="toplogo" id="ftr-ctg" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="ftr-ctg"><input type="checkbox" class="toplogo" id="ftr-ctg" name="isFeatureProduct" [(ngModel)]="isFeatureProduct" checked=""><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -333,7 +333,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="cart-ctg"><input type="checkbox" class="toplogo" id="cart-ctg" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="cart-ctg"><input type="checkbox" name="isCart" [(ngModel)]="isCart" class="toplogo" id="cart-ctg" checked=""><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -353,7 +353,7 @@
                                             alt="gear">Settings
                                     </aside>
                                     <aside>
-                                        <label class="switch" for="new-ctg"><input type="checkbox" class="toplogo" id="new-ctg" checked=""><div class="slider round"></div></label>
+                                        <label class="switch" for="new-ctg"><input type="checkbox" class="toplogo" name="isNewProduct" [(ngModel)]="isNewProduct" id="new-ctg" checked=""><div class="slider round"></div></label>
                                     </aside>
                                 </div>
                             </mat-panel-description>
@@ -448,7 +448,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <p [ngStyle]="{'color':'#fff'}">abc</p>
+                                    <p [ngStyle]="{'color':'#fff'}">{{headerText}}</p>
                                 </div>
                                 <div class="menu-icon d-flex align-items-center justify-content-between">
                                     <div class="pr-2"><svg width="13" height="14" viewBox="0 0 13 14">
@@ -495,12 +495,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sectionmove" style="margin-top: 63px;">
+                        <div class="sectionmove" style="margin-top: 63px;" *ngIf="isBanner">
                             <div class="mainbanner banner1 d-flex align-items-center mt-0"
-                                [ngStyle]="{'background': 'rgb(123, 157, 255)', 'justify-content': 'center' }">
-                                <p [ngStyle]="{'font-size': '18px', 'color': 'rgb(255, 255, 255)'}">abc</p>
+                                [ngStyle]="{'background': bannerColour, 'justify-content': contentJustify}">
+                                <p [ngStyle]="{'font-size': bannerSize, 'color': 'rgb(255, 255, 255)'}">{{bannerText}}</p>
                             </div>
-                            <div class="categoriesset categories1 category-class-four  pt-md-3 pl-md-1">
+                            <div class="categoriesset categories1 category-class-four  pt-md-3 pl-md-1" *ngIf="isProduct">
                                 <div class="d-flex justify-content-between align-items-center pr-md-2">
                                     <p style="font-family: Montserrat-Regular;">Product Categories</p><svg width="57"
                                         height="30" viewBox="0 0 57 30">
@@ -531,7 +531,7 @@
                                     <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
                                             class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
-                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                        <p class="mt-1 mb-1"  style="color: rgb(0, 0, 0); font-size: 9px;">Product
                                             Category</p>
                                     </div>
                                     <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
@@ -566,7 +566,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sale_products1 section-items pt-3 pb-2"
+                            <div class="sale_products1 section-items pt-3 pb-2" *ngIf="isSaleProduct"
                                 [ngStyle]="{'background': 'rgb(246, 249, 255)'}">
                                 <div
                                     class="d-flex justify-content-between align-items-center pl-md-2 pl-3 pr-3 pr-md-2">
@@ -600,7 +600,7 @@
                                             alt="Sale"></div>
                                 </div>
                             </div>
-                            <div class="recently-viewed recently_viewed_products1">
+                            <div class="recently-viewed recently_viewed_products1" *ngIf="isRecentyProduct">
                                 <p class="pt-3 pl-md-2 pl-3"
                                     [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">Recently Viewed
                                     Products</p>
@@ -609,7 +609,7 @@
                                             alt="Recent"></div>
                                 </div>
                             </div>
-                            <div class="featured_products1 section-items pt-3 pb-2"
+                            <div class="featured_products1 section-items pt-3 pb-2" *ngIf="isFeatureProduct"
                                 [ngStyle]="{'background': 'rgb(246, 249, 255)'}">
                                 <div
                                     class="d-flex justify-content-between align-items-center pl-md-2 pr-md-2  pl-3 pr-3">
@@ -644,7 +644,7 @@
                                             class="img-fluid" alt="Featured"></div>
                                 </div>
                             </div>
-                            <div class="in-cart cart1">
+                            <div class="in-cart cart1" *ngIf="isCart">
                                 <p class="pl-md-2 pr-md-2 pt-3 pl-3 pr-3"
                                     [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">Cart
                                 </p>
@@ -653,9 +653,9 @@
                                             alt="Incart"></div>
                                 </div>
                             </div>
-                            <div class="section-items new_products1 arrival pb-2"
+                            <div class="section-items new_products1 arrival pb-2" *ngIf="isNewProduct"
                                 style="background: rgb(246, 249, 255);">
-                                <div
+                                <div 
                                     class="d-flex justify-content-between align-items-center  pl-md-2 pr-md-2 pt-3 pl-3 pr-3">
                                     <p [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">New Products</p>
                                     <svg width="57" height="30" viewBox="0 0 57 30">

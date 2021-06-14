@@ -8,14 +8,14 @@ import { MainAperanceAppInfoService } from '../service/main-aperance-app-info.se
 })
 export class MainAreaComponent implements OnInit {
 
-  backgroundColour:string='#444';
-  fontColour:string='#fff';
+  backgroundColour:string='#050505';
+  fontColour:string='#ffffff';
   fontFamily:string='Arial';
   fontSize:string='14px';
   appText:string='abc';
   appName:string='abc';
   
-  sizeList:string[]=['12px','13px','14px','15px'];
+  sizeList:string[]=['13px','14px','15px','16px'];
   fontFamilyList:string[]=['Arial','Arial Black','Poppins SemiBold','Sans Serif','Times New Roman','Verdana'];
   constructor(private appService:MainAperanceAppInfoService) { }
 

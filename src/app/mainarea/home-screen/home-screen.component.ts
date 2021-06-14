@@ -13,7 +13,30 @@ export class HomeScreenComponent implements OnInit {
   fontSize:string='14px';
   appText:string='abc';
   appName:string='abc';
+  headerText:string='abc';
   
+
+  //banner
+  isBanner:boolean=true;
+  bannerText:string='abc';
+  bannerColour:string='#444';
+  bannerSize:string='14px';
+  bannerFamily:string='Arial';
+  contentJustify:string='center';
+
+  //product
+  isProduct:boolean=true;
+  productCount:string='1';
+  productFontColour:string='#444';
+  productShape:string='sharp';
+
+
+  isNewProduct:boolean=true;
+  isCart:boolean=true;
+  isFeatureProduct:boolean=true;
+  isRecentyProduct:boolean=true;
+  isSaleProduct:boolean=true;
+
   sizeList:string[]=['12px','13px','14px','15px'];
   fontFamilyList:string[]=['Arial','Arial Black','Poppins SemiBold','Sans Serif','Times New Roman','Verdana'];
   columnList:string[]=['1','2','3','3','4'];

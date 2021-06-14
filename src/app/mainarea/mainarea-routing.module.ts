@@ -7,9 +7,11 @@ import { MainAreaComponent } from './main-area/main-area.component';
 
 const routes: Routes = [
     // { path:'', redirectTo:'login', pathMatch:'full'},
-    {path: 'app', component: MainAreaComponent},
-    {path: 'launch', component: LaunchComponent},
     {path: 'homeScreen', component: HomeScreenComponent},
+
+    {path: 'launch', component: LaunchComponent},
+    {path: 'app', component: MainAreaComponent},
+
    
 ];
 

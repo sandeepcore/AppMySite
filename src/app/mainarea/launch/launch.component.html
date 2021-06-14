@@ -68,12 +68,13 @@
                 <div class="mobile-head"><img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAAXCAYAAABAvCkiAAAABHNCSVQICAgIfAhkiAAABTlJREFUeJztnE9vG0UYxn9vYydFIY3dNkYIpEQ9VDRShS3gAodGAnHhQDj1wKFBfAByggNF9YFLuZB8AsKRE+kdqckHQEmFlFYIpck1bWM7UUr+uH047GzrOHZqO8luzM7vEs/u69lX8uTZ552ZXSOhSBoBpoDP487F46nhHjBuZitxJxI1FncCcSIpA5TizsNzNKrV5zxYLrGxtcvm1h4D/WnO9ffyzqUsqdSZuNNrl6yZleNOIg4SLUYAkuaAa3Hn4emM9coOC0trVJ/pwLlUj1EYzXF+sC+GzDpi3szG4k4iLlJxJ+DxdEq1+pyFpTV2dqs8Xt9gY/Mp29s7pNNpspnXeWMoy8LSGtc+eKsbHVLi8GKUMNYrOzxYXmdzay/uVA7wWl8PhdEcA/3pluLvL5eoPhNP1jdYe/Sy2t7b22PtUQkDckNZ7i+XuHr5wgll7Tku/O0iYZxWIQL4d+cZf/39uOX4za1dAErlzYbnK5tP98V5TjdejBLGaRWikHbyC2N396oNz29v77Tdpyc+vBgljLN9PXGncCitlmi1sb3pxrMNZ/t62+7TEx9ejGAx7gSi5Orli6f2n/NsXw9XL19sOX6gPxCbbGag4fnBc/374rqARI3FevwENiRqT8f5wT4+LLwZdxrHwpVLWdaePOXC+XMAVDa22N7ZpTedIpsZIDeUJdVjXLmUjTnTlknUWKzHi1HC70bdTCp1hsJojoWlNXJDWXJD+0Un3GfURcv6iR6LkW56lLQCDAOrZjZSd+42cD08Lulr4If6uBPKqwwMnvR1PCdDtfqc+8slNmt2YA/093Klu3ZgV8ws084X3CNN1wg2S3b94yOROSNJvwD/mNmIpAVJt83su5qQT2ti/wDeJzrbOgvciOhanmMmlTrzf9hHNNvBd8JnK+8A482CJI0R3GzzwByB8J06FxZlmZYD/nSfl4C3JcnMzLmiJeAjADP7BF44qSgo4sXIEy/FVwU4J/QugRMqA6GTOuCoXOwtApFqdH4FmAGmGz0L5wSs3cekysCvnT5bF/Wc0Xvu7yiwZGZhmXjdOaZYrKaZrUiaBr6J4/qexDPdYpk1SyBG08BksyBJk8DPrnnHfa+2/zwwQSCAE5K+aOCUxt212uEeL91X20QmRmb2maSyJAGr4XFXkv0WVR6HUCT4AYbjTsSTKFZp4oqcuxk2s3l3KBSHfLPOJE0QCNG+V5FIyhOUaqtmNgdMudgpYE5Svk4Q87TvjIzOyk0g4n1GZpYJ3ZCZfekOfwx860RqWNJClDnV5FYmEKNKHNf3JJIKgWA0K2vmCIRiotUOzWwG+MrM8kBZ0i1JJWDB9fdQ0kNJN1zsGDB2jBPgRUmvLDkbEeUE9o/A9675kzummlINSStmVogqp3rMbNH98L/HlYMnMYRC9KI8ck6IGmEIXXpbK8pmNuPe1bXo+pgnEKIVAsczDsxIKphZ03IvaqIs024CN+uOWV175LB2FJjZrKQCgd30JZvnJFjloBBlgIfuc+Goq11mVnYOpWxm9aXTpKQpggns42aFDvdLdc0mjChxAyFPcEfxeI6TeSDfQGxq54GaLtO3g5nNuJvrhCvNJOmumx+aPKHl/ZkG4tcSfgd2E1wdP+aWOIv4t0F6jsY8UHSTx40oN/lcS4VgErqTpfOwymh1GmQOuNvBdRL9SEskSMpLmpS0KI+nNRYVjJmmq191Y2xG0qzc3JGkoqS5mvaka4+59rhrv9JJKXBH5VZziYPEvwP7KISDwuOp5RD3EyuSMqf5Zf//Ad1aR8JD8xa+AAAAAElFTkSuQmCC"
                         class="img-fluid" alt="notch"></div>
-                <div id="clocksel" class="white-mobile-border backselect" style="background: rgb(203, 75, 75);">
+                <div id="clocksel" class="white-mobile-border backselect" [ngStyle]="{'background-color':backgroundColour}">
                     <div class="splashlogo w-100  d-flex justify-content-center logo-alignment-vertical"
                         style="align-items: flex-start;">
                         <p id="clockid"
-                            style="color: rgb(203, 186, 186); margin: 0px; justify-content: center; display: flex; align-items: center; font-family: Poppins-SemiBold; width: 214px; height: 100px; font-size: 30px;">
-                            ABC</p>
+                        [ngStyle]="{'font-size': fontSize, 'color':fontColour, 'font-family':fontFamily}"
+                            style="margin: 0px; justify-content: center; display: flex; align-items: center; width: 214px; height: 100px;">
+                            {{appText}}</p>
                     </div>
                 </div>
             </div>
