@@ -1,0 +1,37 @@
+@import '../main-area/main-area.component.scss';
+
+.hollow_phone {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 575px;
+    margin: auto;
+    position: relative;
+    .white-mobile-border {
+        overflow: hidden;
+        width: 234px;
+        height: 507px;
+        border-radius: 23px;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 34px;
+        padding: 20px 10px;
+        margin: auto;
+        display: flex;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-position: 50%!important;
+    }
+
+
+.mobile-head {
+    position: absolute;
+    z-index: 8;
+    top: 28px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 230px;
+}
+}

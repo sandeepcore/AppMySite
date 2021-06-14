@@ -1,0 +1,778 @@
+<div class="right_general">
+    <div class="d-flex justify-content-between">
+        <div class="customiseappfeatures">
+            <article class="hdr">
+                <h3 class="sec_hd">Home Screen <span class="play_vid link_style"><i
+                            class="material-icons hm_icn">play_arrow</i> See Video</span> </h3>
+                <h5 class="ap_sts">Select & design sections for your app home screen. <span class="link_style"> Learn
+                        More </span></h5>
+            </article>
+            <div class="d-flex flex_column flx_cntr">
+
+                <mat-accordion class="full_wd">
+                    <mat-expansion-panel hideToggle class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Section colors
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside class="hdn">
+                                        <label class="switch" for="mainBanner2"><input type="checkbox" class="toplogo" id="mainBanner2" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="setting_block">
+                            <form #appForm="ngForm">
+                                <div class="d-flex justify-content-between flex-wrap mt4 cntr_frm">
+                                    <div class="frm_style mb-4">
+                                        <h4 class="lbl_nm">Background Color <i
+                                                class="material-icons tt">help_outline</i></h4>
+                                        <section class="form-group clr_cnrfm">
+                                            <input type="color" class="clr_inp" name="backgroundColour"
+                                                [(ngModel)]="backgroundColour" />
+                                            <span class="color_code">
+                                                {{backgroundColour}}
+                                            </span>
+                                        </section>
+                                    </div>
+                                    <div class="frm_style mb-4">
+                                        <h4 class="lbl_nm">Heading Color <i class="material-icons tt">help_outline</i>
+                                        </h4>
+                                        <section class="form-group clr_cnrfm">
+                                            <input type="color" class="clr_inp" name="headingColour"
+                                                [(ngModel)]="headingColour" />
+                                            <span class="color_code">
+                                                {{headingColour}}
+                                            </span>
+                                        </section>
+                                    </div>
+                                    <div class="frm_style mb-4">
+                                        <h4 class="lbl_nm">Button Color <i class="material-icons tt">help_outline</i>
+                                        </h4>
+                                        <section class="form-group clr_cnrfm">
+                                            <input type="color" class="clr_inp" name="btnColour"
+                                                [(ngModel)]="btnColour" />
+                                            <span class="color_code">
+                                                {{btnColour}}
+                                            </span>
+                                        </section>
+                                    </div>
+                                    <div class="frm_style mb-4">
+                                        <h4 class="lbl_nm">Button Text Color <i
+                                                class="material-icons tt">help_outline</i></h4>
+                                        <section class="form-group clr_cnrfm">
+                                            <input type="color" class="clr_inp" name="btnTextColour"
+                                                [(ngModel)]="btnTextColour" />
+                                            <span class="color_code">
+                                                {{btnTextColour}}
+                                            </span>
+                                        </section>
+                                    </div>
+                                </div>
+                               
+                            </form>
+                        </div>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Dashboard Header
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside class="hdn">
+                                        <label class="switch" for="mainBanner3"><input type="checkbox" class="toplogo" id="mainBanner3" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <form #appForm="ngForm">
+                            <div class="d-flex justify-content-between flex-wrap mt4 cntr_frm">
+                                
+                                <div class="frm_style full">
+                                    <h4 class="lbl_nm">Header Text (optional)<i class="material-icons tt">help_outline</i></h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control text_inp " maxlength="15" name="headerText"
+                                            [(ngModel)]="headerText" />
+                                    </div>
+            
+                                </div>
+                            </div>
+                           
+                        </form>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Main Banner
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="mainBanner"><input type="checkbox" class="toplogo" id="mainBanner" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <form #appForm="ngForm">
+                            <div class="d-flex justify-content-between flex-wrap mt4 cntr_frm">
+                                <div class="frm_style mb-4">
+                                    <h4 class="lbl_nm">Select Solid Color <i class="material-icons tt">help_outline</i></h4>
+                                    <section class="form-group clr_cnrfm">
+                                        <input type="color" class="clr_inp" name="sscolor"
+                                            [(ngModel)]="sscolor" />
+                                        <span class="color_code">
+                                            {{sscolor}}
+                                        </span>
+                                    </section>
+                                </div>
+                                <div class="frm_style mb-4">
+                                    <h4 class="lbl_nm">Banner text<i class="material-icons tt">help_outline</i></h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control text_inp " maxlength="3" name="bannerText"
+                                            [(ngModel)]="bannerText" />
+                                    </div>
+                                </div>
+                                <div class="frm_style mb-4">
+                                    <h4 class="lbl_nm">Font <i class="material-icons tt">help_outline</i></h4>
+                                    <div class="form-group">
+                                        <select class=" form-control slct_inp" name="fontFamily" [(ngModel)]="fontFamily">
+                                            <option *ngFor="let family of fontFamilyList" [value]="family">{{family}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="frm_style mb-4">
+                                    <h4 class="lbl_nm">Font Size <i class="material-icons tt">help_outline</i></h4>
+                                    <div class="form-group">
+                                        <select class=" form-control slct_inp" name="fontSize" [(ngModel)]="fontSize">
+                                            <option *ngFor="let size of sizeList" [value]="size">{{size}}</option>
+                                        </select>
+                                    </div>
+            
+                                </div>
+                                <div class="frm_style full">
+                                    <h4 class="lbl_nm">Align <i class="material-icons tt">help_outline</i></h4>
+            
+                                    <mat-button-toggle-group #group="matButtonToggleGroup">
+                                        <mat-button-toggle value="left" aria-label="Text align left">
+                                          <mat-icon>format_align_left</mat-icon>
+                                        </mat-button-toggle>
+                                        <mat-button-toggle value="center" aria-label="Text align center">
+                                          <mat-icon>format_align_center</mat-icon>
+                                        </mat-button-toggle>
+                                        <mat-button-toggle value="right" aria-label="Text align right">
+                                          <mat-icon>format_align_right</mat-icon>
+                                        </mat-button-toggle>
+                                        <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+                                          <mat-icon>format_align_justify</mat-icon>
+                                        </mat-button-toggle>
+                                      </mat-button-toggle-group>
+            
+                                </div>
+                           
+                           
+                            </div>
+                        </form> 
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Product Catagories
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="prd-ctg"><input type="checkbox" class="toplogo" id="prd-ctg" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <form #appForm="ngForm">
+                            <div class="d-flex justify-content-between flex-wrap mt4 cntr_frm">
+                               
+                               
+                                <div class="frm_style mb-4">
+                                    <h4 class="lbl_nm">Column <i class="material-icons tt">help_outline</i></h4>
+                                    <div class="form-group">
+                                        <select class=" form-control slct_inp" name="fontFamily" [(ngModel)]="Column">
+                                            <option *ngFor="let Column of columnList" [value]="family">{{Column}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="frm_style mb-4">
+                                    <h4 class="lbl_nm">Text Color <i class="material-icons tt">help_outline</i></h4>
+                                    <section class="form-group clr_cnrfm">
+                                        <input type="color" class="clr_inp" name="prdcolor"
+                                            [(ngModel)]="prdcolor" />
+                                        <span class="color_code">
+                                            {{prdcolor}}
+                                        </span>
+                                    </section>
+                                </div>
+                               
+                                <div class="frm_style full">
+                                    <h4 class="lbl_nm">Shapes <i class="material-icons tt">help_outline</i></h4>
+            
+                                    <mat-button-toggle-group #group="matButtonToggleGroup">
+                                        <mat-button-toggle value="left" aria-label="Text align left">
+                                          <mat-icon>format_align_left</mat-icon>
+                                        </mat-button-toggle>
+                                        <mat-button-toggle value="center" aria-label="Text align center">
+                                          <mat-icon>format_align_center</mat-icon>
+                                        </mat-button-toggle>
+                                        <mat-button-toggle value="right" aria-label="Text align right">
+                                          <mat-icon>format_align_right</mat-icon>
+                                        </mat-button-toggle>
+                                        <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+                                          <mat-icon>format_align_justify</mat-icon>
+                                        </mat-button-toggle>
+                                      </mat-button-toggle-group>
+            
+                                </div>
+                           
+                           
+                            </div>
+                        </form> 
+                    </mat-expansion-panel>
+
+
+
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Sale Products
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside class="hdn"><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="sale-ctg"><input type="checkbox" class="toplogo" id="sale-ctg" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        
+                    </mat-expansion-panel>
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Recently Viewed Products
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside class="hdn"><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="rcnt-ctg"><input type="checkbox" class="toplogo" id="rcnt-ctg" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        
+                    </mat-expansion-panel>
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Featured Products
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside class="hdn"><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="ftr-ctg"><input type="checkbox" class="toplogo" id="ftr-ctg" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        
+                    </mat-expansion-panel>
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Cart
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside class="hdn"><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="cart-ctg"><input type="checkbox" class="toplogo" id="cart-ctg" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        
+                    </mat-expansion-panel>
+                    <mat-expansion-panel class="full_wd_pnl common-height">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                New Product
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <div class="edit-btn">
+                                    <aside class="hdn"><img class="mr-2"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAYhJREFUOI2dVEtOwlAUPecF41CXQAc6ppIYOxJXoK5AlqArEHbAEugKhBWII6oJLWNqIjtAh42kxwFpef2A0TN6997zzv28D7EHr9H7jaQnAIDwcNE+GeziGtuYRh9N206V3ljm5b6kzBZv0aKVis8A5iQmStUE2S2wpSEMR0jRBdEx1NW5ezovCAWz+BPE0b6sNfgUG67nOstta8TkjyIA8OK5zhKwZkRy+GcZbZPnQqXBbnhCX2w4YsOR0K/EqVZeSDCL70FcA+iURbz2Sc/2TWdxj8RjqaoRDX0GYazaqtlwsv4zRNHHcaL1qo5v6pz/gSF5C2BciaTrbtmV1PgAjCE85PdoGi6GBO8KFOr+EAc+ACT4voPYA3CchQX53tlpF7CPX5xXcomDROtVovUK4sAW2bRjRvl6uweV4/8NSpV3YIDNY6XQ2r1lJ64KQp7rLI1RB8IXgDHJW0F+pQLIl9AX8ALhyxh1ypxaBGE8CsJYQRhrGi4KT6j85ey/R/ZbsgabdWHbP8hIpVhndVrUAAAAAElFTkSuQmCC"
+                                            alt="gear">Settings
+                                    </aside>
+                                    <aside>
+                                        <label class="switch" for="new-ctg"><input type="checkbox" class="toplogo" id="new-ctg" checked=""><div class="slider round"></div></label>
+                                    </aside>
+                                </div>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        
+                    </mat-expansion-panel>
+               
+               
+               
+               
+               
+                </mat-accordion>
+
+            </div>
+
+            <!-- <form #appForm="ngForm">
+                <div class="d-flex justify-content-between flex-wrap mt4 cntr_frm">
+                    <div class="frm_style mb-4">
+                        <h4 class="lbl_nm">Background Color <i class="material-icons tt">help_outline</i></h4>
+                        <section class="form-group clr_cnrfm">
+                            <input type="color" class="clr_inp" name="backgroundColour"
+                                [(ngModel)]="backgroundColour" />
+                            <span class="color_code">
+                                {{backgroundColour}}
+                            </span>
+                        </section>
+                    </div>
+                    <div class="frm_style mb-4">
+                        <h4 class="lbl_nm">App icon text<i class="material-icons tt">help_outline</i></h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control text_inp " maxlength="3" name="appText"
+                                [(ngModel)]="appText" />
+                        </div>
+                    </div>
+                    <div class="frm_style mb-4">
+                        <h4 class="lbl_nm">Font <i class="material-icons tt">help_outline</i></h4>
+                        <div class="form-group">
+                            <select class=" form-control slct_inp" name="fontFamily" [(ngModel)]="fontFamily">
+                                <option *ngFor="let family of fontFamilyList" [value]="family">{{family}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="frm_style mb-4">
+                        <h4 class="lbl_nm">Font Size <i class="material-icons tt">help_outline</i></h4>
+                        <div class="form-group">
+                            <select class=" form-control slct_inp" name="fontSize" [(ngModel)]="fontSize">
+                                <option *ngFor="let size of sizeList" [value]="size">{{size}}</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="frm_style full">
+                        <h4 class="lbl_nm">Text Color <i class="material-icons tt">help_outline</i></h4>
+
+                        <section class="form-group clr_cnrfm">
+                            <input type="color" class="clr_inp" name="fontColour" [(ngModel)]="fontColour" />
+                            <span class="color_code">
+                                {{fontColour}}
+                            </span>
+                        </section>
+
+                    </div>
+                </div>
+                <div class="d-flex btn_area">
+                    <button type="submit" class="btn btn-primary" [disabled]="!appForm.valid" (click)="saveData()">
+                        Save
+                    </button>
+                </div>
+            </form> -->
+
+        </div>
+        <div class="customiseapp ">
+            <div class="hollow_phone" style="background-image: url(../../../assets/img/hollow.png);">
+                <div class="mobile-head"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAAXCAYAAABAvCkiAAAABHNCSVQICAgIfAhkiAAABTlJREFUeJztnE9vG0UYxn9vYydFIY3dNkYIpEQ9VDRShS3gAodGAnHhQDj1wKFBfAByggNF9YFLuZB8AsKRE+kdqckHQEmFlFYIpck1bWM7UUr+uH047GzrOHZqO8luzM7vEs/u69lX8uTZ552ZXSOhSBoBpoDP487F46nhHjBuZitxJxI1FncCcSIpA5TizsNzNKrV5zxYLrGxtcvm1h4D/WnO9ffyzqUsqdSZuNNrl6yZleNOIg4SLUYAkuaAa3Hn4emM9coOC0trVJ/pwLlUj1EYzXF+sC+GzDpi3szG4k4iLlJxJ+DxdEq1+pyFpTV2dqs8Xt9gY/Mp29s7pNNpspnXeWMoy8LSGtc+eKsbHVLi8GKUMNYrOzxYXmdzay/uVA7wWl8PhdEcA/3pluLvL5eoPhNP1jdYe/Sy2t7b22PtUQkDckNZ7i+XuHr5wgll7Tku/O0iYZxWIQL4d+cZf/39uOX4za1dAErlzYbnK5tP98V5TjdejBLGaRWikHbyC2N396oNz29v77Tdpyc+vBgljLN9PXGncCitlmi1sb3pxrMNZ/t62+7TEx9ejGAx7gSi5Orli6f2n/NsXw9XL19sOX6gPxCbbGag4fnBc/374rqARI3FevwENiRqT8f5wT4+LLwZdxrHwpVLWdaePOXC+XMAVDa22N7ZpTedIpsZIDeUJdVjXLmUjTnTlknUWKzHi1HC70bdTCp1hsJojoWlNXJDWXJD+0Un3GfURcv6iR6LkW56lLQCDAOrZjZSd+42cD08Lulr4If6uBPKqwwMnvR1PCdDtfqc+8slNmt2YA/093Klu3ZgV8ws084X3CNN1wg2S3b94yOROSNJvwD/mNmIpAVJt83su5qQT2ti/wDeJzrbOgvciOhanmMmlTrzf9hHNNvBd8JnK+8A482CJI0R3GzzwByB8J06FxZlmZYD/nSfl4C3JcnMzLmiJeAjADP7BF44qSgo4sXIEy/FVwU4J/QugRMqA6GTOuCoXOwtApFqdH4FmAGmGz0L5wSs3cekysCvnT5bF/Wc0Xvu7yiwZGZhmXjdOaZYrKaZrUiaBr6J4/qexDPdYpk1SyBG08BksyBJk8DPrnnHfa+2/zwwQSCAE5K+aOCUxt212uEeL91X20QmRmb2maSyJAGr4XFXkv0WVR6HUCT4AYbjTsSTKFZp4oqcuxk2s3l3KBSHfLPOJE0QCNG+V5FIyhOUaqtmNgdMudgpYE5Svk4Q87TvjIzOyk0g4n1GZpYJ3ZCZfekOfwx860RqWNJClDnV5FYmEKNKHNf3JJIKgWA0K2vmCIRiotUOzWwG+MrM8kBZ0i1JJWDB9fdQ0kNJN1zsGDB2jBPgRUmvLDkbEeUE9o/A9675kzummlINSStmVogqp3rMbNH98L/HlYMnMYRC9KI8ck6IGmEIXXpbK8pmNuPe1bXo+pgnEKIVAsczDsxIKphZ03IvaqIs024CN+uOWV175LB2FJjZrKQCgd30JZvnJFjloBBlgIfuc+Goq11mVnYOpWxm9aXTpKQpggns42aFDvdLdc0mjChxAyFPcEfxeI6TeSDfQGxq54GaLtO3g5nNuJvrhCvNJOmumx+aPKHl/ZkG4tcSfgd2E1wdP+aWOIv4t0F6jsY8UHSTx40oN/lcS4VgErqTpfOwymh1GmQOuNvBdRL9SEskSMpLmpS0KI+nNRYVjJmmq191Y2xG0qzc3JGkoqS5mvaka4+59rhrv9JJKXBH5VZziYPEvwP7KISDwuOp5RD3EyuSMqf5Zf//Ad1aR8JD8xa+AAAAAElFTkSuQmCC"
+                        class="img-fluid" alt="notch">
+                </div>
+                <div class="dashboard-mobile">
+                    <div class="white-mobile-border cus_scrl_none" id="applogo">
+                        <div class="top-header" [ngStyle]="{'height': '63px', 'background':'rgb(48 100 249)'}">
+                            <div class=" d-flex align-items-center justify-content-between">
+                                <div class="menu-icon d-flex align-items-center justify-content-between">
+                                    <div class="pl-md-2">
+                                        <svg width="15.5" height="11.5" viewBox="0 0 15.5 11.5">
+                                            <g id="menu" transform="translate(0.25 0.25)" fill="#fff">
+                                                <path
+                                                    d="M 15.125 11.125 L 15 11.125 L -8.881784197001252e-16 11.125 L -0.125 11.125 L -0.125 11 L -0.125 10.2324104309082 L -0.125 10.1074104309082 L -8.881784197001252e-16 10.1074104309082 L 15 10.1074104309082 L 15.125 10.1074104309082 L 15.125 10.2324104309082 L 15.125 11 L 15.125 11.125 Z M 15.125 6.008560180664063 L 15 6.008560180664063 L -8.881784197001252e-16 6.008560180664063 L -0.125 6.008560180664063 L -0.125 5.883560180664063 L -0.125 5.116199970245361 L -0.125 4.991199970245361 L -8.881784197001252e-16 4.991199970245361 L 15 4.991199970245361 L 15.125 4.991199970245361 L 15.125 5.116199970245361 L 15.125 5.883560180664063 L 15.125 6.008560180664063 Z M 15.125 0.8923599720001221 L 15 0.8923599720001221 L -8.881784197001252e-16 0.8923599720001221 L -0.125 0.8923599720001221 L -0.125 0.7673599720001221 L -0.125 -8.881784197001252e-16 L -0.125 -0.125 L -8.881784197001252e-16 -0.125 L 15 -0.125 L 15.125 -0.125 L 15.125 -8.881784197001252e-16 L 15.125 0.7673599720001221 L 15.125 0.8923599720001221 Z"
+                                                    stroke="none"></path>
+                                                <path
+                                                    d="M 15 11 L 15 10.2324104309082 L -8.881784197001252e-16 10.2324104309082 L -8.881784197001252e-16 11 L 15 11 M 15 5.883560180664063 L 15 5.116199970245361 L -8.881784197001252e-16 5.116199970245361 L -8.881784197001252e-16 5.883560180664063 L 15 5.883560180664063 M 15 0.7673599720001221 L 15 -8.881784197001252e-16 L -8.881784197001252e-16 -8.881784197001252e-16 L -8.881784197001252e-16 0.7673599720001221 L 15 0.7673599720001221 M 15.25 11.25 L 15 11.25 L -8.881784197001252e-16 11.25 L -0.25 11.25 L -0.25 11 L -0.25 10.2324104309082 L -0.25 9.982410430908203 L -8.881784197001252e-16 9.982410430908203 L 15 9.982410430908203 L 15.25 9.982410430908203 L 15.25 10.2324104309082 L 15.25 11 L 15.25 11.25 Z M 15.25 6.133560180664063 L 15 6.133560180664063 L -8.881784197001252e-16 6.133560180664063 L -0.25 6.133560180664063 L -0.25 5.883560180664063 L -0.25 5.116199970245361 L -0.25 4.866199970245361 L -8.881784197001252e-16 4.866199970245361 L 15 4.866199970245361 L 15.25 4.866199970245361 L 15.25 5.116199970245361 L 15.25 5.883560180664063 L 15.25 6.133560180664063 Z M 15.25 1.017359972000122 L 15 1.017359972000122 L -8.881784197001252e-16 1.017359972000122 L -0.25 1.017359972000122 L -0.25 0.7673599720001221 L -0.25 -8.881784197001252e-16 L -0.25 -0.25 L -8.881784197001252e-16 -0.25 L 15 -0.25 L 15.25 -0.25 L 15.25 -8.881784197001252e-16 L 15.25 0.7673599720001221 L 15.25 1.017359972000122 Z"
+                                                    stroke="none" fill="#ffffff"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p [ngStyle]="{'color':'#fff'}">abc</p>
+                                </div>
+                                <div class="menu-icon d-flex align-items-center justify-content-between">
+                                    <div class="pr-2"><svg width="13" height="14" viewBox="0 0 13 14">
+                                            <g id="userd" transform="translate(0.004 -0.223)">
+                                                <g id="Ellipse_45" data-name="Ellipse 45"
+                                                    transform="translate(2.996 0.223)" fill="none" stroke="#ffffff"
+                                                    stroke-width="1.5">
+                                                    <circle cx="3.5" cy="3.5" r="3.5" stroke="none"></circle>
+                                                    <circle cx="3.5" cy="3.5" r="2.75" fill="none"></circle>
+                                                </g>
+                                                <g id="Rectangle_150" data-name="Rectangle 150"
+                                                    transform="translate(-0.004 8.223)" fill="none" stroke="#ffffff"
+                                                    stroke-width="1.5">
+                                                    <path
+                                                        d="M4,0H9a4,4,0,0,1,4,4V5a1,1,0,0,1-1,1H1A1,1,0,0,1,0,5V4A4,4,0,0,1,4,0Z"
+                                                        stroke="none"></path>
+                                                    <path
+                                                        d="M4,.75H9A3.25,3.25,0,0,1,12.25,4V5a.25.25,0,0,1-.25.25H1A.25.25,0,0,1,.75,5V4A3.25,3.25,0,0,1,4,.75Z"
+                                                        fill="none"></path>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                    <div class="pr-2"><svg width="18.444" height="14.881" viewBox="0 0 18.444 14.881">
+                                            <g id="Group_2127" data-name="Group 2127"
+                                                transform="translate(-1753.667 -243)">
+                                                <path id="Path_6086" data-name="Path 6086"
+                                                    d="M1754.417,243.75h3.463l2.059,9.055h9.192l1.99-7.066H1758.6"
+                                                    transform="translate(0)" fill="none" stroke="#ffffff"
+                                                    stroke-linecap="round" stroke-width="1.5"></path>
+                                                <g id="Ellipse_257" data-name="Ellipse 257"
+                                                    transform="translate(1759.305 254.681)" fill="none" stroke="#ffffff"
+                                                    stroke-linecap="round" stroke-width="1.5">
+                                                    <circle cx="1.6" cy="1.6" r="1.6" stroke="none"></circle>
+                                                    <circle cx="1.6" cy="1.6" r="0.85" fill="none"></circle>
+                                                </g>
+                                                <g id="Ellipse_258" data-name="Ellipse 258"
+                                                    transform="translate(1765.704 254.681)" fill="none" stroke="#ffffff"
+                                                    stroke-linecap="round" stroke-width="1.5">
+                                                    <circle cx="1.6" cy="1.6" r="1.6" stroke="none"></circle>
+                                                    <circle cx="1.6" cy="1.6" r="0.85" fill="none"></circle>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sectionmove" style="margin-top: 63px;">
+                            <div class="mainbanner banner1 d-flex align-items-center mt-0"
+                                [ngStyle]="{'background': 'rgb(123, 157, 255)', 'justify-content': 'center' }">
+                                <p [ngStyle]="{'font-size': '18px', 'color': 'rgb(255, 255, 255)'}">abc</p>
+                            </div>
+                            <div class="categoriesset categories1 category-class-four  pt-md-3 pl-md-1">
+                                <div class="d-flex justify-content-between align-items-center pr-md-2">
+                                    <p style="font-family: Montserrat-Regular;">Product Categories</p><svg width="57"
+                                        height="30" viewBox="0 0 57 30">
+                                        <defs>
+                                            <filter id="Rounded_Rectangle_2_copy" x="0" y="0" width="57" height="30"
+                                                filterUnits="userSpaceOnUse">
+                                                <feOffset dy="1" input="SourceAlpha"></feOffset>
+                                                <feGaussianBlur stdDeviation="1.5" result="blur"></feGaussianBlur>
+                                                <feFlood flood-opacity="0.102"></feFlood>
+                                                <feComposite operator="in" in2="blur"></feComposite>
+                                                <feComposite in="SourceGraphic"></feComposite>
+                                            </filter>
+                                        </defs>
+                                        <g id="Group_2834" data-name="Group 2834" transform="translate(-1692.5 -749.5)">
+                                            <g transform="matrix(1, 0, 0, 1, 1692.5, 749.5)"
+                                                filter="url(#Rounded_Rectangle_2_copy)">
+                                                <rect id="Rounded_Rectangle_2_copy-2"
+                                                    data-name="Rounded Rectangle 2 copy" width="48" height="21" rx="2"
+                                                    transform="translate(4.5 3.5)" fill="#3064f9"></rect>
+                                            </g><text id="View_All" data-name="View All" transform="translate(1721 767)"
+                                                font-size="8" font-family="Montserrat-Regular" fill="#FFFFFF">
+                                                <tspan x="-16.568" y="0">View All</tspan>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="category-list flex-wrap d-flex pt-2">
+                                    <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
+                                            class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
+                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                            Category</p>
+                                    </div>
+                                    <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
+                                            class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
+                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                            Category</p>
+                                    </div>
+                                    <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
+                                            class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
+                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                            Category</p>
+                                    </div>
+                                    <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
+                                            class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
+                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                            Category</p>
+                                    </div>
+                                    <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
+                                            class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
+                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                            Category</p>
+                                    </div>
+                                    <div class="cat-product mr-2 mr-md-1 " style="width: 31%;"><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAABHNCSVQICAgIfAhkiAAAA9JJREFUeF7tnOlu2lAQRscbOyUbivr+71apWUhI2AN29bkdhIwNNh6j1P7uH4Swh+vDuTNzDYnz6+kjEo7SBByCLM0wDkCQNhwJ0ogjQRKkFQGjOMyRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZhaOT/BLLXCaTd8sV1HaNp5wsThpEs11+yWm/znVDiqMqNBMTRsCNhFMl2G5aYavFTfd8V13FkMl3KelMtzMpB3t/0xHMdeZrMi5MoeQYgPj4MZL7YyMd8XTLa6dOvAhJTeH1fnL0QNWi3C2UX2vxIDh9k3vc/O8ETB3wbkDfDjnQ7wX6q8+VGPmanLXIckdGgI9PZSqIM7o0CCRPHt31ZbbbxMkReBVRYvPnaZXqAc3Aucu/zW3rqaBTIfrclPwZteXqd7Zf0z/FQZouNfGbkNjV4ufqKoePx/XN1BL1RIDstX25H3XgpY0mrofo8SUfBK+hhvy2DXisVfKNAItc93g8Fj1jKrcCLzXyezI5yH+yDjUkD1VBYidd0NAokLhotUq/biiEC5myxPoIIUx9u+oKqnpYTNWfiNe1ZGwESBmZV2+RyVmvR2KeZiuNxDEB7nisv739h1h4kliJGWoFIg5gElFXKD60FzLtRjftIzXOAkadfRCFCQTrXDilcLVYwEgbXsiHXCq0FAVCTBeLQtqwicm4Xoh8Wblxsd2GundW5mKdev+rOJrnsIAtyGArMYYHQCSuMPNamXaS2RQD5XPFe/2ogJ9NF3OJg/H793BeZtAKBYwAXkLHbeZsuL5ZlfNcXWJlnr3/xm1zjD5a0auJOzGE1PZw0Wp/x3SBua1AgcJy2OXiet7KngahV1fY9N76pC7NgWNrQAoEeEiAB/tDcS22pDUgsLYA8VVCSORHP03LmJTBrAxIXAruy7s4k4WiByNpnF4VZK5BF+7hLW57a58iiILMqeVEbcXyjjQQAwEQlL1t0Gg8SMNMa+KJWEuQ/YmUb89qAxHfa7cCTl7fF/gZCUasu3Srq17H4ugJ306sclW8RA9+Th9te6R8IoEmPoije7uUdsBl3f/AhYtdU5agcJCYPmN22L0HgVXktR7Hx64rlels5xLg48r+s2Hy2BGnDkUYacSRIgrQiYBSHOZIgjQgYhaGRBGlEwCgMjSRIIwJGYWgkQRoRMApDIwnSiIBRGBpJkEYEjMLQSII0ImAUhkYSpBEBozA0kiCNCBiFoZEEaUTAKAyNJEgjAkZh/gBZkjxSn4FIdAAAAABJRU5ErkJggg=="
+                                            class="img-fluid" alt="Sale" style="width: 100%; border-radius: 10px;">
+                                        <p class="mt-1 mb-1" style="color: rgb(0, 0, 0); font-size: 9px;">Product
+                                            Category</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sale_products1 section-items pt-3 pb-2"
+                                [ngStyle]="{'background': 'rgb(246, 249, 255)'}">
+                                <div
+                                    class="d-flex justify-content-between align-items-center pl-md-2 pl-3 pr-3 pr-md-2">
+                                    <p [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">Sale Products</p>
+                                    <svg width="57" height="30" viewBox="0 0 57 30">
+                                        <defs>
+                                            <filter id="Rounded_Rectangle_2_copy" x="0" y="0" width="57" height="30"
+                                                filterUnits="userSpaceOnUse">
+                                                <feOffset dy="1" input="SourceAlpha"></feOffset>
+                                                <feGaussianBlur stdDeviation="1.5" result="blur"></feGaussianBlur>
+                                                <feFlood flood-opacity="0.102"></feFlood>
+                                                <feComposite operator="in" in2="blur"></feComposite>
+                                                <feComposite in="SourceGraphic"></feComposite>
+                                            </filter>
+                                        </defs>
+                                        <g id="Group_2834" data-name="Group 2834" transform="translate(-1692.5 -749.5)">
+                                            <g transform="matrix(1, 0, 0, 1, 1692.5, 749.5)"
+                                                filter="url(#Rounded_Rectangle_2_copy)">
+                                                <rect id="Rounded_Rectangle_2_copy-2"
+                                                    data-name="Rounded Rectangle 2 copy" width="48" height="21" rx="2"
+                                                    transform="translate(4.5 3.5)" fill="#FFFFFF"></rect>
+                                            </g><text id="View_All" data-name="View All" transform="translate(1721 767)"
+                                                font-size="8" fill="#3064f9" font-family="Montserrat-Regular">
+                                                <tspan x="-16.568" y="0">View All</tspan>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="category-list pt-2">
+                                    <div class="cat-product"><img src="../../../assets/img/sale.png" class="img-fluid"
+                                            alt="Sale"></div>
+                                </div>
+                            </div>
+                            <div class="recently-viewed recently_viewed_products1">
+                                <p class="pt-3 pl-md-2 pl-3"
+                                    [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">Recently Viewed
+                                    Products</p>
+                                <div class="category-list pt-2 pl-3 pl-md-2 recent-dashboard">
+                                    <div class="cat-product"><img src="../../../assets/img/recent.png" class="img-fluid"
+                                            alt="Recent"></div>
+                                </div>
+                            </div>
+                            <div class="featured_products1 section-items pt-3 pb-2"
+                                [ngStyle]="{'background': 'rgb(246, 249, 255)'}">
+                                <div
+                                    class="d-flex justify-content-between align-items-center pl-md-2 pr-md-2  pl-3 pr-3">
+                                    <p [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">Featured Products
+                                    </p>
+                                    <svg width="57" height="30" viewBox="0 0 57 30">
+                                        <defs>
+                                            <filter id="Rounded_Rectangle_2_copy" x="0" y="0" width="57" height="30"
+                                                filterUnits="userSpaceOnUse">
+                                                <feOffset dy="1" input="SourceAlpha"></feOffset>
+                                                <feGaussianBlur stdDeviation="1.5" result="blur"></feGaussianBlur>
+                                                <feFlood flood-opacity="0.102"></feFlood>
+                                                <feComposite operator="in" in2="blur"></feComposite>
+                                                <feComposite in="SourceGraphic"></feComposite>
+                                            </filter>
+                                        </defs>
+                                        <g id="Group_2834" data-name="Group 2834" transform="translate(-1692.5 -749.5)">
+                                            <g transform="matrix(1, 0, 0, 1, 1692.5, 749.5)"
+                                                filter="url(#Rounded_Rectangle_2_copy)">
+                                                <rect id="Rounded_Rectangle_2_copy-2"
+                                                    data-name="Rounded Rectangle 2 copy" width="48" height="21" rx="2"
+                                                    transform="translate(4.5 3.5)" fill="#FFFFFF"></rect>
+                                            </g><text id="View_All" data-name="View All" transform="translate(1721 767)"
+                                                font-size="8" fill="#3064f9" font-family="Montserrat-Regular">
+                                                <tspan x="-16.568" y="0">View All</tspan>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="category-list">
+                                    <div class="cat-product "><img src="../../../assets/img/feature.png"
+                                            class="img-fluid" alt="Featured"></div>
+                                </div>
+                            </div>
+                            <div class="in-cart cart1">
+                                <p class="pl-md-2 pr-md-2 pt-3 pl-3 pr-3"
+                                    [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">Cart
+                                </p>
+                                <div class="category-list pt-2 pl-3 pl-md-2 recent-dashboard">
+                                    <div class="cat-product"><img src="../../../assets/img/incart.png" class="img-fluid"
+                                            alt="Incart"></div>
+                                </div>
+                            </div>
+                            <div class="section-items new_products1 arrival pb-2"
+                                style="background: rgb(246, 249, 255);">
+                                <div
+                                    class="d-flex justify-content-between align-items-center  pl-md-2 pr-md-2 pt-3 pl-3 pr-3">
+                                    <p [ngStyle]="{'color': 'rgb(0, 0, 0)', 'font-family': 'arial'}">New Products</p>
+                                    <svg width="57" height="30" viewBox="0 0 57 30">
+                                        <defs>
+                                            <filter id="Rounded_Rectangle_2_copy" x="0" y="0" width="57" height="30"
+                                                filterUnits="userSpaceOnUse">
+                                                <feOffset dy="1" input="SourceAlpha"></feOffset>
+                                                <feGaussianBlur stdDeviation="1.5" result="blur"></feGaussianBlur>
+                                                <feFlood flood-opacity="0.102"></feFlood>
+                                                <feComposite operator="in" in2="blur"></feComposite>
+                                                <feComposite in="SourceGraphic"></feComposite>
+                                            </filter>
+                                        </defs>
+                                        <g id="Group_2834" data-name="Group 2834" transform="translate(-1692.5 -749.5)">
+                                            <g transform="matrix(1, 0, 0, 1, 1692.5, 749.5)"
+                                                filter="url(#Rounded_Rectangle_2_copy)">
+                                                <rect id="Rounded_Rectangle_2_copy-2"
+                                                    data-name="Rounded Rectangle 2 copy" width="48" height="21" rx="2"
+                                                    transform="translate(4.5 3.5)" fill="#FFFFFF"></rect>
+                                            </g><text id="View_All" data-name="View All" transform="translate(1721 767)"
+                                                font-size="8" fill="#3064f9" font-family="Montserrat-Regular">
+                                                <tspan x="-16.568" y="0">View All</tspan>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="category-list d-flex pl-md-0">
+                                    <div class="cat-product"><img src="../../../assets/img/neww.png" class="img-fluid"
+                                            alt="Newproduct"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pages1 section-items">
+                            <div class="category-list"
+                                style="border-top: 1px solid rgb(216, 221, 238); background-color: rgb(255, 255, 255);">
+                                <div class="cat-product  pl-2 pr-2">
+                                    <div class="pages-list">
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Portfolio</a></li>
+                                            <li><a href="#">Contact us</a></li>
+                                            <li class="see-all-pages"><a href="#">See All
+                                                    Pages</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="click-to-scroll" style="display: block;"><img
+                                src="data:image/png;base64,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"
+                                class="img-fluid" alt="nosubscription"></div> -->
+                        <div class="bottom_menu_bar d-flex align-items-center justify-content-between"
+                            [ngStyle]="{'background':'rgb(48 100 249)', 'border-top':'1px solid rgb(241, 243, 248)'}">
+                            <div><svg width="15.477" height="16.355" viewBox="0 0 15.477 16.355">
+                                    <g id="Group_4106" data-name="Group 4106" transform="translate(0.5 0.626)">
+                                        <path id="Subtraction_12" data-name="Subtraction 12"
+                                            d="M4.493,15.229H0V5.457L7.238,0l7.239,5.457v9.771H9.922V8.88a.441.441,0,0,0-.465-.412h-4.5a.441.441,0,0,0-.465.412v6.349Z"
+                                            transform="translate(0 0)" fill="none" stroke="#f1f3f8"
+                                            stroke-miterlimit="10" stroke-width="1"></path>
+                                    </g>
+                                </svg>
+                                <p style="color: rgb(241, 243, 248);">Home</p>
+                            </div>
+                            <div><svg width="16.487" height="15.548" viewBox="0 0 16.487 15.548">
+                                    <g id="Group_4110" data-name="Group 4110" transform="translate(0.5 0.5)">
+                                        <circle id="Ellipse_2850" data-name="Ellipse 2850" cx="1.599" cy="1.599"
+                                            r="1.599" transform="translate(0)" fill="#f1f3f8" stroke="#f1f3f8"
+                                            stroke-width="1"></circle>
+                                        <line id="Line_116" data-name="Line 116" x2="10.724"
+                                            transform="translate(5.263 1.598)" fill="#f1f3f8" stroke="#f1f3f8"
+                                            stroke-width="1"></line>
+                                        <line id="Line_117" data-name="Line 117" x2="10.724"
+                                            transform="translate(5.263 7.46)" fill="#f1f3f8" stroke="#f1f3f8"
+                                            stroke-width="1"></line>
+                                        <circle id="Ellipse_2852" data-name="Ellipse 2852" cx="1.5" cy="1.5" r="1.5"
+                                            transform="translate(0 11.548)" fill="rgba(0,0,0,0)" stroke="#f1f3f8"
+                                            stroke-width="1"></circle>
+                                        <circle id="Ellipse_4555" data-name="Ellipse 4555" cx="1.5" cy="1.5" r="1.5"
+                                            transform="translate(0 5.548)" fill="rgba(0,0,0,0)" stroke="#f1f3f8"
+                                            stroke-width="1"></circle>
+                                        <line id="Line_118" data-name="Line 118" x2="10.724"
+                                            transform="translate(5.263 12.789)" fill="#f1f3f8" stroke="#f1f3f8"
+                                            stroke-width="1"></line>
+                                    </g>
+                                </svg>
+                                <p style="color: rgb(241, 243, 248);">Categories</p>
+                            </div>
+                            <div><svg width="15.519" height="15.961" viewBox="0 0 15.519 15.961">
+                                    <g id="Group_4111" data-name="Group 4111" transform="translate(0.5 0.5)">
+                                        <path id="Path_8421" data-name="Path 8421"
+                                            d="M876.759,251.686l-2.315,1.1a2.46,2.46,0,0,0-1.4,2.221v2.165H887.56V255.01a2.46,2.46,0,0,0-1.4-2.221l-2.315-1.1"
+                                            transform="translate(-873.041 -242.214)" fill="#f1f3f8" stroke="#f1f3f8"
+                                            stroke-width="1"></path>
+                                        <path id="Path_8422" data-name="Path 8422"
+                                            d="M895.7,212.145c0,2.289-1.856,4.974-4.145,4.974s-4.145-2.685-4.145-4.974a4.145,4.145,0,0,1,8.289,0Z"
+                                            transform="translate(-884.291 -208)" fill="#f1f3f8" stroke="#f1f3f8"
+                                            stroke-width="1"></path>
+                                        <line id="Line_119" data-name="Line 119" y1="1.783"
+                                            transform="translate(3.541 13.178)" fill="none" stroke="#f1f3f8"
+                                            stroke-width="1"></line>
+                                        <line id="Line_120" data-name="Line 120" y1="1.783"
+                                            transform="translate(10.978 13.178)" fill="none" stroke="#f1f3f8"
+                                            stroke-width="1"></line>
+                                    </g>
+                                </svg>
+                                <p [ngStyle]="{'color': '#f1f3f8'}">Account</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
