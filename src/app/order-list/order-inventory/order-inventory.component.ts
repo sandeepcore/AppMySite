@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-order-inventory',
@@ -13,7 +15,10 @@ export class OrderInventoryComponent implements OnInit {
     iColAll: any[];
     iCols1: any;
     iColsAll: any[]; 
- 
+    emailFormControl = new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]);
   constructor() { }
 
   ngOnInit() {
@@ -45,4 +50,6 @@ export class OrderInventoryComponent implements OnInit {
   } )
   }
 
+
+  
 }

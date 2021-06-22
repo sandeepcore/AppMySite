@@ -12,36 +12,18 @@
         (click)="rowUrl(menuItem)"
         *ngIf="selectedOption != 'Archived'"
     >
-        <span>URL</span>
+        <span>Edit Order</span>
     </button>
-    <button
-        mat-menu-item
-        (click)="rowNotes(menuItem)"
-        *ngIf="selectedOption != 'Archived' && showTagNotes"
-    >
-        <span>Notes</span>
-    </button>
-    <button
-        mat-menu-item
-        (click)="rowTags(menuItem)"
-        *ngIf="selectedOption != 'Archived' && showTagNotes"
-    >
-        <span>Tags</span>
-    </button>
+    
+  
     <button
         mat-menu-item
         *ngIf="selectedOption == 'Active'"
         (click)="rowArchive(menuItem)"
     >
-        <span>Archive</span>
+        <span>Delete</span>
     </button>
-    <button
-        mat-menu-item
-        *ngIf="selectedOption == 'Archived'"
-        (click)="rowRestore(menuItem)"
-    >
-        <span>Restore</span>
-    </button>
+    
 </mat-menu>
 
 <div class="">

@@ -1,0 +1,37 @@
+@import '../../scss/theme.scss';
+
+section.inventory {
+    margin: 0px -30px;
+    header.inv_hdr {
+        display: flex;
+        padding: 10px 15px;
+        justify-content: space-between;
+        background: #3064f9;
+        color: #fff;
+        border-radius: 4px 4px 0px 0px;
+        i.material-icons {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        h4 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px 15px;
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 0.9px;
+            text-transform: capitalize;
+
+        }
+    }
+}
+h4{
+    &.modal-title{
+        font-size: 20px;
+    margin: 0px;
+    color: #3f51b5;
+    font-weight: 600;
+    }
+}

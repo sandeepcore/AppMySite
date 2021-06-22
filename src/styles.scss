@@ -837,4 +837,10 @@ div.mrt-min {
             width: 25% !important;
         }
     }
-    
+    .card{
+        border:none !important;
+    }
+    label.mat-form-field-label {
+        font-size: 14px;
+        font-weight: 600;
+    }
