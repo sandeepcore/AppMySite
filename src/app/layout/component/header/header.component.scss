@@ -1,7 +1,10 @@
 @import '../../../scss/theme.scss';
 .logo {
-    width: 175px;
-    margin-top: 6px;
+    width: 200px;
+    margin-top: 0px;
+    svg{
+        margin-left: -60px;
+    }
 }
 .getstartedhead{
     align-items: center;
