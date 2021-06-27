@@ -1,7 +1,7 @@
 <div class="app_icon">
   <div class="d-md-flex d-none align-items-center">
     <div class="app_heading">
-      <h2>{{appName}}</h2>
+      <h2>{{selectedApp.Appname}}</h2>
       <p class="pb-0 mb-0">Version 1</p>
     </div>
   </div>
@@ -12,7 +12,7 @@
   </div>
 </div>
 <div class="leftscroll cus_scrl">
-  <div class="d-flex align-items-center common-height setting" style="margin-bottom: 10px;">
+  <div class="d-flex align-items-center common-height setting" style="margin-bottom: 10px;" [routerLink]="'/'">
     <div class="web_logo"><svg width="36" height="35.999" viewBox="0 0 36 35.999">
         <g id="Group_2933" data-name="Group 2933" transform="translate(-20 -170)">
           <g id="Component_48_1" data-name="Component 48 – 1" transform="translate(20 170)">
@@ -73,7 +73,7 @@
           </li>
         </ul>
 
-        <ul class="side-list" routerLinkActive="act">
+        <!-- <ul class="side-list" routerLinkActive="act">
           <li matRipple>
             <div class="item" >
               <span class="categ">Login & Sign Up </span>
@@ -86,7 +86,7 @@
               <span class="categ">Color Theme </span>
             </div>
           </li>
-        </ul>
+        </ul> -->
         <ul class="side-list" routerLinkActive="act">
           <li [routerLink]="'/appearance/homeScreen'" matRipple>
             <div class="item" >

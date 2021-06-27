@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+
+<section>
+    
+    <div *ngFor="let app of appList">
+        <button (click)="selectedAppEvent(app)">{{app.Appname}}</button>
+    </div>
+</section>
+
+<button (click)="addApp()">Add App</button>
+
+<app-add-app *ngIf="isAddApp" (emitClose)="isAddApp=false"></app-add-app>

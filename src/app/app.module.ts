@@ -11,6 +11,8 @@ import { MainareaModule } from './mainarea/mainarea.module';
 import { LoginModule } from './login/login.module';
 import { StepModule } from './step/step.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpInterceptorProviders } from './http-interceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MainareaModule,
     LoginModule,
     StepModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
     
   ],
   providers: [
+    HttpInterceptorProviders
   ],
   exports: [
   ],

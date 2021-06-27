@@ -17,10 +17,14 @@ export class LoginFormComponent implements OnInit {
   }
 
   loginUser(){
-    let obj={"userName":this.userName,"password":this.password};
+    let obj={"email":this.userName,"password":this.password};
     this.loginService.authorizeUser(obj).subscribe(v=>{
-       if(v) this.loginService.setIsLoggedIn(true);
-       this.router.navigate(['/']);
+       if(v) {
+         localStorage.setItem("token",v.token);
+         this.loginService.setIsLoggedIn(true);
+         this.router.navigate(['/']); 
+        }
+       
     })
   }
 }

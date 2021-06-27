@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppModel } from 'src/app/dashboard/Model/AppModel';
+import { AppService } from 'src/app/dashboard/service/app.service';
 //import { LoginService } from 'src/app/login-form/login.service';
 
 
@@ -9,12 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  // loginUser:UserModel=new UserModel();
-  // constructor(private loginService:LoginService) {
-  //   this.loginUser=loginService.getUserDetails();
-  //  }
+  selectedApp: AppModel = new AppModel();
   clickFlag: boolean;
-  appName:string='abc';
+
+  constructor(private appService: AppService) {
+    this.selectedApp = appService.selectedApp;
+  }
   ngOnInit(): void {
   }
   classClick() {

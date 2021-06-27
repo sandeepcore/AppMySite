@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { SpinnerService } from 'src/app/spinner/spinner.service';
+import { environment } from 'src/environments/environment';
+import { map } from 'rxjs/operators';
+import { UserRegister } from '../login/model/UserRegister';
 
 
 @Injectable({
@@ -13,7 +16,8 @@ export class LoginService {
   baseUrl:string='';
   private loggedIn = new BehaviorSubject<boolean>(false); // {1}
   private loggedInValue:boolean = false; // {1}
-  constructor(private http:HttpClient,private router:Router,private spinner:SpinnerService) { 
+  constructor(private http:HttpClient,private router:Router) { 
+    this.baseUrl=environment.apiUrl+"/users";
   }
 
   get isLoggedIn() {
@@ -28,13 +32,18 @@ export class LoginService {
     this.loggedInValue=value;
     this.loggedIn.next(value);
   }
-  authorizeUser(obj:any):Observable<boolean>{
-    // this.baseUrl=;
-    // return this.http.post(this.baseUrl,obj).pipe(map(res=>res as JwtResponse|any));
-   if(obj.userName=='test@abc.com' && obj.password=="test"){
+  authorizeUser(obj:any):Observable<any>{
+    const url=this.baseUrl+"/login"
+    // return this.http.post(url,obj).pipe(map(res=>res as any));
+   if(obj.email=='test@abc.com' && obj.password=="test"){
      return of(true);
    }
    return of(false);
+  }
+
+  registerUser(obj:UserRegister):Observable<boolean>{
+    const url=this.baseUrl+"/signup"
+    return this.http.post(url,obj).pipe(map(res=>res as any));
   }
 
   logoutUser(){

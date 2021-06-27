@@ -103,8 +103,8 @@
                                 <div class="frm_style full">
                                     <h4 class="lbl_nm">Header Text (optional)<i class="material-icons tt">help_outline</i></h4>
                                     <div class="form-group">
-                                        <input type="text" class="form-control text_inp " maxlength="15" name="headerText"
-                                            [(ngModel)]="headerText" />
+                                        <input type="text" class="form-control text_inp " maxlength="15" name="dashboardHeaderText"
+                                            [(ngModel)]="dashboardHeaderText" />
                                     </div>
             
                                 </div>
@@ -170,7 +170,7 @@
                                 <div class="frm_style full">
                                     <h4 class="lbl_nm">Align <i class="material-icons tt">help_outline</i></h4>
             
-                                    <mat-button-toggle-group #group="matButtonToggleGroup" name="contentJustify" [(ngModel)]="contentJustify">
+                                    <mat-button-toggle-group #group="matButtonToggleGroup" name="bannerAllign" [(ngModel)]="bannerAllign">
                                         <mat-button-toggle value="left" aria-label="Text align left">
                                           <mat-icon>format_align_left</mat-icon>
                                         </mat-button-toggle>
@@ -449,7 +449,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <p [ngStyle]="{'color':'#fff'}">{{headerText}}</p>
+                                    <p [ngStyle]="{'color':'#fff'}">{{dashboardHeaderText}}</p>
                                 </div>
                                 <div class="menu-icon d-flex align-items-center justify-content-between">
                                     <div class="pr-2"><svg width="13" height="14" viewBox="0 0 13 14">
@@ -498,7 +498,7 @@
                         </div>
                         <div class="sectionmove" style="margin-top: 63px;" >
                             <div class="mainbanner banner1 d-flex align-items-center mt-0" *ngIf="isBanner"
-                                [ngStyle]="{'background': bannerColour, 'justify-content': contentJustify}">
+                                [ngStyle]="{'background': bannerColour, 'justify-content': bannerAllign}">
                                 <p [ngStyle]="{'font-size': bannerSize, 'color': 'rgb(255, 255, 255)'}">{{bannerText}}</p>
                             </div>
                             <div class="categoriesset categories1 category-class-four  pt-md-3 pl-md-1" *ngIf="isProduct">

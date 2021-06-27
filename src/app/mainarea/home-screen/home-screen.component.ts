@@ -13,7 +13,7 @@ export class HomeScreenComponent implements OnInit {
   fontSize:string='14px';
   appText:string='abc';
   appName:string='abc';
-  headerText:string='abc';
+  dashboardHeaderText:string='abc';
   
     //section
     sectionColour:string='#fff';
@@ -27,7 +27,7 @@ export class HomeScreenComponent implements OnInit {
   bannerColour:string='#444';
   bannerSize:string='14px';
   bannerFamily:string='Arial';
-  contentJustify:string='center';
+  bannerAllign:string='center';
 
   //product
   isProduct:boolean=true;

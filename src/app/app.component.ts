@@ -1,5 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { AppService } from './dashboard/service/app.service';
 import { LoginService } from './service/login.service';
 
 @Component({
@@ -9,8 +11,10 @@ import { LoginService } from './service/login.service';
 })
 export class AppComponent {
   title = 'AppMySite';
-  islogin$:Observable<boolean>=new BehaviorSubject<boolean>(false);
-  constructor(private loginService:LoginService){
-    this.islogin$=loginService.isLoggedIn;
+  isShowSideBar$: Observable<boolean> = new BehaviorSubject<boolean>(false);
+  islogin$: Observable<boolean> = new BehaviorSubject<boolean>(false);
+  constructor(private loginService: LoginService, private router: Router, private appService: AppService) {
+    this.islogin$ = loginService.isLoggedIn;
+    this.isShowSideBar$=this.appService.IsShowSideBar;
   }
 }
