@@ -22,8 +22,9 @@ export class SignUpComponent implements OnInit {
     let obj:UserRegister={email:this.email,password:this.password,orgId:this.orgId};
     this.loginService.registerUser(obj).subscribe(v=>{
       if(v) {
+        localStorage.setItem("token",v.token);
         this.loginService.setIsLoggedIn(true);
-        this.router.navigate(['/login']); 
+        this.router.navigate(['/']); 
        }
     });
   }

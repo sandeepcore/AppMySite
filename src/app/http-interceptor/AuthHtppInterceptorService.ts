@@ -11,7 +11,8 @@ export class AuthHtppInterceptorService implements HttpInterceptor {
         if (!req.headers.has('meta') && localStorage.getItem('token')) {
           req = req.clone({
             setHeaders: {
-              Authorization: "Bearer "+ localStorage.getItem('token')
+              Authorization: "Bearer "+ localStorage.getItem('token'),
+              'Access-Control-Allow-Origin':'http://localhost:4200'
             }
           })
         }

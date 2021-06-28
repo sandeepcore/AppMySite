@@ -18,11 +18,11 @@ export class DashboardComponent implements OnInit,OnDestroy {
    }
 
   ngOnInit() {
-    // this.appService.getAllApps().subscribe(v=>{
-        // this.appList=v;
-        let obj:AppModel={Appname:"testApp",orgId:"abc",websiteurl:"www.abc.com"}
-        this.appList=[obj];
-    // })
+    this.appService.getAllApps().subscribe(v=>{
+        this.appList=v;
+        // let obj:AppModel={Appname:"testApp",orgId:"abc",websiteurl:"www.abc.com"}
+        // this.appList=[obj];
+    })
   }
 
   addApp(){

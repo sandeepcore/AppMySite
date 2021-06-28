@@ -6,6 +6,7 @@ import { SpinnerService } from 'src/app/spinner/spinner.service';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { UserRegister } from '../login/model/UserRegister';
+import { JwtResponse } from '../login/model/JwtResponse';
 
 
 @Injectable({
@@ -17,7 +18,7 @@ export class LoginService {
   private loggedIn = new BehaviorSubject<boolean>(false); // {1}
   private loggedInValue:boolean = false; // {1}
   constructor(private http:HttpClient,private router:Router) { 
-    this.baseUrl=environment.apiUrl+"/users";
+    this.baseUrl=environment.apiUrl+"/buildapp";
   }
 
   get isLoggedIn() {
@@ -32,18 +33,18 @@ export class LoginService {
     this.loggedInValue=value;
     this.loggedIn.next(value);
   }
-  authorizeUser(obj:any):Observable<any>{
+  authorizeUser(obj:any):Observable<JwtResponse>{
     const url=this.baseUrl+"/login"
-    // return this.http.post(url,obj).pipe(map(res=>res as any));
-   if(obj.email=='test@abc.com' && obj.password=="test"){
-     return of(true);
-   }
-   return of(false);
+    return this.http.post(url,obj).pipe(map(res=>res as JwtResponse));
+  //  if(obj.email=='test@abc.com' && obj.password=="test"){
+  //    return of(true);
+  //  }
+  //  return of(false);
   }
 
-  registerUser(obj:UserRegister):Observable<boolean>{
+  registerUser(obj:UserRegister):Observable<JwtResponse>{
     const url=this.baseUrl+"/signup"
-    return this.http.post(url,obj).pipe(map(res=>res as any));
+    return this.http.post(url,obj).pipe(map(res=>res as JwtResponse));
   }
 
   logoutUser(){

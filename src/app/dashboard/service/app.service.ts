@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-// import { AppAttributeModel } from 'src/app/mainarea/model/AppAttributeModel';
+import { AppAttributeModel } from 'src/app/mainarea/model/AppAttributeModel';
 import { environment } from 'src/environments/environment';
 import { AppModel } from '../Model/AppModel';
 
@@ -15,7 +15,7 @@ export class AppService {
   private isShowSideBar = new BehaviorSubject<boolean>(true);
   private appData:AppModel=new AppModel();
   constructor(private http:HttpClient) { 
-    this.baseUrl=environment.apiUrl;
+    this.baseUrl=environment.apiUrl+"/buildapp";
   }
   get IsShowSideBar() {
     return this.isShowSideBar.asObservable(); // {2}
@@ -34,24 +34,24 @@ export class AppService {
     this.appData=obj;
   }
 
-  addApp(obj:AppModel){
+  addApp(obj:AppModel):Observable<AppModel>{
     const url=this.baseUrl+"/addapp";
-    return this.http.post(url,obj).pipe(map(res=>res as any));
+    return this.http.post(url,obj).pipe(map(res=>res as AppModel));
   }
 
-  getAppById(appId:string){
+  getAppById(appId:string):Observable<AppModel>{
     const url=this.baseUrl+"/getApp/"+appId
-    return this.http.get(url).pipe(map(res=>res as any));
+    return this.http.get(url).pipe(map(res=>res as AppModel));
   }
 
-  getAllApps(){
+  getAllApps():Observable<AppModel[]>{
     const url=this.baseUrl+"/getapps";
-    return this.http.get(url).pipe(map(res=>res as any));
+    return this.http.get(url).pipe(map(res=>res as AppModel[]));
   }
 
-  addAppAttribute(obj:any){
+  addAppAttribute(obj:AppAttributeModel){
     const url=this.baseUrl+"/addappattributes";
-    return this.http.post(url,obj).pipe(map(res=>res as any));
+    return this.http.post(url,obj).pipe(map(res=>res as AppModel[]));
   }
 
   uploadIcon(appId:string,obj:FormData){

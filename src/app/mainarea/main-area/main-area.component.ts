@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppService } from 'src/app/dashboard/service/app.service';
+import { AppIconAttributeModel } from '../model/AppAttributeModel';
 import { MainAperanceAppInfoService } from '../service/main-aperance-app-info.service';
 
 @Component({
@@ -17,14 +20,25 @@ export class MainAreaComponent implements OnInit {
   
   sizeList:string[]=['13px','14px','15px','16px'];
   fontFamilyList:string[]=['Arial','Arial Black','Poppins SemiBold','Sans Serif','Times New Roman','Verdana'];
-  constructor(private appService:MainAperanceAppInfoService) { }
+  constructor(private mainAppService:MainAperanceAppInfoService,private appService:AppService,private router:Router) {
+    this.appName=appService.selectedApp.Appname;  
+  }
 
   ngOnInit() {
+    let obj =this.mainAppService.getDataMainArea();
+    if(obj){
+      this.backgroundColour=obj.backgroundColour;
+      this.fontColour=obj.fontColour;
+      this.fontFamily=obj.fontFamily;
+      this.fontSize=obj.fontSize;
+      this.appText=obj.appText;
+    }
   }
 
   saveData(){
-    let obj={backgroundColour:this.backgroundColour,fontColour:this.fontColour,fontFamily:this.fontFamily,fontSize:this.fontSize,appText:this.appText};
-    this.appService.setData(obj);
+    let obj:AppIconAttributeModel={backgroundColour:this.backgroundColour,fontColour:this.fontColour,fontFamily:this.fontFamily,fontSize:this.fontSize,appText:this.appText};
+    this.mainAppService.setDataMainArea(obj);
+    this.router.navigate(['/appearance/launch']);
   }
 
 }
