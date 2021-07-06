@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from 'src/app/dashboard/service/app.service';
+// tslint:disable-next-line:max-line-length
 import { AppAttributeModel, HomeScreenAttributeModel, MainBannerHomeScreenModel, ProductHomeScreenModel, SectionHomeScreenModel } from '../model/AppAttributeModel';
 import { MainAperanceAppInfoService } from '../service/main-aperance-app-info.service';
 
