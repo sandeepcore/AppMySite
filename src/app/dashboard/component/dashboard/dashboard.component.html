@@ -1,11 +1,115 @@
-
-<section>
-    
-    <div *ngFor="let app of appList">
-        <button (click)="selectedAppEvent(app)">{{app.Appname}}</button>
+<div class="d-md-flex justify-content-between align-items-center mb-md-3">
+  <h1 class="my-app-heading ml-3 d-none d-md-block">My Apps</h1>
+  <div class="d-flex justify-content-end align-items-center">
+    <div class="my-apps-search d-none d-md-flex">
+      <form
+        class="form-group d-flex justify-content-between align-items-center"
+      >
+        <input
+          type="text"
+          placeholder="Search"
+          class="pl-1 search-my-app"
+          value=""
+        /><button type="submit">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABHNCSVQICAgIfAhkiAAAAjVJREFUOI2d1L9LG2EYB/An7xtyufNqfnCpMVgqIk4tnIsdCgYKXTqUUKXFdgr9A5olulQ5EIo1S4cO3a5DTZY2ZCspgjZD4iCYgsFYwRIViXUwmtC79346JT1O0yb5bu/D+37ueeF9zgG2xATR68LoVR9NhXVNv0sUjWNoqqjqekFRlW/L89GM/UwzDutidlGMOJEzOTE+hkZHglRowA8+Lwv7lSocV89gY7PcuGhI+bqsPHsnRGttsddvPq14+pnHz6fCbCjob/dxyK5tybn8tqFq+v2EEC1e2TC7KEYS79N1s8NslyvmwtLKnt3BMUH0Uk5n/uWLh303WLptR9bc5Dzwq3Li5u896v+++mW1WUcuB4pNjI+hf13tusxMTTKEKHPWGmIZKjw6EqS6kgCAdrvA72PP44LItzBN1++EBrrrqpmhQQ5jhP9iRNE4n5ftCQtwHtYwzeEWxjDUj/1KtSdsZ++whpCx3sI0VS8cV896wn6f1mhZh9ZbQ0RTshub5Ua3UGn3ADDGR9ZJQMvz0Uy9IReya1typ5AkK5BK54gkkWlrHQEAXMjkaa5QMku7Bx1BHz5+/QOAkvZxas1mXBB5mqY+3x4KDM48mWRot+vaq6XSOQKAkqqmPTANI2IFHfYDC29TS4Qoc34fe34rxOEA52F3fh7WTk5rNMb4SJLIdEKIFuOCyDsQyljBK5i1U4wwb5jmMELGuqxD0f7bsYNtsU7TBBXD4P+/u4PEBNELAHAJirgZ23tDs/4AAAAASUVORK5CYII="
+            alt="search"
+            class="img-fluid"
+          />
+        </button>
+      </form>
     </div>
+  </div>
+</div>
+<section class="d-flex flex-wrap align-items-center app_store">
+  <div class="app_list">
+    <div
+      (click)="addApp()"
+      class="
+        inside_image
+        dash-border
+        d-flex
+        flex-wrap
+        align-items-center
+        justify-content-center
+      "
+    >
+      <div class="first-app">
+        <p class="d-md-none creatapps">Create New App</p>
+        <img
+          src="data:image/png;base64,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"
+          alt="createapp"
+          class="d-none d-md-block"
+        />
+        <h4 class="app-grey-name text-center d-none d-md-block">
+          Create New App
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="app_list">
+    <button  class="add_app">Add App</button>
+  </div> -->
+
+  <div class="app_list" *ngFor="let app of appList">
+    <div class="boxlink">
+      <div class="inside_image">
+        <div class="topsectionapp d-none d-md-block">
+          <div class="d-flex justify-content-between">
+            <h2>{{ app.Appname }}</h2>
+            <p
+              class="viewstatus"
+              style="
+                color: rgb(200, 206, 219);
+                border: 1px solid rgb(200, 206, 219);
+              "
+            >
+              Free
+            </p>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <h3 style="color: rgb(119, 130, 161)">Plan: Preview</h3>
+            <p>09 Jun,2021</p>
+          </div>
+        </div>
+        <div class="onhoverparent d-none d-md-block">
+          <div
+            class="appimg"
+            style="
+              background:#dbdfec;
+              width: auto;
+              height: 300px;
+            "
+          >    
+           {{ app.Appname | slice:0:3 | uppercase}}
+           </div>
+          <div class="onhoverdata">
+            <div class="hoverdashboard"><p (click)="selectedAppEvent(app)">Dashboard</p></div>
+          </div>
+          <div class="connectivity">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAlhJREFUSEutVj0sQ1EU/t6KhIlRq7ufTSwWZhpjJWoTEwZGxERSlkZsNDFK1NSBgQWbv9nP2o3EXud799729d0fTTjJzXvtOfd85+c7974IAWk0GhlRz8ialdUna1SbP8rzU1ZV1kUURR8+N5FLoR1viq4YCiChO5H3bReQBSDOGe2xjrhD/7EZM1oUEGbVlDYAcc6I6fwvQhBmFEsT4J+cG795k0kMoGv+4CzL7S0wMdHKqFQCuruBpaVQlizXGHtiAJjSgrXj+RnY2BAeCZGMw+VlYGAA2CQHglIRgGKko3/3mh4dCREvgN1dYHgYICgzyOV+A6A+S4AVeTkIWqfLRGMCvbyobKamfNtXCXAt2knL4vQU6OmRESNrU1Kvy4QUW39OTwNray6QGwJ8iGawTZt0UKu5o2MGQ0PA3R2wvw8UCsD8fNr2kQANb3m+v1UWlNdXf93X14G3N+DszHIVBqA5syGT+OzvByoVOx5DhHLZCsJdoqQLRsfo83lVkuRM0I4E2NkRvmSBw8M0+JO/yYYpjJ4NZCNNqe7vgfFxRd/LS+V8b69VzhZM3GQ/TTm1jJBlMb2gQzbViLu5RhvTNCO/3IM2N6ciTx8LLBlZxHJxDvySDR8VPBYiMeEUmwzOzztxTEh1VPBNZ8FbqrctGNNAHg3MhEwi782x4Y/8S1SjzcNOg3BkJbyU0Cmn+uoK6OpSbLIHKr2r/bg22n+6E9wXTgKEmZxY5Qq1UulYlmLwykyAkFlbsuw7wg3E8d7q6NJP7tfNZ0bms2VE65/kaT5bqqHPlh+pvuo4fi5VtwAAAABJRU5ErkJggg=="
+              title="Disconnected"
+              alt="notconnect"
+              class="d-none d-md-block"
+            />
+          </div>
+          <div class="cart-my-app">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAkxJREFUSEtjZMAD/v//rwCU9gfiACAWAGIDqPILQPoDEG8A4o2MjIwPcBnDiE0CanA9UC4BnwOQ5BYA2Y3YLMKwAGg4yLXzoS4m0nywMpCPEoGWgHwFBygWAA0HuRhkOCUAZAnIR2AAt4BKhsPMDYT5BGwBNMzPkxEsuHwKCi5DUJzALAB5KR6mOqX7NwMj1G99WawMvFxkhdhCoAUJjFDX30c2Ysamv2DuzM1/GWaXsDKYqGNNbMTYqgiyoACosh+batu8XwwacoxAC5iIMYzBwYCJQV0WxTGFIAsOAHXbYzOhcOofhgMX/hFlOEjR1nY2BikRFOUHQRY8AArJYzMFFFSgYCIGqMkwMqysZ0VXegFkwX9cBpy5+Z8htec3MeYzRDkzM5RGMGOoxWsBSLVh6i+iLFhRx4oe/mB9eIMIpCC88TfDrSc4PQk2hIeTgeHwJDZsDrmIN5JBOrpX/GVYthd/PPhaMjE0JbFgswAcyTiTKUjHpqP/GOoX/MEbTH1ZLAyOhliTMjiZKgB1o2Q0ogKdOEWKWIsKdL0gX2w+/pch3ZcFnqthYr6WzAx+1lhdDykqQIZBfQGqpfixOcyr/BfD83cM4Jzanw0Ja1B5dfbWfwZjNUaGOaUY6f8jUIkBvLCDWgKqaNZjswDk2k3H/gLTOQs8Ke4//49h6Z6/DBl+CF8h6UUtrmESVKoTsFc4SJaAfLIAV3DhiVtQsCTgrTKRLAGlrAYghtcRBBLNQpB6oip9ZIOgkQ/yEazZog+VvwikYc2WDfiaLQAld9Q4PgoNcQAAAABJRU5ErkJggg=="
+              title="WooCommerce"
+              alt="connect"
+              class="d-none d-md-block"
+            />
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
 </section>
 
-<button (click)="addApp()">Add App</button>
-
-<app-add-app *ngIf="isAddApp" (emitClose)="isAddApp=false"></app-add-app>
+<app-add-app *ngIf="isAddApp" (emitClose)="isAddApp = false"></app-add-app>

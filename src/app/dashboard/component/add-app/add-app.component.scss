@@ -1,0 +1,121 @@
+                @import '../dashboard/dashboard.component.scss';
+                .forstrip {
+                    padding-top: 80px;
+                }
+                
+                #clockid {
+                    word-break: break-all;
+                }
+                
+                .welcome h1 {
+                    font-family: "Proxima-Regular";
+                    font-size: 30px;
+                    color: #1b2952;
+                    margin-bottom: 0;
+                    padding-top: 25px;
+                    padding-bottom: 10px;
+                    font-weight: 500;
+                    line-height: 1.2;
+                }
+                
+                .form-group {
+                    margin-bottom: 1.5rem;
+                    position: relative;
+                    input {
+                        height: 55px;
+                        font-family: "Proxima-Regular";
+                        border: 1px solid #c8cedb;
+                        outline: none!important;
+                        color: #1b2952;
+                    }
+                }
+                
+                .welcome .form-control {
+                    padding: .375rem 1.25rem;
+                }
+                
+                .store-url {
+                    p {
+                        margin-bottom: 5px;
+                        color: #1b2952;
+                        font-size: 16px;
+                    }
+                    .input-btn {
+                        input {
+                            border-bottom-left-radius: 0;
+                            border-top-left-radius: 0;
+                            border-bottom-right-radius: 4px;
+                            border-top-right-radius: 4px;
+                        }
+                    }
+                }
+                
+                .spinntop {
+                    position: relative;
+                }
+                
+                .http {
+                    width: 117px;
+                }
+                
+                .form-group .http select {
+                    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAABHNCSVQICAgIfAhkiAAAAJRJREFUKJGNzrENwjAQheH3HAnajJIN8CTgbECakCqC0MAUNizACFmJlsaXKpIFvpBr775fx254OkHc3XtXY8Ucz77cGr5ilMZEEQvQnYbg18ANOQK0hSkqAkB7eQQSB0CC9sEMSVYE61u/D5yXS4EcBACmR7mABn/wd+ATpdFgFqcBEXmTLHNQxWlAg3+nu3q7tJ8Ae0FQXPUlGl8AAAAASUVORK5CYII=);
+                    background-repeat: no-repeat;
+                    background-position: 90%;
+                    -webkit-appearance: none;
+                    border: 1px solid #bcc7e6;
+                    border-right: 0;
+                    border-bottom-left-radius: 4px;
+                    border-top-left-radius: 4px;
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                    height: 55px;
+                    width: 100%;
+                    outline: none!important;
+                    padding-left: 1.25rem!important;
+                    color: #1b2952;
+                }
+                
+                .form-group select {
+                    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAABHNCSVQICAgIfAhkiAAAAGhJREFUGJV9j1ERgDAMQxNkrAaKi1mgBpgzQAEWkIECbIQP7jhuMPKZy0sbmEdJHhN+9Mx0gjKJJmQeBcQEiLeZfJitD9WQeZTLH+ZXUw21wqwhkiOkDWSWtBz7Wv72PS59vNGSeTRbT5ZuKhzVLEEOAAAAAElFTkSuQmCC);
+                    background-repeat: no-repeat;
+                    background-position: 96%;
+                    font-family: "Proxima-Regular";
+                    border: 1px solid #bcc7e6;
+                    height: 55px;
+                    border-radius: .25rem;
+                    -webkit-appearance: none;
+                    width: 100%;
+                    outline: none!important;
+                    padding-left: 1.25rem!important;
+                    color: #1b2952;
+                }
+                
+                .typeselect {
+                    padding-right: 26px;
+                }
+                
+                .welcome .sendbtn {
+                    width: 40%;
+                }
+                
+                .backbtn,
+                .sendbtn {
+                    border-radius: 4px;
+                    line-height: 60px;
+                    border: 1px solid #3064f9;
+                    font-size: 16px;
+                    font-family: "Proxima-Bold";
+                    outline: none!important;
+                    text-decoration: none!important;
+                    display: block;
+                    text-transform: uppercase;
+                    text-align: center;
+                    transition: all .5s ease;
+                    cursor: pointer;
+                }
+                
+                .sendbtn {
+                    color: #fff;
+                    height: 60px!important;
+                }

@@ -1,1 +1,114 @@
-<p>add-app works!</p>
+<section class="forstrip">
+  <div class="container">
+    <div
+      class="
+        d-lg-flex d-flex
+        ipad-block
+        justify-content-between
+        align-items-center
+        pb-5
+      "
+    >
+      <div class="welcome w-md-50 w-100 mr-md-5">
+        <h1 class="d-md-block" id="clockid">Add New App</h1>
+        <div class="store-url">
+          <form>
+            <div class="form-group">
+              <p>Your Website</p>
+              <div
+                class="
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  input-btn
+                  spinntop
+                "
+              >
+                <div class="http">
+                  <select name="websiteLocator">
+                    <option value="1">https://</option>
+                    <option value="0">http://</option>
+                  </select>
+                </div>
+                <input
+                  class="w-100 form-control"
+                  type="text"
+                  name="websiteUrl"
+                  required=""
+                  placeholder="example.com"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <p class="pt-md-2">CMS Platform</p>
+              <select required="" class="typeselect">
+                <option value="1">Wordpress</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <p class="pt-md-2">What type of website is it?</p>
+              <select required="" class="typeselect">
+                <option value="">Select</option>
+                <option value="1">Ecommerce</option>
+                <option value="2">Ecommerce with blogs</option>
+                <option value="3">Blogs with Ecommerce</option>
+                <option value="4">Blog</option>
+                <option value="5">CMS pages</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <p class="pt-md-2">Give your app a name</p>
+              <input
+                type="text"
+                name="websiteName"
+                required=""
+                class="form-control"
+                maxlength="30"
+                value=""
+              />
+              <div class="smallgrey pt-md-2">
+                <p>This is usually your business or brand name.</p>
+              </div>
+            </div>
+            <div class="pt-md-2">
+              <button
+                type="submit"
+                class="sendbtn letsstart mr-md-5"
+                style="
+                  background: rgb(48, 100, 249);
+                  border-color: rgb(48, 100, 249);
+                "
+              >
+                <div
+                  class="
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    h-100
+                    w-100
+                  "
+                >
+                  <div class="d-none">
+                    <img
+                      src="data:image/gif;base64,R0lGODlhGAAYAPf/AEl2+jts+RtU+EJy+urw/nOW+1yF+v7+/wxJ+OTq/s3a/tbg/mCI+2aM+1iC+n2e+46q/FJ++sHR/Xye+2uQ++Do/pu0/BhS+Hyc+7nK/azB/fL2/xxV+JGs/HaY+8jW/SRb+ebs/rTH/YCg+yNa+Ziy/B1W+DZp+R5W+FaA+n2d++Lp/tzl/paw/Nvk/vX4/6O5/HCU+8TS/V2G+r3N/T5u+XSX+xVQ+Km+/d7m/lR/+oKi+522/A5L+Ke8/VuE+j9v+hJN+GqP+77P/RlT+HKV+2OK+7XI/UR0+p62/E15+kZ0+R9X+Iim/IGh+0t4+mGJ+2CH+xRP+AtI+Dlq+iVc+S5i+She+S9j+Sxh+S9k+SZc+TRn+W2R+yde+W6S+2SL+l+H+jhq+Stg+TFk+S5j+TJm+Sle+S1i+UZ1+jVo+TVn+VB8+nma+2yQ+1+H+2mO+0Z0+lB7+nub+xNO+Hmb+3qc+2mO+jNm+Slf+RZQ+BBM+A1K+CFZ+UFx+iJZ+RFN+A9M+BZR+Orv/hBN+Cpf+env/kBw+kd1+iZd+Zy1/Ozx/ypg+RJO+Pj6/9Hd/jJl+RNP+E57+m6T++Pq/m+T+/n6/22S+097+myR+xFM+CBY+cfV/cXU/UFw+nuc+8bU/U56+i1h+TNn+ezw/9Ld/l6G+hdS+BdR+ERz+mSL+3qb+yBY+Oju/unu/iFZ+FF9+k16+py0/J21/Dpr+aS7/Nrj/kJx+mSK+j9w+tDc/fv8/yhf+VJ9+jlr+ezx/sbV/dDc/kJx+Yel+0d2+miO+2eN+1F8+kV0+jlq+WWL+2SK+yth+dPe/ouo/CBZ+SFY+V2F+zxt+T1u+Uh1+srX/Ul3+sjV/dDd/jRm+WmP+nCT+1+I+nyd+zBj+eft/jpr+mmP++nv/8bU/oOj+4Sj/Ddp+UNy+qC3/A9L+Hqb/BFO+H+f+ydd+LrL/YKh/CBZ+Clf+FN++neZ+16H+l+G+ixg+V+G+/r7/wlH+Dxt+jFl+Sdd+f///zBk+f///yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM3MDBBNjMwMTgxRDExRUFCRDNDOUE3M0QyOUFCNjFCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM3MDBBNjMxMTgxRDExRUFCRDNDOUE3M0QyOUFCNjFCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzcwMEE2MkUxODFEMTFFQUJEM0M5QTczRDI5QUI2MUIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzcwMEE2MkYxODFEMTFFQUJEM0M5QTczRDI5QUI2MUIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0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"
+                      alt="loader"
+                    />
+                  </div>
+                  <div>BUILD APP</div>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="w-md-50 w-100 ml-md-4 gapforfooter text-center">
+        <img
+          src="https://app.appmysite.com/static/media/createapp.79d9523c.png"
+          alt="Rectangle"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</section>

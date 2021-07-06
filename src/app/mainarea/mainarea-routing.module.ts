@@ -12,7 +12,7 @@ const routes: Routes = [
     {path: 'launch', component: LaunchComponent},
     {path: 'app', component: MainAreaComponent},
 
-   
+
 ];
 
 @NgModule({

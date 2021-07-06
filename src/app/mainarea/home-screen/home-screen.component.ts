@@ -48,7 +48,7 @@ export class HomeScreenComponent implements OnInit {
 
   sizeList: string[] = ['12px', '13px', '14px', '15px'];
   fontFamilyList: string[] = ['Arial', 'Arial Black', 'Poppins SemiBold', 'Sans Serif', 'Times New Roman', 'Verdana'];
-  columnList: string[] = ['1', '2', '3', '4', '5', '6'];
+  columnList: string[] = ['1', '2', '3', '4',  '6'];
   categoryList: string[] = ['1', '2', '3', '4', '5', '6'];
 
   constructor(private mainAppService: MainAperanceAppInfoService, private appService: AppService,private router:Router) {

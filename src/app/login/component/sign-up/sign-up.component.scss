@@ -1,0 +1,31 @@
+@import '../login-form/login-form.component.scss';
+.form-group select {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAABHNCSVQICAgIfAhkiAAAAGhJREFUGJV9j1ERgDAMQxNkrAaKi1mgBpgzQAEWkIECbIQP7jhuMPKZy0sbmEdJHhN+9Mx0gjKJJmQeBcQEiLeZfJitD9WQeZTLH+ZXUw21wqwhkiOkDWSWtBz7Wv72PS59vNGSeTRbT5ZuKhzVLEEOAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 96%;
+    font-family: "Proxima-Regular";
+    border: 1px solid #bcc7e6;
+    height: 55px;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none!important;
+    padding-left: 1.25rem!important;
+    color: #1b2952;
+    word-wrap: normal;
+    margin: 0px;
+}
+
+.tc h6 {
+    color: #c8cedb;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+span.link-style {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}

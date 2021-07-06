@@ -23,7 +23,7 @@
         <div class="left_panel" *ngIf="(isShowSideBar$ | async)">
                 <app-side-bar class="left_bar"></app-side-bar>
         </div>
-        <div class="transparent_background " [ngClass]="{'full-sz':(isShowSideBar$ | async)}">
+        <div class="transparent_background " [ngClass]="{'full-sz':!(isShowSideBar$ | async)}">
                 <section class="right_panel">
                 <router-outlet class="pdl-pd"></router-outlet>
         </section>
