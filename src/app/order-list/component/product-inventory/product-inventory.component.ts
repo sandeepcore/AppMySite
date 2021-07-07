@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ProductModel } from '../../model/ProductModel';
+import { ProductService } from '../../service/product.service';
 
 @Component({
   selector: 'app-product-inventory',
@@ -21,26 +22,16 @@ export class ProductInventoryComponent implements OnInit {
     Validators.required,
     Validators.email,
   ]);
-  colorAttributes:string[]=[
-    "black/233,333,333",
-    "red/233,444,333",
-    "brown/233,333,444"
-];
-sizeAttributes:string[]=[
-    "XL",
-    "S",
-    "M",
-    "XXL"
-]
-  constructor() { }
+
+  constructor(private productService:ProductService) { }
 
   ngOnInit() {
     this.iCols = [
       { field: "name", header: "Name", show: true, type: "String" },
-      { field: "username", header: "User Name", show: true, type: "String" },
-      { field: "website", header: "Website", show: true, type: "String" },
-      { field: "phone", header: "Phone", show: true, type: "String" },
-      { field: "email", header: "Email", show: true, type: "String" },      
+      { field: "description", header: "Description", show: true, type: "String" },
+      { field: "price", header: "Price", show: true, type: "String" },
+      { field: "tax", header: "Tax", show: true, type: "String" },
+      { field: "StockQty", header: "Stock Quantity", show: true, type: "String" },      
       { field: "Action", header: "", show: true, type: "String" },
   ];
 
