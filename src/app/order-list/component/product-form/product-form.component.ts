@@ -14,6 +14,17 @@ export class ProductFormComponent implements OnInit {
   @Input() product:ProductModel=new ProductModel();
   text:string='Create';
   id:string="";
+  colorAttributes:string[]=[
+    "black/233,333,333",
+    "red/233,444,333",
+    "brown/233,333,444"
+];
+sizeAttributes:string[]=[
+    "XL",
+    "S",
+    "M",
+    "XXL"
+]
   constructor(private productService:ProductService) {
    }
 
