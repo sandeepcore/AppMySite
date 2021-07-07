@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductModel } from '../../model/ProductModel';
+import { ProductService } from '../../service/product.service';
 
 @Component({
   selector: 'app-product-form',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductFormComponent implements OnInit {
 
-  constructor() { }
+  @Input() isShow:boolean=false;
+  @Input() product:ProductModel=new ProductModel();
+  text:string='Create';
+  id:string="";
+  constructor(private productService:ProductService) {
+   }
 
   ngOnInit() {
+    if(this.product!=null && this.product._id){
+      this.text='Edit';
+    }
   }
 
 }
