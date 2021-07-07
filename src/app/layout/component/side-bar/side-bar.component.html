@@ -130,7 +130,7 @@
       </mat-expansion-panel-header>
       <div class="mat-expansion-panel-body">
         <ul class="side-list"  routerLinkActive="act">
-          <li [routerLink]="'/order'" matRipple>
+          <li [routerLink]="'/product/order'" matRipple>
             <div class="item">
 
               <span class="categ">Order </span>
@@ -138,17 +138,17 @@
           </li>
         </ul>
 
-        <ul class="side-list">
+        <ul class="side-list"  routerLinkActive="act" [routerLink]="'/product/list'">
           <li  matRipple>
-            <div class="item" routerLinkActive="act current">
+            <div class="item">
               <span class="categ">Product</span>
             </div>
           </li>
         </ul>
 
-        <ul class="side-list">
+        <ul class="side-list"  routerLinkActive="act" [routerLink]="'/product/category'">
           <li matRipple>
-            <div class="item" routerLinkActive="act current">
+            <div class="item">
               <span class="categ">Catalogue </span>
             </div>
           </li>
