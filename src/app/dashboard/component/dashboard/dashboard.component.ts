@@ -33,11 +33,19 @@ export class DashboardComponent implements OnInit,OnDestroy {
   selectedAppEvent(obj:AppModel){
    this.appService.getAppById(obj._id).subscribe(v=>{
      console.log(v);
+     this.navigateToAppConfigure(obj);
+   })
+  }
+
+  navigateToAppConfigure(obj:AppModel){
     this.selectedApp=obj;
     this.appService.setSelectedApp(this.selectedApp);
     this.router.navigate(['/appearance/app'])
-   })
-
+  }
+  getSave(event:AppModel){
+    this.appList.push(event);
+    this.isAddApp=true;
+    this.navigateToAppConfigure(event);
   }
   ngOnDestroy(){
     this.appService.setIsShowSideBar(true);

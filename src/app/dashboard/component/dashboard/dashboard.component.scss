@@ -1,0 +1,149 @@
+@import "../../../scss/theme.scss";
+.my-app-heading {
+    color: #1b2952;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.my-apps-search {
+    border: 1px solid #c8cedb;
+    height: 44px;
+    margin-right: 12px;
+    padding-left: 10px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    display: -webkit-flex;
+    display: flex;
+    border-radius: 3px;
+    -webkit-align-items: center;
+    align-items: center;
+    .search-my-app {
+        border: none;
+        height: 18px;
+        background-color: transparent;
+    }
+}
+
+.my-apps-search button {
+    width: 40px;
+    background: none;
+    border: none;
+    height: 100%;
+    margin-top: -2px;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button;
+}
+
+.app_list {
+    margin: 1%;
+    width: 18%;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.inside_image {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 362px;
+    box-shadow: 0 0 12px 0 rgb(84 125 242 / 15%);
+    overflow: hidden;
+    border: 1px dashed #c8cedb!important;
+}
+
+.app-grey-name {
+    font-size: 16px;
+    font-family: "Proxima-Regular";
+    color: #bcc7e6;
+    margin-top: 22px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.topsectionapp {
+    padding: 10px 15px;
+    h2 {
+        color: #1b2952;
+        font-size: 16px;
+        white-space: nowrap;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: calc(100% - 45px);
+    }
+    p {
+        font-size: 12px;
+        margin: 0;
+        text-align: right;
+        &.viewstatus {
+            border-radius: 10px;
+            width: 42px!important;
+            text-align: center!important;
+            height: 18px!important;
+            line-height: 17px!important;
+        }
+    }
+    h3 {
+        font-size: 12px;
+        margin: 0;
+        width: 50%;
+    }
+}
+
+.onhoverparent {
+    position: relative;
+    transition: all .5s ease;
+    overflow: hidden;
+    .onhoverdata {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(27, 41, 82, .7);
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all .5s ease;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .appimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        font-weight: 600;
+        transform: rotate(0deg) scale(1);
+        transition: all .5s;
+    }
+    &:hover {
+        .onhoverdata {
+            opacity: 1;
+        }
+        .appimg {
+            -webkit-transform: rotate( 20deg) scale(1.3);
+            transform: rotate( 20deg) scale(1.3);
+        }
+    }
+}
+
+.hoverdashboard p {
+    background: #3064f9;
+    width: 144px;
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -58,6 +58,28 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     
   ],
   exports: [
+    FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatFormFieldModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTabsModule,
+        MatExpansionModule,
+        MatIconModule,
+        MatDatepickerModule,
+        MatCheckboxModule,
+        MatDialogModule,
+        MatNativeDateModule,
+        MatMenuModule,
+        MatSortModule,
+        DragDropModule,
+        MatToolbarModule,
+        MatTooltipModule,
   ]
 })
 export class CoreModule { }
