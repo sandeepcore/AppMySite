@@ -1,1 +1,17 @@
-<p>product-inventory works!</p>
+<section class="inventory">
+    <header class="inv_hdr">
+        <aside class="lft">
+            <i class="material-icons" data-toggle="modal" (click)="openAddProduct()" data-target="#myModal">add</i> <h4> Product inventory</h4>
+        </aside>
+       
+    
+    </header>
+    <app-table
+    [data]="currentList"
+    [cols]="iCols" 
+    [header]="iCol" 
+    [advSearch]="true" 
+    ></app-table>
+    </section>
+
+    <app-product-form *ngIf="isShowForm" [isShow]="isShowForm" [product]="selectedProduct"></app-product-form>

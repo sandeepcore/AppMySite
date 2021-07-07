@@ -15,7 +15,7 @@ export class AppService {
   private isShowSideBar = new BehaviorSubject<boolean>(true);
   private appData:AppModel=new AppModel();
   constructor(private http:HttpClient) { 
-    this.baseUrl=environment.apiUrl+"/buildapp";
+    this.baseUrl=environment.apiUrl;
   }
   get IsShowSideBar() {
     return this.isShowSideBar.asObservable(); // {2}
@@ -35,32 +35,32 @@ export class AppService {
   }
 
   addApp(obj:AppModel):Observable<AppModel>{
-    const url=this.baseUrl+"/addapp";
+    const url=this.baseUrl+"/buildapp/addapp";
     return this.http.post(url,obj).pipe(map(res=>res as AppModel));
   }
 
-  getAppById(appId:string):Observable<AppModel>{
+  getAppById(appId:string):Observable<AppAttributeModel>{
     const url=this.baseUrl+"/getApp/"+appId
-    return this.http.get(url).pipe(map(res=>res as AppModel));
+    return this.http.get(url).pipe(map(res=>res as AppAttributeModel));
   }
 
   getAllApps():Observable<AppModel[]>{
-    const url=this.baseUrl+"/getapps";
+    const url=this.baseUrl+"/buildapp/getapps";
     return this.http.get(url).pipe(map(res=>res as AppModel[]));
   }
 
   addAppAttribute(obj:AppAttributeModel){
-    const url=this.baseUrl+"/addappattributes";
+    const url=this.baseUrl+"/buildapp/addappattributes";
     return this.http.post(url,obj).pipe(map(res=>res as AppModel[]));
   }
 
   uploadIcon(appId:string,obj:FormData){
-    const url=this.baseUrl+"/iconimage/"+appId;
+    const url=this.baseUrl+"/buildapp/iconimage/"+appId;
     return this.http.post(url,obj).pipe(map(res=>res as any));
   }
 
   getAppImageById(appId:string){
-    const url=this.baseUrl+appId+"/icon";
+    const url=this.baseUrl+appId+"/buildapp/icon";
     return this.http.get(url).pipe(map(res=>res as any));
   }
 

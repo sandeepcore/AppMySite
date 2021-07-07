@@ -5,6 +5,8 @@ export class AppAttributeModel {
     launchscreenAttr: LaunchIconAttributeModel[];
     launchimage: string;
     homeAttr: HomeScreenAttributeModel[];
+    appowner?:string;
+    _id?:string;
 }
 
 export class AppIconAttributeModel {

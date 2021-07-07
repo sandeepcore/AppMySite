@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppModel } from '../../Model/AppModel';
@@ -30,9 +31,13 @@ export class DashboardComponent implements OnInit,OnDestroy {
   }
 
   selectedAppEvent(obj:AppModel){
-   this.selectedApp=obj;
-   this.appService.setSelectedApp(this.selectedApp);
-   this.router.navigate(['/appearance/app'])
+   this.appService.getAppById(obj._id).subscribe(v=>{
+     console.log(v);
+    this.selectedApp=obj;
+    this.appService.setSelectedApp(this.selectedApp);
+    this.router.navigate(['/appearance/app'])
+   })
+
   }
   ngOnDestroy(){
     this.appService.setIsShowSideBar(true);
