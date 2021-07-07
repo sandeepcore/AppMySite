@@ -105,7 +105,7 @@
               Register and build your app
             </h5>
           </div>
-          <div class="socialoptions d-flex justify-content-between">
+          <!-- <div class="socialoptions d-flex justify-content-between">
             <div class="d-flex">
               <div class="mr-3">
                 <img
@@ -120,20 +120,9 @@
                 />
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <form #loginForm="ngForm">
-          <div class="form-group">
-            <input
-              type="text"
-              required
-              [(ngModel)]="name"
-              class="form-control"
-              name="name"
-              placeholder="Name*"
-              value=""
-            />
-          </div>
           <div class="form-group">
             <input
               type="email"
@@ -142,26 +131,15 @@
               class="form-control"
               name="email"
               placeholder="Email*"
-              value=""
+          
             />
           </div>
-          <div class="form-group">
-            <select name="usertype" required="">
-              <option value="">I'm a</option>
-              <option value="Website Owner">Website Owner</option>
-              <option value="Freelance Developer">Freelance Developer</option>
-              <option value="Website Development Company">
-                Website Development Company
-              </option>
-            </select>
-            <div class="d-flex align-items-center mt-md-1 error">
-              <div></div>
-            </div>
-          </div>
+       
           <div class="form-group">
             <input
               type="password"
               required
+              minlength="7"
               [(ngModel)]="password"
               class="form-control eye-close"
               name="password"
@@ -176,33 +154,23 @@
               />
             </div>
           </div>
-          <div>
-            <!-- <div>
-                            <div style="width: 304px; height: 78px;">
-                                <div><iframe title="reCAPTCHA"
-                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeOmMAUAAAAAGj7NXf5SlZA25DNAfvL1HwxaAeP&amp;co=aHR0cHM6Ly9hcHAuYXBwbXlzaXRlLmNvbTo0NDM.&amp;hl=en&amp;type=image&amp;v=6OAif-f8nYV0qSFmq-D6Qssr&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=uk1z8c2hbmvr"
-                                        width="304" height="78" role="presentation" name="a-6q10juguodvk"
-                                        frameborder="0" scrolling="no"
-                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
-                                </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                                    class="g-recaptcha-response"
-                                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                            </div><iframe style="display: none;"></iframe>
-                        </div> -->
+          <div class="form-group">
+            <input
+              type="orgId"
+              required
+              [(ngModel)]="orgId"
+              class="form-control"
+              name="orgId"
+              placeholder="Organisation Id*"
+          
+            />
           </div>
-         <!--<div class="d-flex justify-content-between forgot_pw">
-            <label class="container1"
-              >Remember me<input type="checkbox" />
-              <span class="checkmark"></span
-            ></label>
-            <div class="forgot_password"><a>Forgot Password?</a></div>
-          </div>--> 
           <div class="tc"><h6 class="mt-md-2 mb-md-2">By creating an account, you agree to our<span class="link-style" > Terms &amp; Conditions</span> &amp;<span class="link-style" > Privacy Policy. </span>You also agree to receiving occasional emails about our product and services on your registered email address.</h6></div>
           <button
             type="submit"
             [disabled]="!loginForm.valid"
             class="loginbtn"
-            (click)="loginUser()"
+            (click)="registerUser()"
           >
             <div
               class="
@@ -232,7 +200,7 @@
             p-md-4
           "
         >
-          <h5>Already have an account?<span class="link-style"> Sign In</span></h5>
+          <h5>Already have an account?<span class="link-style" routerLink="/login"> Sign In</span></h5>
         </div>
       </div>
     </div>

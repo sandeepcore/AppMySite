@@ -10,7 +10,9 @@ import { AppService } from '../../service/app.service';
 export class AddAppComponent implements OnInit {
 
   appData:AppModel=new AppModel();
+  httpType:string="https://";
   @Output() emitClose:EventEmitter<boolean>=new EventEmitter();
+  @Output() emitSave:EventEmitter<AppModel>=new EventEmitter();
   constructor(private appService:AppService) { }
 
   ngOnInit() {
@@ -20,9 +22,10 @@ export class AddAppComponent implements OnInit {
     this.emitClose.emit(true);
   }
 
-  addApp(){
+  saveApp(){
+    // this.appData.websiteurl=this.httpType+this.appData.websiteurl;
     this.appService.addApp(this.appData).subscribe(v=>{
-      this.emitClose.emit(true);
+      this.emitSave.emit(v);
     })
   }
 }

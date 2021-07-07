@@ -112,4 +112,4 @@
  
 </section>
 
-<app-add-app *ngIf="isAddApp" (emitClose)="isAddApp = false"></app-add-app>
+<app-add-app *ngIf="isAddApp" (emitClose)="isAddApp = false" (emitSave)="getSave($event)"></app-add-app>

@@ -12,7 +12,7 @@
       <div class="welcome w-md-50 w-100 mr-md-5">
         <h1 class="d-md-block" id="clockid">Add New App</h1>
         <div class="store-url">
-          <form>
+          <form #addform="ngForm">
             <div class="form-group">
               <p>Your Website</p>
               <div
@@ -24,29 +24,30 @@
                   spinntop
                 "
               >
-                <div class="http">
-                  <select name="websiteLocator">
-                    <option value="1">https://</option>
-                    <option value="0">http://</option>
+                <!-- <div class="http">
+                  <select name="websiteLocator"  [(ngModel)]="httpType">
+                    <option value="https://">https://</option>
+                    <option value="http://">http://</option>
                   </select>
-                </div>
+                </div> -->
                 <input
                   class="w-100 form-control"
                   type="text"
                   name="websiteUrl"
+                  [(ngModel)]="appData.websiteurl"
                   required=""
-                  placeholder="example.com"
+                  placeholder="www.example.com"
                   value=""
                 />
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <p class="pt-md-2">CMS Platform</p>
               <select required="" class="typeselect">
                 <option value="1">Wordpress</option>
               </select>
-            </div>
-            <div class="form-group">
+            </div> -->
+            <!-- <div class="form-group">
               <p class="pt-md-2">What type of website is it?</p>
               <select required="" class="typeselect">
                 <option value="">Select</option>
@@ -56,12 +57,13 @@
                 <option value="4">Blog</option>
                 <option value="5">CMS pages</option>
               </select>
-            </div>
+            </div> -->
             <div class="form-group">
               <p class="pt-md-2">Give your app a name</p>
               <input
                 type="text"
                 name="websiteName"
+                [(ngModel)]="appData.Appname"
                 required=""
                 class="form-control"
                 maxlength="30"
@@ -71,8 +73,24 @@
                 <p>This is usually your business or brand name.</p>
               </div>
             </div>
+            <div class="form-group">
+              <p class="pt-md-2">Orgainisation Id</p>
+              <input
+                type="text"
+                name="websiteName"
+                [(ngModel)]="appData.orgId"
+                required
+                class="form-control"
+                maxlength="30"
+                value=""
+              />
+              <div class="smallgrey pt-md-2">
+                <!-- <p>This is usually your business or brand name.</p> -->
+              </div>
+            </div>
             <div class="pt-md-2">
               <button
+                [disabled]="!addform.valid" (click)="saveApp()"
                 type="submit"
                 class="sendbtn letsstart mr-md-5"
                 style="
