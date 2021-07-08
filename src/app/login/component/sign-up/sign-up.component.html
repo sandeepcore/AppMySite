@@ -97,12 +97,12 @@
           </div> -->
 
           <div class="form-group">
-            <input type="email" required [(ngModel)]="email" class="form-control" name="email" placeholder="Email*" />
+            <input type="email" required [(ngModel)]="email" class="form-control" name="email" placeholder="Email (Required)*" />
           </div>
 
           <div class="form-group">
             <input type="password" required minlength="7" [(ngModel)]="password" class="form-control eye-close"
-              name="password" placeholder="Password*" value="" />
+              name="password " placeholder="Password (Required)" value="" />
             <div class="eye">
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVCAYAAABYHP4bAAAABHNCSVQICAgIfAhkiAAAAt1JREFUSInNlT+PG0UYxn/veC8+KpyOLrZ0dhtvjHJ2lfsGMRKiAKTk4ANk09JwlBQI0kWKwE51rdOF6pwG28B5TIe8lnz5BnYVTufsQ+HzZb3nRERKJKbbnZnn9/55Zgbe0ziSgv5wfNjz8RcA7n1AJLkP/OQQ7DMTeYDgbQR6flrMaXENANP8ZlgZbYIM/OQR8Cnwdf1G+RcAe5PwwE+aSpLbmDWBwubwuV+vlX/KQL5K/39tRr3j+MBMdyQVwebI2kIznE7ATgAcVkgSVZ1bfkty/eHkTzPCLOQSqOenRdOiBewJe+bM7u/e2Oms5n/342oC1wCukOuGtVInlcnfZpQRL+Q0ywZvayKyI4TJKWqElfZqzvtp4TRZtDCa5+Wa12vlQhoClEnoyHHV4Baik3fBfhiWZhcZXUDQc7mtZiMsnaSjOdWiDezJtA9b3VV46xAd1j+ufA7QP44jjB9Pk7MZsA9g3k8Lpzo7QlbKu6C4iiCTqZdpP53lWk9SkFdtGN81WQvZg3ptJ3L/aNFBVnJOe1kIwEuoAmyz1UlDBn7y6LzxZCEAjbDSFnqM6V7Pj+86k40wPlwJXmpiYmu2XrNwol/ffECsiJjnYOTqtZ0IeGKyVs/He9mleRe08xZcDcPSLHtOcHwEPNmE6A3HbYNbcopuhpWRwbmrdNYFu44pqoeVB9mNktxgOPkNY9fEUxnbiFAuqKbNc+7QbzEiie8atfIBpOy9hC3awG2gm7fgk1XP1tyl5S7Bs5wto11pLI1DC6yahqyBVqN/HEcyom0LqqlyXVhYua1vsvZfXlW6g9FEzOVoNsJyd61bm+rr/bRwCSJemOP7i1ImVDEKLE1UEDw3WSfvcgeb3Ptaz0hyg9HkMeJLSX+YcQXsemrFX8JmoBNnrrMbvrqq/vNYHsb45/4wVv84jt5a4H8DAegN4x/6w1h9P773LnUvvUdm7qHpZbwbVh6+S9C/o1G5Z7TG8/sAAAAASUVORK5CYII="
@@ -112,7 +112,7 @@
 
           <div class="form-group">
             <input type="password" required minlength="7" [(ngModel)]="confirmPassword" class="form-control eye-close"
-              name="password" placeholder="Confirm Password*" value="" />
+              name="password" placeholder="Confirm Password (Required)*" value="" />
             <div class="eye">
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVCAYAAABYHP4bAAAABHNCSVQICAgIfAhkiAAAAt1JREFUSInNlT+PG0UYxn/veC8+KpyOLrZ0dhtvjHJ2lfsGMRKiAKTk4ANk09JwlBQI0kWKwE51rdOF6pwG28B5TIe8lnz5BnYVTufsQ+HzZb3nRERKJKbbnZnn9/55Zgbe0ziSgv5wfNjz8RcA7n1AJLkP/OQQ7DMTeYDgbQR6flrMaXENANP8ZlgZbYIM/OQR8Cnwdf1G+RcAe5PwwE+aSpLbmDWBwubwuV+vlX/KQL5K/39tRr3j+MBMdyQVwebI2kIznE7ATgAcVkgSVZ1bfkty/eHkTzPCLOQSqOenRdOiBewJe+bM7u/e2Oms5n/342oC1wCukOuGtVInlcnfZpQRL+Q0ywZvayKyI4TJKWqElfZqzvtp4TRZtDCa5+Wa12vlQhoClEnoyHHV4Baik3fBfhiWZhcZXUDQc7mtZiMsnaSjOdWiDezJtA9b3VV46xAd1j+ufA7QP44jjB9Pk7MZsA9g3k8Lpzo7QlbKu6C4iiCTqZdpP53lWk9SkFdtGN81WQvZg3ptJ3L/aNFBVnJOe1kIwEuoAmyz1UlDBn7y6LzxZCEAjbDSFnqM6V7Pj+86k40wPlwJXmpiYmu2XrNwol/ffECsiJjnYOTqtZ0IeGKyVs/He9mleRe08xZcDcPSLHtOcHwEPNmE6A3HbYNbcopuhpWRwbmrdNYFu44pqoeVB9mNktxgOPkNY9fEUxnbiFAuqKbNc+7QbzEiie8atfIBpOy9hC3awG2gm7fgk1XP1tyl5S7Bs5wto11pLI1DC6yahqyBVqN/HEcyom0LqqlyXVhYua1vsvZfXlW6g9FEzOVoNsJyd61bm+rr/bRwCSJemOP7i1ImVDEKLE1UEDw3WSfvcgeb3Ptaz0hyg9HkMeJLSX+YcQXsemrFX8JmoBNnrrMbvrqq/vNYHsb45/4wVv84jt5a4H8DAegN4x/6w1h9P773LnUvvUdm7qHpZbwbVh6+S9C/o1G5Z7TG8/sAAAAASUVORK5CYII="
