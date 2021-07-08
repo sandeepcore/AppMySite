@@ -1,8 +1,23 @@
                 @import '../dashboard/dashboard.component.scss';
                 .forstrip {
                     padding-top: 80px;
+                    position: absolute;
+                    width: calc(100% - 60px);
+                    top: 0px;
+                    background: #ffffff;
+                    height: 100%;
+                    box-shadow: rgb(110 110 110 / 50%) 0px 0px 2px;
                 }
-                
+                span.clss {
+                    color: #fff;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    cursor: pointer;
+                    background: #3064f9;
+                    padding: 5px;
+                    border-radius: 4px;
+                }
                 #clockid {
                     word-break: break-all;
                 }
@@ -13,7 +28,7 @@
                     color: #1b2952;
                     margin-bottom: 0;
                     padding-top: 25px;
-                    padding-bottom: 10px;
+                    padding-bottom: 20px;
                     font-weight: 500;
                     line-height: 1.2;
                 }
