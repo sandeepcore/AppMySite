@@ -4,9 +4,9 @@
         <mat-menu #animals="matMenu">
             <ng-container *ngFor="let cat of catList">
                 <button *ngIf="cat.subCat && cat.subCat.length>0;else noChildSub" mat-menu-item
-                    [matMenuTriggerFor]="subCat" (click)="setSelectedCat(cat,true)" (mouseenter)="setSelectedCat(cat,false)">{{cat.catName}}</button>
+                    [matMenuTriggerFor]="subCat" (click)="setSelectedCat(cat,false)" (mouseenter)="setSelectedCat(cat,false)">{{cat.catName}}</button>
                 <ng-template #noChildSub>
-                    <button mat-menu-item>{{cat.catName}}</button>
+                    <button mat-menu-item (click)="setSelectedCat(cat,true)">{{cat.catName}}</button>
                 </ng-template>
             </ng-container>
         </mat-menu>
@@ -14,16 +14,16 @@
         <mat-menu #subCat="matMenu">
             <ng-container *ngFor="let cat of subCatList">
                 <button *ngIf="cat.Items && cat.Items.length>0;else noChildSub" mat-menu-item
-                    [matMenuTriggerFor]="itemsCat" (click)="setSelectedSubCat(cat,true)" (mouseenter)="setSelectedSubCat(cat,false)">{{cat.subCategory}}</button>
+                    [matMenuTriggerFor]="itemsCat" (click)="setSelectedSubCat(cat,false)" (mouseenter)="setSelectedSubCat(cat,false)">{{cat.subCategory}}</button>
                 <ng-template #noChildSub>
-                    <button mat-menu-item>{{cat.subCategory}}</button>
+                    <button mat-menu-item (click)="setSelectedSubCat(cat,true)">{{cat.subCategory}}</button>
                 </ng-template>
             </ng-container>
         </mat-menu>
 
         <mat-menu #itemsCat="matMenu">
             <ng-container *ngFor="let cat of itemCatList">
-                <button mat-menu-item (click)="setSelectedItemCat(cat,true)" (mouseenter)="setSelectedItemCat(cat,false)">{{cat.name}}</button>
+                <button mat-menu-item (click)="setSelectedItemCat(cat,true)">{{cat.name}}</button>
             </ng-container>
         </mat-menu>
 
@@ -38,4 +38,4 @@
     <app-table [data]="currentList" [cols]="iCols" [header]="iCol" [advSearch]="true"></app-table>
 </section>
 
-<app-product-form *ngIf="isShowForm" [isShow]="isShowForm" [product]="selectedProduct"></app-product-form>
+<app-product-form *ngIf="isShowForm" [isShow]="isShowForm" [product]="selectedProduct" [catList]="catList" (emitSave)="getEmitSave($event)"></app-product-form>

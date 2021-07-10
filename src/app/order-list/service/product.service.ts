@@ -28,4 +28,13 @@ export class ProductService {
     const url=this.baseUrl+"/getCatdata?childcatid="+childcatid+"&orgId="+orgId;
     return this.http.get(url).pipe(map(res=>res as ProductModel[]));
   }
+  getAppBySubCatIdAndOrgId(subCatid:string,orgId:string):Observable<ProductModel[]>{
+    const url=this.baseUrl+"/getCatdata?subCatid="+subCatid+"&orgId="+orgId;
+    return this.http.get(url).pipe(map(res=>res as ProductModel[]));
+  }
+
+  getAppByParentCatIdAndOrgId(parentCatid:string,orgId:string):Observable<ProductModel[]>{
+    const url=this.baseUrl+"/getCatdata?parentCatid="+parentCatid+"&orgId="+orgId;
+    return this.http.get(url).pipe(map(res=>res as ProductModel[]));
+  }
 }

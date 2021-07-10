@@ -38,6 +38,8 @@ export class ProductInventoryComponent implements OnInit {
 
   itemCatList: ItemCategory[] = [];
   selectedItemCategory: ItemCategory = new ItemCategory();
+  isForm:boolean=false;
+
   constructor(private productService:ProductService,private categoryService:CatService,private appService:AppService) { 
     this.selectedApp=appService.selectedApp;
   }
@@ -96,7 +98,7 @@ export class ProductInventoryComponent implements OnInit {
       this.subCatList = [];
       this.setSelectedSubCat(new SubCategory(),false);
       if(isClicked){
-        this.getProductList();
+        this.getProductList(1);
       }
     }
   }
@@ -110,24 +112,40 @@ export class ProductInventoryComponent implements OnInit {
       this.itemCatList = [];
       this.setSelectedItemCat(new ItemCategory(),false);
       if(isClicked){
-        this.getProductList();
+        this.getProductList(2);
       }
     }
   }
   setSelectedItemCat(cat: ItemCategory,isClicked:boolean) {
     this.selectedItemCategory = cat;
     if(isClicked){
-      this.getProductList();
+      this.getProductList(3);
     }
   }
 
-  getProductList(){
-   this.productService.getAppByChildCatIdAndOrgId(this.selectedItemCategory.id,this.selectedApp._id).subscribe(v=>{
-    this.currentList=v;
-   })
+  getProductList(level:number){
+    if(level==1){
+      this.productService.getAppByParentCatIdAndOrgId(this.selectedCategory._id,this.selectedApp.orgId).subscribe(v=>{
+        this.currentList=v;
+       })
+    }else if(level==2){
+      this.productService.getAppBySubCatIdAndOrgId(this.selectedItemCategory.id,this.selectedApp.orgId).subscribe(v=>{
+        this.currentList=v;
+       })
+    }else if(level==3){
+      this.productService.getAppByChildCatIdAndOrgId(this.selectedItemCategory.id,this.selectedApp.orgId).subscribe(v=>{
+        this.currentList=v;
+       })
+    }
+
   }
-//   @ViewChild('subCat')
-// set subMenu(value: MatMenu)  {
-//   this.catList[1] = value;
-// }
+
+  getEmitSave(event:ProductModel){
+    this.currentList.push(event);
+    this.getClosePopup();
+  }
+
+  getClosePopup(){
+    this.isForm=false;
+  }
 }

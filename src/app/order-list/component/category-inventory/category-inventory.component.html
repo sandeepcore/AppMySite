@@ -15,7 +15,8 @@
             </li>
         </ul>
     </section>
-    <ng-container *ngIf="subCatList.length>0">
+    <ng-container >
+    <!-- <ng-container *ngIf="subCatList.length>0"> -->
         <section class="catg_name sub_catag">
             <h4 class="catag_hd"> <i class="material-icons" title="add Sub catagory" (click)="openFormCreate(2)">add</i>
                 Sub Category</h4>
@@ -32,7 +33,8 @@
                 </li>
             </ul>
         </section>
-        <ng-container *ngIf="itemCatList.length">
+        <ng-container>
+        <!-- <ng-container *ngIf="itemCatList.length"> -->
             <section class="catg_name sub_catag">
                 <h4 class="catag_hd"> <i class="material-icons" title="add Item catagory"
                         (click)="openFormCreate(3)">add</i> Item Category</h4>

@@ -20,9 +20,13 @@ export class CatService {
     const url=this.baseUrl+"/addCategoriesData/"+appId;
     return this.http.post(url,obj).pipe(map(res=>res as CategoryModel));
   }
-  editCategoriesData(appId:string,obj:CategoryModel){
-    const url=this.baseUrl+"/edit/product/"+appId;
-    return this.http.post(url,obj).pipe(map(res=>res as CategoryModel));
+  editCategoriesData(categoryId:string,obj:CategoryModel){
+    delete(obj._id);
+    delete(obj.appId);
+    delete(obj.orgId);
+    delete(obj.__v);
+    const url=this.baseUrl+"/edit/category/"+categoryId;
+    return this.http.patch(url,obj).pipe(map(res=>res as CategoryModel));
   }
 
   allCategories(appId:string):Observable<CategoryModel[]>{

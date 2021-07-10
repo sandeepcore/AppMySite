@@ -4,6 +4,7 @@ export class CategoryModel {
         subCat: SubCategory[]=[];
         _id:string;
         appId:string;
+        __v:string;
 }
 
 export class SubCategory {
