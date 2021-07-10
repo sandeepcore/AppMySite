@@ -9,6 +9,7 @@ import { CategoryFormComponent } from './component/category-form/category-form.c
 import { CategoryInventoryComponent } from './component/category-inventory/category-inventory.component';
 import { ProductInventoryComponent } from './component/product-inventory/product-inventory.component';
 import { ProductFormComponent } from './component/product-form/product-form.component';
+import { ClosePopupDirective } from './directive/close-popup.directive';
 
 
 

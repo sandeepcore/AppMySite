@@ -18,8 +18,8 @@ export class MainAperanceAppInfoService {
 
 
   getDataMainArea(): AppIconAttributeModel {
-    const obj=atob(localStorage.getItem("appiconAttr"));
-    if(obj) return JSON.parse(obj);
+    const obj=localStorage.getItem("appiconAttr");
+    if(obj) return JSON.parse(atob(obj));
     return null;
   }
 
@@ -31,8 +31,8 @@ export class MainAperanceAppInfoService {
   }
 
   getDataLaunch(): LaunchIconAttributeModel {
-    const obj=atob(localStorage.getItem("launchscreenAttr"));
-    if(obj) return JSON.parse(obj);
+    const obj=localStorage.getItem("launchscreenAttr");
+    if(obj) return JSON.parse(atob(obj));
     return null;
   }
 
@@ -44,8 +44,8 @@ export class MainAperanceAppInfoService {
 
 
   getDataHomeScreen(): HomeScreenAttributeModel {
-    const obj=atob(localStorage.getItem("homeAttr"));
-    if(obj) return JSON.parse(obj);
+    const obj=localStorage.getItem("homeAttr");
+    if(obj) return JSON.parse(atob(obj));
     return null;
   }
 

@@ -1,236 +1,65 @@
-<section class="catg_name">
-    <h4 class="catag_hd"><i class="material-icons" title="add catagory">add</i> Category</h4>
-    <ul class="main_parent cus_scrl">
-        <li>category 1
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 2
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
+    <section class="catg_name">
+        <h4 class="catag_hd"><i class="material-icons" title="add catagory" (click)="openFormCreate(1)">add</i> Category
+        </h4>
+        <ul class="main_parent cus_scrl">
 
-        </li>
-        <li>category 3
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 4
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li class="active">category 5
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 6
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 7
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 8
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-    </ul>
-</section>
-<section class="catg_name sub_catag">
-    <h4 class="catag_hd"> <i class="material-icons" title="add Sub catagory">add</i> Sub Category</h4>
-    <ul class="main_parent cus_scrl">
-        <li>category 1
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 2
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
+            <li [ngClass]="{'active':selectedCategory._id==cat._id}" *ngFor="let cat of catList"
+                (click)="setSelectedCat(cat)">{{cat.catName}}
+                <button mat-button color="primary" [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="openFormEdit(1)">Edit Category</button>
+                        <button mat-menu-item>Delete Category</button>
+                    </mat-menu>
+                </button>
+            </li>
+        </ul>
+    </section>
+    <ng-container *ngIf="subCatList.length>0">
+        <section class="catg_name sub_catag">
+            <h4 class="catag_hd"> <i class="material-icons" title="add Sub catagory" (click)="openFormCreate(2)">add</i>
+                Sub Category</h4>
+            <ul class="main_parent cus_scrl">
+                <li [ngClass]="{'active':selectedSubCategory.id==cat.id}" *ngFor="let cat of subCatList"
+                    (click)="setSelectedSubCat(cat)">{{cat.subCategory}}
+                    <button mat-button color="primary" [matMenuTriggerFor]="menu">
+                        <mat-icon>more_vert</mat-icon>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item (click)="openFormEdit(2)">Edit Category</button>
+                            <button mat-menu-item>Delete Category</button>
+                        </mat-menu>
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <ng-container *ngIf="itemCatList.length">
+            <section class="catg_name sub_catag">
+                <h4 class="catag_hd"> <i class="material-icons" title="add Item catagory"
+                        (click)="openFormCreate(3)">add</i> Item Category</h4>
+                <ul class="main_parent cus_scrl">
+                    <li [ngClass]="{'active':selectedItemCategory.id==cat.id}" *ngFor="let cat of itemCatList"
+                        (click)="setSelectedItemCat(cat)">{{cat.name}}
+                        <button mat-button color="primary" [matMenuTriggerFor]="menu">
+                            <mat-icon>more_vert</mat-icon>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item (click)="openFormEdit(3)">Edit Category</button>
+                                <button mat-menu-item>Delete Category</button>
+                            </mat-menu>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </ng-container>
 
-        </li>
-        <li class="active">category 3
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 4
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li >category 5
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 6
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 7
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 8
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-    </ul>
-</section>
-<section class="catg_name sub_catag">
-    <h4 class="catag_hd"> <i class="material-icons" title="add Sub catagory">add</i> Sub Category</h4>
-    <ul class="main_parent cus_scrl">
-        <li>category 1
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 2
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
+    </ng-container>
 
-        </li>
-        <li >category 3
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 4
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li >category 5
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 6
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li class="active">category 7
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-        <li>category 8
-            <button mat-button color="primary" [matMenuTriggerFor]="menu">
-                <mat-icon>more_vert</mat-icon>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Edit Category</button>
-                    <button mat-menu-item>Delete Category</button>
-                </mat-menu>
-            </button>
-        </li>
-    </ul>
-</section>
 
-<app-category-form class="modified_catg"></app-category-form>
+    <app-category-form class="modified_catg" (emitClose)="emitClosePopup()" *ngIf="(level==1 && isForm)" [level]="level"
+        [selectedCategory]="selectedCategory" [selectedSubCategory]="selectedSubCategory"
+        [selectedItemCategory]="selectedItemCategory"></app-category-form>
+    <app-category-form class="modified_catg" (emitClose)="emitClosePopup()"*ngIf="(level==2 && isForm)" [level]="level"
+        [selectedCategory]="selectedCategory" [selectedSubCategory]="selectedSubCategory"
+        [selectedItemCategory]="selectedItemCategory"></app-category-form>
+    <app-category-form class="modified_catg" (emitClose)="emitClosePopup()"*ngIf="(level==3 && isForm)" [level]="level"
+        [selectedCategory]="selectedCategory" [selectedSubCategory]="selectedSubCategory"
+        [selectedItemCategory]="selectedItemCategory"></app-category-form>

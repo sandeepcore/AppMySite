@@ -27,10 +27,16 @@ export class AppService {
   }
 
   get selectedApp(){
+    if(localStorage.getItem("selected-app-id")){
+      const obj=atob(localStorage.getItem("selected-app-id"));
+      if(obj) this.appData= JSON.parse(obj);
+    }
     return this.appData;
   }
 
   setSelectedApp(obj:AppModel){
+    const value=btoa(JSON.stringify(obj));
+    localStorage.setItem("selected-app-id",value);
     this.appData=obj;
   }
 
