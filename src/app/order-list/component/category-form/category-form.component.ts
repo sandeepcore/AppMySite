@@ -49,6 +49,7 @@ export class CategoryFormComponent implements OnInit {
       this.selectedCategory.orgId = this.selectedApp.orgId;
     } else if (this.level == 2) {
       this.selectedSubCategory.subCategory = this.catName;
+      if(!this.selectedSubCategory.id) this.selectedSubCategory.id= this.randomString(36);
       if (this.selectedCategory.subCat.length > 0) {
         this.selectedCategory.subCat.push(this.selectedSubCategory);
       } else {
@@ -56,6 +57,7 @@ export class CategoryFormComponent implements OnInit {
       }
     } else {
       this.selectedItemCategory.name = this.catName;
+      if(!this.selectedItemCategory.id) this.selectedItemCategory.id= this.randomString(36);
       if (this.selectedSubCategory.Items.length > 0) {
         this.selectedSubCategory.Items.push(this.selectedItemCategory);
       } else {
@@ -82,4 +84,11 @@ export class CategoryFormComponent implements OnInit {
     this.emitClose.emit(true);
   }
 
+  randomString(length) {
+    var result = '';
+    let chars='0123456789abcdefghijklmnopqrstuvwxyz-';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+}
+// var rString = randomString(40, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 }
