@@ -1,0 +1,58 @@
+@import '../product-inventory/product-inventory.component.scss';
+section.catg_name {
+    display: inline-flex;
+    height: calc(92vh - 45px);
+    width: 16%;
+    margin: 0px -30px;
+    margin-bottom: -60px;
+    flex-flow: wrap column;
+    box-shadow: rgb(0 0 0 / 20%) 2px 0px 4px;
+    h4.catag_hd {
+        background: #42c6e1;
+        color: #192da1;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        i.material-icons {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 30px;
+        }
+    }
+
+    ul.main_parent {
+        display: flex;
+    list-style: none;
+    padding: 0px;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0px;
+    overflow: auto;
+    flex-flow:  column;
+    li {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        padding-left: 30px;
+        cursor: pointer;
+        border-bottom: solid 1px #ccc;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 1px;
+        &:hover,&.active {
+            background: #42c6e1;
+            color: #192da1;
+            font-weight: 600;
+        }
+    }
+    }
+
+    &.sub_catag{
+        margin-left: 40px;
+    }
+}
