@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatMenu } from '@angular/material';
+import { AppModel } from 'src/app/dashboard/Model/AppModel';
+import { AppService } from 'src/app/dashboard/service/app.service';
+import { CategoryModel, ItemCategory, SubCategory } from '../../model/CategoryModel';
 import { ProductModel } from '../../model/ProductModel';
+import { CatService } from '../../service/cat.service';
 import { ProductService } from '../../service/product.service';
 
 @Component({
@@ -23,9 +28,22 @@ export class ProductInventoryComponent implements OnInit {
     Validators.email,
   ]);
 
-  constructor(private productService:ProductService) { }
+  selectedApp:AppModel=new AppModel();
+
+  catList: CategoryModel[] = [];
+  selectedCategory: CategoryModel = new CategoryModel();
+
+  subCatList: SubCategory[] = [];
+  selectedSubCategory: SubCategory = new SubCategory();
+
+  itemCatList: ItemCategory[] = [];
+  selectedItemCategory: ItemCategory = new ItemCategory();
+  constructor(private productService:ProductService,private categoryService:CatService,private appService:AppService) { 
+    this.selectedApp=appService.selectedApp;
+  }
 
   ngOnInit() {
+    this.loadCategoryGrid();
     this.iCols = [
       { field: "name", header: "Name", show: true, type: "String" },
       { field: "description", header: "Description", show: true, type: "String" },
@@ -46,12 +64,18 @@ export class ProductInventoryComponent implements OnInit {
   });
   this.iColAll = this.iCol;
 
-    fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(json =>{
-    console.log(json);
-    this.currentList=json;
-  } )
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  // .then(response => response.json())
+  // .then(json =>{
+  //   console.log(json);
+  //   this.currentList=json;
+  // } )
+  }
+
+  loadCategoryGrid() {
+    this.categoryService.allCategories(this.selectedApp._id).subscribe(v => {
+      this.catList = v;
+    })
   }
 
   openAddProduct(){
@@ -62,4 +86,48 @@ export class ProductInventoryComponent implements OnInit {
     this.selectedProduct=product;
     this.isShowForm=true;
   }
+
+  setSelectedCat(cat: CategoryModel,isClicked:boolean) {
+    this.selectedCategory = cat;
+    this.subCatList = this.selectedCategory.subCat;
+    if (this.subCatList && this.subCatList.length > 0) {
+      this.setSelectedSubCat(this.subCatList[0],false);
+    } else {
+      this.subCatList = [];
+      this.setSelectedSubCat(new SubCategory(),false);
+      if(isClicked){
+        this.getProductList();
+      }
+    }
+  }
+
+  setSelectedSubCat(cat: SubCategory,isClicked:boolean) {
+    this.selectedSubCategory = cat;
+    this.itemCatList = this.selectedSubCategory.Items;
+    if (this.itemCatList && this.itemCatList.length > 0) {
+      this.setSelectedItemCat(this.itemCatList[0],false);
+    } else {
+      this.itemCatList = [];
+      this.setSelectedItemCat(new ItemCategory(),false);
+      if(isClicked){
+        this.getProductList();
+      }
+    }
+  }
+  setSelectedItemCat(cat: ItemCategory,isClicked:boolean) {
+    this.selectedItemCategory = cat;
+    if(isClicked){
+      this.getProductList();
+    }
+  }
+
+  getProductList(){
+   this.productService.getAppByChildCatIdAndOrgId(this.selectedItemCategory.id,this.selectedApp._id).subscribe(v=>{
+    this.currentList=v;
+   })
+  }
+//   @ViewChild('subCat')
+// set subMenu(value: MatMenu)  {
+//   this.catList[1] = value;
+// }
 }

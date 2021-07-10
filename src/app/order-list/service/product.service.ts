@@ -24,8 +24,8 @@ export class ProductService {
     return this.http.post(url,obj).pipe(map(res=>res as ProductModel));
   }
 
-  getAppByIdAndOrgId(producId:string,orgId:string):Observable<ProductModel>{
-    const url=this.baseUrl+"/getCatdata?childcatid="+producId+"&orgId="+orgId;
-    return this.http.get(url).pipe(map(res=>res as ProductModel));
+  getAppByChildCatIdAndOrgId(childcatid:string,orgId:string):Observable<ProductModel[]>{
+    const url=this.baseUrl+"/getCatdata?childcatid="+childcatid+"&orgId="+orgId;
+    return this.http.get(url).pipe(map(res=>res as ProductModel[]));
   }
 }

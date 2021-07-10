@@ -1,17 +1,41 @@
 <section class="inventory">
     <header class="inv_hdr">
-        <aside class="lft">
-            <i class="material-icons" data-toggle="modal" (click)="openAddProduct()" data-target="#myModal">add</i> <h4> Product inventory</h4>
-        </aside>
-       
-    
-    </header>
-    <app-table
-    [data]="currentList"
-    [cols]="iCols" 
-    [header]="iCol" 
-    [advSearch]="true" 
-    ></app-table>
-    </section>
+        <button mat-button [matMenuTriggerFor]="animals">Category</button>
+        <mat-menu #animals="matMenu">
+            <ng-container *ngFor="let cat of catList">
+                <button *ngIf="cat.subCat && cat.subCat.length>0;else noChildSub" mat-menu-item
+                    [matMenuTriggerFor]="subCat" (click)="setSelectedCat(cat,true)" (mouseenter)="setSelectedCat(cat,false)">{{cat.catName}}</button>
+                <ng-template #noChildSub>
+                    <button mat-menu-item>{{cat.catName}}</button>
+                </ng-template>
+            </ng-container>
+        </mat-menu>
 
-    <app-product-form *ngIf="isShowForm" [isShow]="isShowForm" [product]="selectedProduct"></app-product-form>
+        <mat-menu #subCat="matMenu">
+            <ng-container *ngFor="let cat of subCatList">
+                <button *ngIf="cat.Items && cat.Items.length>0;else noChildSub" mat-menu-item
+                    [matMenuTriggerFor]="itemsCat" (click)="setSelectedSubCat(cat,true)" (mouseenter)="setSelectedSubCat(cat,false)">{{cat.subCategory}}</button>
+                <ng-template #noChildSub>
+                    <button mat-menu-item>{{cat.subCategory}}</button>
+                </ng-template>
+            </ng-container>
+        </mat-menu>
+
+        <mat-menu #itemsCat="matMenu">
+            <ng-container *ngFor="let cat of itemCatList">
+                <button mat-menu-item (click)="setSelectedItemCat(cat,true)" (mouseenter)="setSelectedItemCat(cat,false)">{{cat.name}}</button>
+            </ng-container>
+        </mat-menu>
+
+        
+        <aside class="lft">
+            <i class="material-icons" data-toggle="modal" (click)="openAddProduct()" data-target="#myModal">add</i>
+            <h4> Product inventory</h4>
+        </aside>
+
+
+    </header>
+    <app-table [data]="currentList" [cols]="iCols" [header]="iCol" [advSearch]="true"></app-table>
+</section>
+
+<app-product-form *ngIf="isShowForm" [isShow]="isShowForm" [product]="selectedProduct"></app-product-form>

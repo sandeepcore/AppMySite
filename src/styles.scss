@@ -33,20 +33,20 @@ body{
     font-weight: 500;
 }
 }
-.tag-grp{
-    button{
-        &.mat-menu-trigger{
-            &.mat-icon-button {
-                position: absolute;
-                right: 0px;
-                top: -10px;
-                outline: none;
-                height: 100%;
-                width: 14px;
-    }
-}
-}
-}
+// .tag-grp{
+//     button{
+//         &.mat-menu-trigger{
+//             &.mat-icon-button {
+//                 position: absolute;
+//                 right: 0px;
+//                 top: -10px;
+//                 outline: none;
+//                 height: 100%;
+//                 width: 14px;
+//     }
+// }
+// }
+// }
 
 .nav-item{
     .mat-button{
@@ -577,13 +577,13 @@ div.mrt-min {
     height: 100%;
 }
 
-    button.mat-menu-item{
-        line-height: 1.5;
-        height: auto;
-        i{
-            vertical-align: middle;
-        }
-    }
+    // button.mat-menu-item{
+    //     line-height: 1.5;
+    //     height: auto;
+    //     i{
+    //         vertical-align: middle;
+    //     }
+    // }
 
     .hem-tree{
         .mat-form-field-label-wrapper{
