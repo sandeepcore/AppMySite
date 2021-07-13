@@ -25,16 +25,19 @@ export class ProductService {
   }
 
   getAppByChildCatIdAndOrgId(childcatid:string,orgId:string):Observable<ProductModel[]>{
-    const url=this.baseUrl+"/getCatdata?childcatid="+childcatid+"&orgId="+orgId;
+    // const url=this.baseUrl+"/getCatdata?childcatid="+childcatid+"&orgId="+orgId;
+    const url=this.baseUrl+"/getchildProducts/"+childcatid;
     return this.http.get(url).pipe(map(res=>res as ProductModel[]));
   }
   getAppBySubCatIdAndOrgId(subCatid:string,orgId:string):Observable<ProductModel[]>{
-    const url=this.baseUrl+"/getCatdata?subCatid="+subCatid+"&orgId="+orgId;
+    // const url=this.baseUrl+"/getCatdata?subCatid="+subCatid+"&orgId="+orgId;
+    const url=this.baseUrl+"/getsubcategoryProducts/"+subCatid;
     return this.http.get(url).pipe(map(res=>res as ProductModel[]));
   }
 
   getAppByParentCatIdAndOrgId(parentCatid:string,orgId:string):Observable<ProductModel[]>{
-    const url=this.baseUrl+"/getCatdata?parentCatid="+parentCatid+"&orgId="+orgId;
+    // const url=this.baseUrl+"/getCatdata?parentCatid="+parentCatid+"&orgId="+orgId;
+    const url=this.baseUrl+"/getCategoryProducts/"+parentCatid;
     return this.http.get(url).pipe(map(res=>res as ProductModel[]));
   }
 }
