@@ -1,1 +1,44 @@
 @import '../order-inventory/order-inventory.component.scss';
+h4.lbl_nm {
+    color: #1b2952;
+    position: relative;
+    margin-right: 0.5rem;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group {
+    select {
+        background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAABHNCSVQICAgIfAhkiAAAAGhJREFUGJV9j1ERgDAMQxNkrAaKi1mgBpgzQAEWkIECbIQP7jhuMPKZy0sbmEdJHhN+9Mx0gjKJJmQeBcQEiLeZfJitD9WQeZTLH+ZXUw21wqwhkiOkDWSWtBz7Wv72PS59vNGSeTRbT5ZuKhzVLEEOAAAAAElFTkSuQmCC);
+        background-repeat: no-repeat;
+        background-position: 96%;
+        border: 1px solid #bcc7e6;
+        height: 55px;
+        border-radius: 0.25rem;
+        padding: 1px 5px;
+    }
+}
+
+.modal-dialog {
+    max-width: 720px !important;
+}
+
+.frm_style {
+    input {
+        background-color: #fff;
+        border: 1px solid #bcc7e6;
+        border-radius: 0.25rem;
+        padding: 1px 5px;
+        height: 54px;
+    }
+}
+
+.modal-footer {
+    button {
+        margin-left: 10px;
+    }
+}
+
+::ng-deep .mat-form-field {
+    display: block !important;
+}
