@@ -30,6 +30,7 @@ export class HomeScreenAttributeModel {
    mainBanner:MainBannerHomeScreenModel;
    dashboardHeaderText:string;
    productCategories:ProductHomeScreenModel;
+   moduleCategories:ModuleHomeScreenModel;
    isNewProduct:boolean;
    isCart:boolean;
    isFeatureProduct:boolean;
@@ -59,5 +60,10 @@ export class ProductHomeScreenModel {
     productCount:string;
     productFontColour:string;
     productShape:string;
+  
+}
+export class ModuleHomeScreenModel {
+    isModule:boolean;
+    moduleList:string[];
   
 }

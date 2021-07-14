@@ -6,14 +6,14 @@ export class ProductModel{
         parentCatid:string="";
         subCatid:string="";
         childCatId:string="";
-        imageUrl:string[];
+        imageUrl:string[]=[];
         price:string;
         tax:string;
-        promotion:string[];
+        promotion:string[]=[];
         IsAvailable:boolean;
         StockQty:string;
-        colorAttributes:string[ ];
-        sizeAttributes:string[];
+        colorAttributes:string[]=[];
+        sizeAttributes:string[]=[];
         orgId:string;
         _id?:string;
         _v?:number;

@@ -142,12 +142,37 @@
 
 
 
-                            <mat-form-field class="example-full-width">
+                            <!-- <mat-form-field class="example-full-width">
                                 <mat-label>Select Size</mat-label>
                                 <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.sizeAttributes" multiple="true">
                                     <mat-option *ngFor="let size of sizeAttributes" [value]="size">{{size}}</mat-option>
                                 </mat-select>
-                            </mat-form-field>
+                            </mat-form-field> -->
+                            <mat-form-field class="example-chip-list">
+                                <mat-label>Select Size</mat-label>
+                                <mat-chip-list #chipList aria-label="Fruit selection">
+                                  <mat-chip
+                                    *ngFor="let size of product.sizeAttributes"
+                                    [selectable]="selectable"
+                                    [removable]="removable"
+                                    (removed)="remoSize(size)">
+                                    {{size}}
+                                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                  </mat-chip>
+                                  <input
+                                    placeholder="Enter color RGB"
+                                    name="sizeText"
+                                    [(ngModel)]="sizeText"
+                                    [matChipInputFor]="chipList"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    (matChipInputTokenEnd)="addSize($event)">
+                                </mat-chip-list>
+                                <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                                  <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                                    {{fruit}}
+                                  </mat-option>
+                                </mat-autocomplete> -->
+                              </mat-form-field>
                         </div>
                         <div class="col-6">
 
@@ -212,14 +237,41 @@
                                 </div>
                             </div> -->
 
+                            <mat-form-field class="example-chip-list">
+                                <mat-label>Color RGB</mat-label>
+                                <mat-chip-list #chipList aria-label="Fruit selection">
+                                  <mat-chip
+                                    *ngFor="let color of product.colorAttributes"
+                                    [selectable]="selectable"
+                                    [removable]="removable"
+                                    (removed)="removeColor(color)">
+                                    {{color}}
+                                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                  </mat-chip>
+                                  <input
+                                    placeholder="Enter color RGB"
+                                    name="colorText"
+                                    [(ngModel)]="colorText"
+                                    [matChipInputFor]="chipList"
+                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                    (matChipInputTokenEnd)="addColor($event)">
+                                </mat-chip-list>
+                                <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                                  <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                                    {{fruit}}
+                                  </mat-option>
+                                </mat-autocomplete> -->
+                              </mat-form-field>
 
-                            <mat-form-field class="example-full-width">
+
+
+                            <!-- <mat-form-field class="example-full-width">
                                 <mat-label>Select Color</mat-label>
                                 <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.colorAttributes" multiple="true">
                                     <mat-option *ngFor="let color of colorAttributes" [value]="color">{{color}}
                                     </mat-option>
                                 </mat-select>
-                            </mat-form-field>
+                            </mat-form-field> -->
                         </div>
                     </div>
                 </div>

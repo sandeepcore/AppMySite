@@ -129,7 +129,7 @@ export class ProductInventoryComponent implements OnInit {
         this.currentList=v;
        })
     }else if(level==2){
-      this.productService.getAppBySubCatIdAndOrgId(this.selectedItemCategory.id,this.selectedApp.orgId).subscribe(v=>{
+      this.productService.getAppBySubCatIdAndOrgId(this.selectedSubCategory.id,this.selectedApp.orgId).subscribe(v=>{
         this.currentList=v;
        })
     }else if(level==3){
@@ -141,11 +141,11 @@ export class ProductInventoryComponent implements OnInit {
   }
 
   getEmitSave(event:ProductModel){
-    this.currentList.push(event);
     this.getClosePopup();
+    this.currentList.push(event);
   }
 
   getClosePopup(){
-    this.isForm=false;
+    this.isShowForm=false;
   }
 }

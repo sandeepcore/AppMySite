@@ -71,7 +71,13 @@
                         </div>
                     </li>
                 </ul>
-
+                <ul class="side-list" routerLinkActive="act">
+                    <li [routerLink]="'/appearance/module'" matRipple>
+                        <div class="item">
+                            <span class="categ">Module</span>
+                        </div>
+                    </li>
+                </ul>
                 <!-- <ul class="side-list" routerLinkActive="act">
           <li matRipple>
             <div class="item" >
@@ -123,15 +129,22 @@
             <mat-expansion-panel-header>
                 <mat-panel-title class="ml-2 mt-2">
                     <h4 class="sec-nm">
-                        Inventory</h4>
+                        Catalogue Management</h4>
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="mat-expansion-panel-body">
-                <ul class="side-list" routerLinkActive="act">
-                    <li [routerLink]="'/product/order'" matRipple>
+                <!-- <ul class="side-list" routerLinkActive="act">
+                    <li  matRipple>
                         <div class="item">
 
                             <span class="categ">Order </span>
+                        </div>
+                    </li>
+                </ul> -->
+                <ul class="side-list" routerLinkActive="act" [routerLink]="'/product/category'">
+                    <li matRipple>
+                        <div class="item">
+                            <span class="categ">Category </span>
                         </div>
                     </li>
                 </ul>
@@ -144,16 +157,29 @@
                     </li>
                 </ul>
 
-                <ul class="side-list" routerLinkActive="act" [routerLink]="'/product/category'">
-                    <li matRipple>
-                        <div class="item">
-                            <span class="categ">Catalogue </span>
-                        </div>
-                    </li>
-                </ul>
+
 
 
             </div>
+        </mat-expansion-panel>
+    </div>
+    <div class="d-flex  common-height setting">
+        <div class="web_logo"><svg id="Component_31_1" data-name="Component 31 – 1" width="36" height="35.999" viewBox="0 0 36 35.999">
+        <rect id="Rectangle_1158" data-name="Rectangle 1158" width="36" height="35.999" rx="6" fill="#01c99b"></rect>
+        <g id="Settings_Copy" data-name="Settings Copy" transform="translate(9.615 9.613)">
+          <path id="Shape"
+            d="M8.7,16.547a9.1,9.1,0,0,1-1-.056.467.467,0,0,1-.428-.483,1.83,1.83,0,0,0-1.178-1.8,1.889,1.889,0,0,0-.7-.129,2.051,2.051,0,0,0-1.469.593.5.5,0,0,1-.663.05A8.454,8.454,0,0,1,1.878,13.4a.446.446,0,0,1,.053-.624,1.777,1.777,0,0,0,.487-2.046A1.92,1.92,0,0,0,.671,9.6H.626a.575.575,0,0,1-.571-.407,7.859,7.859,0,0,1,0-1.881A.461.461,0,0,1,.542,6.9h.02a2.025,2.025,0,0,0,1.9-1.119,1.771,1.771,0,0,0-.487-2.064.445.445,0,0,1-.052-.629A8.441,8.441,0,0,1,3.326,1.77a.5.5,0,0,1,.657.052,2.055,2.055,0,0,0,1.468.59,1.891,1.891,0,0,0,.688-.124A1.839,1.839,0,0,0,7.332.524.471.471,0,0,1,7.763.05a9.118,9.118,0,0,1,1.959,0,.466.466,0,0,1,.427.483,1.833,1.833,0,0,0,1.177,1.8,1.9,1.9,0,0,0,.7.129A2.047,2.047,0,0,0,13.5,1.871a.5.5,0,0,1,.662-.051,8.441,8.441,0,0,1,1.38,1.324.445.445,0,0,1-.053.624A1.779,1.779,0,0,0,15,5.814a1.939,1.939,0,0,0,1.8,1.134.567.567,0,0,1,.56.407,7.862,7.862,0,0,1,0,1.881.479.479,0,0,1-.474.407h-.036l-.108,0a1.955,1.955,0,0,0-1.782,1.121,1.77,1.77,0,0,0,.488,2.064.444.444,0,0,1,.052.629,8.482,8.482,0,0,1-1.409,1.323.506.506,0,0,1-.657-.052,2.056,2.056,0,0,0-1.467-.591,1.9,1.9,0,0,0-.689.124,1.836,1.836,0,0,0-1.192,1.764.471.471,0,0,1-.431.474A9.152,9.152,0,0,1,8.7,16.547ZM8.722,5.531a2.838,2.838,0,0,0-2.9,2.76,2.838,2.838,0,0,0,2.9,2.76,2.838,2.838,0,0,0,2.905-2.76A2.839,2.839,0,0,0,8.722,5.531Z"
+            transform="translate(0 0)" fill="#fff"></path>
+        </g>
+      </svg></div>
+        <mat-expansion-panel class="list-item">
+
+            <mat-expansion-panel-header [routerLink]="'/product/order'">
+                <mat-panel-title class="ml-2 mt-2">
+                    <h4 class="sec-nm">
+                        Order Management</h4>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
         </mat-expansion-panel>
     </div>
 
@@ -168,12 +194,20 @@
       </svg></div>
         <mat-expansion-panel class="list-item">
 
-            <mat-expansion-panel-header>
+            <mat-expansion-panel-header [routerLink]="'/user'">
                 <mat-panel-title class="ml-2 mt-2">
                     <h4 class="sec-nm">
                         User Management</h4>
                 </mat-panel-title>
             </mat-expansion-panel-header>
+            <!-- <ul class="side-list act">
+                <li [routerLink]="'/user'" matRipple>
+                    <div class="item" routerLinkActive="act current">
+
+                        <span class="categ"> User Management </span>
+                    </div>
+                </li>
+            </ul> -->
             <!-- <div class="mat-expansion-panel-body">
                 <ul class="side-list act">
                     <li [routerLink]="'/order'" matRipple>

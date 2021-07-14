@@ -26,7 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-
+import {MatChipsModule} from '@angular/material/chips';
 
 const MaterialComponents = [
   CommonModule,
@@ -60,6 +60,7 @@ const MaterialComponents = [
   MatButtonModule,
   MatFormFieldModule,
   MatToolbarModule,
+  MatChipsModule
 ]
 
 @NgModule({

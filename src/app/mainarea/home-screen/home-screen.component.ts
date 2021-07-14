@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from 'src/app/dashboard/service/app.service';
 // tslint:disable-next-line:max-line-length
-import { AppAttributeModel, HomeScreenAttributeModel, MainBannerHomeScreenModel, ProductHomeScreenModel, SectionHomeScreenModel } from '../model/AppAttributeModel';
+import { AppAttributeModel, HomeScreenAttributeModel, MainBannerHomeScreenModel, ModuleHomeScreenModel, ProductHomeScreenModel, SectionHomeScreenModel } from '../model/AppAttributeModel';
 import { MainAperanceAppInfoService } from '../service/main-aperance-app-info.service';
 
 @Component({
@@ -40,6 +40,9 @@ export class HomeScreenComponent implements OnInit {
   productFontColour = '#444';
   productShape = 'sharp';
 
+  //module
+  isModule:boolean=false;
+  selectedModuleList:string[]=[];
 
   isNewProduct = true;
   isCart = true;
@@ -51,6 +54,8 @@ export class HomeScreenComponent implements OnInit {
   fontFamilyList: string[] = ['Arial', 'Arial Black', 'Poppins SemiBold', 'Sans Serif', 'Times New Roman', 'Verdana'];
   columnList: string[] = ['1', '2', '3', '4',  '6'];
   categoryList: string[] = ['1', '2', '3', '4', '5', '6'];
+  moduleList:string[]=['About us','Contact us'];
+
 
   constructor(private mainAppService: MainAperanceAppInfoService, private appService: AppService, private router: Router) {
     this.appName = appService.selectedApp.Appname;
@@ -85,6 +90,10 @@ export class HomeScreenComponent implements OnInit {
       this.isFeatureProduct = obj.isFeatureProduct;
       this.isRecentyProduct = obj.isRecentyProduct;
       this.isSaleProduct = obj.isSaleProduct;
+
+       //module 
+       this.isModule=obj.moduleCategories.isModule;
+       this.selectedModuleList=obj.moduleCategories.moduleList;
     }
   }
 
@@ -118,6 +127,13 @@ export class HomeScreenComponent implements OnInit {
     productCategories.productShape = this.productShape;
 
     obj.productCategories = productCategories;
+
+    //module
+    const moduleCategories: ModuleHomeScreenModel = new ModuleHomeScreenModel();
+    moduleCategories.moduleList=this.selectedModuleList;
+    moduleCategories.isModule=this.isModule;
+
+    obj.moduleCategories=moduleCategories;
 
     obj.isNewProduct = this.isNewProduct;
     obj.isCart = this.isCart;
