@@ -1,19 +1,19 @@
 <div class="app_icon">
-  <div class="d-md-flex d-none align-items-center">
-    <div class="app_heading">
-      <h2>{{selectedApp.Appname}}</h2>
-      <p class="pb-0 mb-0">Version 1</p>
+    <div class="d-md-flex d-none align-items-center">
+        <div class="app_heading">
+            <h2>{{selectedApp.Appname}}</h2>
+            <p class="pb-0 mb-0">Version 1</p>
+        </div>
     </div>
-  </div>
-  <div class="d-none d-md-flex justify-content-between plandata" style="min-height: 31px;">
-    <div>
-      <p class="mb-0"><span>Plan:</span> Preview</p>
-    </div><a href="/subscription/NzAxNDA=">Change</a>
-  </div>
+    <div class="d-none d-md-flex justify-content-between plandata" style="min-height: 31px;">
+        <div>
+            <p class="mb-0"><span>Plan:</span> Preview</p>
+        </div><a href="/subscription/NzAxNDA=">Change</a>
+    </div>
 </div>
 <div class="leftscroll cus_scrl">
-  <div class="d-flex align-items-center common-height setting" style="margin-bottom: 10px;" [routerLink]="'/'">
-    <div class="web_logo"><svg width="36" height="35.999" viewBox="0 0 36 35.999">
+    <div class="d-flex align-items-center common-height setting" style="margin-bottom: 10px;" [routerLink]="'/'">
+        <div class="web_logo"><svg width="36" height="35.999" viewBox="0 0 36 35.999">
         <g id="Group_2933" data-name="Group 2933" transform="translate(-20 -170)">
           <g id="Component_48_1" data-name="Component 48 – 1" transform="translate(20 170)">
             <rect id="Rectangle_1156" data-name="Rectangle 1156" width="36" height="35.999" rx="6" fill="#3064f9">
@@ -24,19 +24,18 @@
           </g>
         </g>
       </svg>
+        </div>
+        <div class="pannel_title ml-2 mt-2">
+            <h4 class="panel-title act">Dashboard</h4>
+        </div>
     </div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">Dashboard</h4>
-    </div>
-  </div>
 
 
-  <div class="d-flex  common-height setting" >
-    <div class="web_logo web_logo_alert  fld " [ngClass]="{'fill-act':clickFlag}">
-      <div class="alert_big"><img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAP9JREFUOE+lk7uNwkAYhGeggOsEuYPjArRkQCeQkB5UcFwHlAARrEhMBYdEjijBlkhhTovxysJmLeAPVvvQfv9ziDtTpxOh2ewBaEOKrs/kDkCM83nJzcbtvbF4kDFDkD/3UH+WEgATWvub33mAjFmAdJ7rTVrQ2sE1OLfUeq5CSiNaO+Mt579Kt6sVsN8D43H52aVzuXxR3e4EwPfTgOzD1AFiAJ8vAraUMQnIj5cAUvIuIA2nUN/QbbiIrRZwOgGHwyPUNGtjoxFX1iHcxhRkFB6kUAT5IOWxPTnKS1rb96NcgAydWB62VUpvYpqVxOQhmZwdvSxnYM71+lis6D+x44UuiqPOgQAAAABJRU5ErkJggg=="
-          alt="Connecting" class="img-fluid"></div>
-      <svg id="Component_48_1" data-name="Component 48 – 1" width="36" height="35.999" viewBox="0 0 36 35.999">
+    <div class="d-flex  common-height setting">
+        <div class="web_logo web_logo_alert  fld " [ngClass]="{'fill-act':clickFlag}">
+            <div class="alert_big"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAP9JREFUOE+lk7uNwkAYhGeggOsEuYPjArRkQCeQkB5UcFwHlAARrEhMBYdEjijBlkhhTovxysJmLeAPVvvQfv9ziDtTpxOh2ewBaEOKrs/kDkCM83nJzcbtvbF4kDFDkD/3UH+WEgATWvub33mAjFmAdJ7rTVrQ2sE1OLfUeq5CSiNaO+Mt579Kt6sVsN8D43H52aVzuXxR3e4EwPfTgOzD1AFiAJ8vAraUMQnIj5cAUvIuIA2nUN/QbbiIrRZwOgGHwyPUNGtjoxFX1iHcxhRkFB6kUAT5IOWxPTnKS1rb96NcgAydWB62VUpvYpqVxOQhmZwdvSxnYM71+lis6D+x44UuiqPOgQAAAABJRU5ErkJggg=="
+                    alt="Connecting" class="img-fluid"></div>
+            <svg id="Component_48_1" data-name="Component 48 – 1" width="36" height="35.999" viewBox="0 0 36 35.999">
         <path id="Path_6271" data-name="Path 6271"
           d="M6,0H30a6,6,0,0,1,6,6V30a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" fill=""></path>
         <ellipse id="Ellipse_89" data-name="Ellipse 89" cx="1.091" cy="1.091" rx="1.091" ry="1.091"
@@ -46,34 +45,34 @@
           transform="translate(9 8)" fill="#ffffff"></path>
       </svg>
 
-    </div>
-    <mat-expansion-panel class="list-item" (click)="classClick()">
+        </div>
+        <mat-expansion-panel class="list-item" (click)="classClick()">
 
-      <mat-expansion-panel-header>
-        <mat-panel-title class="ml-2 mt-2">
-          <h4 class="sec-nm">
-            Appearance</h4>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div class="mat-expansion-panel-body">
-        <ul class="side-list"  routerLinkActive="act">
-          <li [routerLink]="'/appearance/app'" matRipple>
-            <div class="item" >
+            <mat-expansion-panel-header>
+                <mat-panel-title class="ml-2 mt-2">
+                    <h4 class="sec-nm">
+                        Appearance</h4>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="mat-expansion-panel-body">
+                <ul class="side-list" routerLinkActive="act">
+                    <li [routerLink]="'/appearance/app'" matRipple>
+                        <div class="item">
 
-              <span class="categ">App Icon </span>
-            </div>
-          </li>
-        </ul>
+                            <span class="categ">App Icon </span>
+                        </div>
+                    </li>
+                </ul>
 
-        <ul class="side-list" routerLinkActive="act">
-          <li [routerLink]="'/appearance/launch'" matRipple>
-            <div class="item" >
-              <span class="categ">Launch Screen</span>
-            </div>
-          </li>
-        </ul>
+                <ul class="side-list" routerLinkActive="act">
+                    <li [routerLink]="'/appearance/launch'" matRipple>
+                        <div class="item">
+                            <span class="categ">Launch Screen</span>
+                        </div>
+                    </li>
+                </ul>
 
-        <!-- <ul class="side-list" routerLinkActive="act">
+                <!-- <ul class="side-list" routerLinkActive="act">
           <li matRipple>
             <div class="item" >
               <span class="categ">Login & Sign Up </span>
@@ -87,24 +86,23 @@
             </div>
           </li>
         </ul> -->
-        <ul class="side-list" routerLinkActive="act">
-          <li [routerLink]="'/appearance/homeScreen'" matRipple>
-            <div class="item" >
-              <span class="categ">Home Screen </span>
+                <ul class="side-list" routerLinkActive="act">
+                    <li [routerLink]="'/appearance/homeScreen'" matRipple>
+                        <div class="item">
+                            <span class="categ">Home Screen </span>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
-          </li>
-        </ul>
+        </mat-expansion-panel>
+    </div>
 
-      </div>
-    </mat-expansion-panel>
-  </div>
-
-  <div class="d-flex  common-height setting">
-    <div class="web_logo web_logo_alert fld">
-      <div class="alert_big"><img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAP9JREFUOE+lk7uNwkAYhGeggOsEuYPjArRkQCeQkB5UcFwHlAARrEhMBYdEjijBlkhhTovxysJmLeAPVvvQfv9ziDtTpxOh2ewBaEOKrs/kDkCM83nJzcbtvbF4kDFDkD/3UH+WEgATWvub33mAjFmAdJ7rTVrQ2sE1OLfUeq5CSiNaO+Mt579Kt6sVsN8D43H52aVzuXxR3e4EwPfTgOzD1AFiAJ8vAraUMQnIj5cAUvIuIA2nUN/QbbiIrRZwOgGHwyPUNGtjoxFX1iHcxhRkFB6kUAT5IOWxPTnKS1rb96NcgAydWB62VUpvYpqVxOQhmZwdvSxnYM71+lis6D+x44UuiqPOgQAAAABJRU5ErkJggg=="
-          alt="Connecting" class="img-fluid"></div>
-      <svg width="36" height="35.999" viewBox="0 0 36 35.999">
+    <div class="d-flex  common-height setting">
+        <div class="web_logo web_logo_alert fld">
+            <div class="alert_big"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAP9JREFUOE+lk7uNwkAYhGeggOsEuYPjArRkQCeQkB5UcFwHlAARrEhMBYdEjijBlkhhTovxysJmLeAPVvvQfv9ziDtTpxOh2ewBaEOKrs/kDkCM83nJzcbtvbF4kDFDkD/3UH+WEgATWvub33mAjFmAdJ7rTVrQ2sE1OLfUeq5CSiNaO+Mt579Kt6sVsN8D43H52aVzuXxR3e4EwPfTgOzD1AFiAJ8vAraUMQnIj5cAUvIuIA2nUN/QbbiIrRZwOgGHwyPUNGtjoxFX1iHcxhRkFB6kUAT5IOWxPTnKS1rb96NcgAydWB62VUpvYpqVxOQhmZwdvSxnYM71+lis6D+x44UuiqPOgQAAAABJRU5ErkJggg=="
+                    alt="Connecting" class="img-fluid"></div>
+            <svg width="36" height="35.999" viewBox="0 0 36 35.999">
         <g id="Group_3586" data-name="Group 3586" transform="translate(-20 -390)">
           <g id="Group_3487" data-name="Group 3487">
             <rect id="Rectangle_1159" data-name="Rectangle 1159" width="36" height="35.999" rx="6"
@@ -119,49 +117,48 @@
           </g>
         </g>
       </svg>
+        </div>
+        <mat-expansion-panel class="list-item">
+
+            <mat-expansion-panel-header>
+                <mat-panel-title class="ml-2 mt-2">
+                    <h4 class="sec-nm">
+                        Inventory</h4>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="mat-expansion-panel-body">
+                <ul class="side-list" routerLinkActive="act">
+                    <li [routerLink]="'/product/order'" matRipple>
+                        <div class="item">
+
+                            <span class="categ">Order </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="side-list" routerLinkActive="act" [routerLink]="'/product/list'">
+                    <li matRipple>
+                        <div class="item">
+                            <span class="categ">Product</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="side-list" routerLinkActive="act" [routerLink]="'/product/category'">
+                    <li matRipple>
+                        <div class="item">
+                            <span class="categ">Catalogue </span>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </mat-expansion-panel>
     </div>
-    <mat-expansion-panel class="list-item">
 
-      <mat-expansion-panel-header>
-        <mat-panel-title class="ml-2 mt-2">
-          <h4 class="sec-nm">
-            Inventory</h4>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div class="mat-expansion-panel-body">
-        <ul class="side-list"  routerLinkActive="act">
-          <li [routerLink]="'/product/order'" matRipple>
-            <div class="item">
-
-              <span class="categ">Order </span>
-            </div>
-          </li>
-        </ul>
-
-        <ul class="side-list"  routerLinkActive="act" [routerLink]="'/product/list'">
-          <li  matRipple>
-            <div class="item">
-              <span class="categ">Product</span>
-            </div>
-          </li>
-        </ul>
-
-        <ul class="side-list"  routerLinkActive="act" [routerLink]="'/product/category'">
-          <li matRipple>
-            <div class="item">
-              <span class="categ">Catalogue </span>
-            </div>
-          </li>
-        </ul>
-        
-
-      </div>
-    </mat-expansion-panel>
-  </div>
-
-  <div class="d-flex  common-height setting">
-    <div class="web_logo"><svg id="Component_31_1" data-name="Component 31 – 1" width="36" height="35.999"
-        viewBox="0 0 36 35.999">
+    <div class="d-flex  common-height setting">
+        <div class="web_logo"><svg id="Component_31_1" data-name="Component 31 – 1" width="36" height="35.999" viewBox="0 0 36 35.999">
         <rect id="Rectangle_1158" data-name="Rectangle 1158" width="36" height="35.999" rx="6" fill="#01c99b"></rect>
         <g id="Settings_Copy" data-name="Settings Copy" transform="translate(9.615 9.613)">
           <path id="Shape"
@@ -169,158 +166,107 @@
             transform="translate(0 0)" fill="#fff"></path>
         </g>
       </svg></div>
-    <mat-expansion-panel class="list-item">
+        <mat-expansion-panel class="list-item">
 
-      <mat-expansion-panel-header>
-        <mat-panel-title class="ml-2 mt-2">
-          <h4 class="sec-nm">
-            App Setting</h4>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div class="mat-expansion-panel-body">
-        <ul class="side-list act">
-          <li [routerLink]="'/order'" matRipple>
-            <div class="item" routerLinkActive="act current">
+            <mat-expansion-panel-header>
+                <mat-panel-title class="ml-2 mt-2">
+                    <h4 class="sec-nm">
+                        User Management</h4>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- <div class="mat-expansion-panel-body">
+                <ul class="side-list act">
+                    <li [routerLink]="'/order'" matRipple>
+                        <div class="item" routerLinkActive="act current">
 
-              <span class="categ">App Icon </span>
-            </div>
-          </li>
-        </ul>
+                            <span class="categ">App Icon </span>
+                        </div>
+                    </li>
+                </ul>
 
-        <ul class="side-list">
-          <li [routerLink]="'/retrospective/inventory'" matRipple>
-            <div class="item" routerLinkActive="act current">
-              <span class="categ">Launch Screen</span>
-            </div>
-          </li>
-        </ul>
+                <ul class="side-list">
+                    <li [routerLink]="'/retrospective/inventory'" matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">Launch Screen</span>
+                        </div>
+                    </li>
+                </ul>
 
-        <ul class="side-list">
-          <li matRipple>
-            <div class="item" routerLinkActive="act current">
-              <span class="categ">Login & Sign Up </span>
-            </div>
-          </li>
-        </ul>
-        <ul class="side-list">
-          <li matRipple>
-            <div class="item" routerLinkActive="act current">
-              <span class="categ">Color Theme </span>
-            </div>
-          </li>
-        </ul>
-        <ul class="side-list">
-          <li matRipple>
-            <div class="item" routerLinkActive="act current">
-              <span class="categ">Home Screen </span>
-            </div>
-          </li>
-        </ul>
+                <ul class="side-list">
+                    <li matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">Login & Sign Up </span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="side-list">
+                    <li matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">Color Theme </span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="side-list">
+                    <li matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">Home Screen </span>
+                        </div>
+                    </li>
+                </ul>
 
-      </div>
-    </mat-expansion-panel>
-  </div>
-
-  <div class="d-flex align-items-center common-height setting" >
-    <div class="web_logo web_logo_alert"><svg width="36" height="35.999" viewBox="0 0 36 35.999"><g id="Component_34_1" data-name="Component 34 – 1" transform="translate(0 0.076)"><rect id="Rectangle_1160" data-name="Rectangle 1160" width="36" height="35.999" rx="6" transform="translate(0 -0.076)" fill="#3064f9"></rect><g id="Group_2166" data-name="Group 2166" transform="translate(-186.484 -649.076)"><path id="Exclusion_5" data-name="Exclusion 5" d="M17686.482,4679h-8a2,2,0,0,1-2-2v-2h12v2A2,2,0,0,1,17686.482,4679Zm-3.91-3.063a1,1,0,1,0,1,1A1,1,0,0,0,17682.572,4675.938Zm5.912-1.939h-12l0-13a2,2,0,0,1,2-2h8a2,2,0,0,1,2,2v13Zm-8-13a.5.5,0,1,0,0,1h4a.5.5,0,0,0,0-1Z" transform="translate(-17478 -4002)" fill="#fff"></path></g></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">App Preview</h4>
-    </div>
-  </div>
-  <div class="d-flex align-items-center common-height setting" >
-    <div class="web_logo web_logo_alert"><svg width="36" height="35.999" viewBox="0 0 36 35.999"><g id="Component_15" data-name="Component 15" transform="translate(0 0.076)"><rect id="Rectangle_1160" data-name="Rectangle 1160" width="36" height="35.999" rx="6" transform="translate(0 -0.076)" fill="#ffc53a"></rect><g id="Group_2883" data-name="Group 2883" transform="translate(-220.1 -154.166)"><path id="Path_6275" data-name="Path 6275" d="M244.094,177.424h-2.9v-1.708h1.137a1.234,1.234,0,0,0,.938-2.035l-4.028-4.716a1.23,1.23,0,0,0-.937-.434h0a1.232,1.232,0,0,0-.938.433l-4.027,4.716a1.234,1.234,0,0,0,.937,2.036h1.137v1.708h-2.9a4.511,4.511,0,0,1,0-9.016h.18a5.75,5.75,0,0,1,11.229,0h.182a4.509,4.509,0,0,1,0,9.012Z" transform="translate(0 0)" fill="#fff"></path><path id="Path_6276" data-name="Path 6276" d="M380.776,307.287h-2.16v4.637a.164.164,0,0,1-.164.164h-3.41a.164.164,0,0,1-.164-.164v-4.637H372.72a.211.211,0,0,1-.161-.348l4.028-4.717a.211.211,0,0,1,.321,0l4.028,4.717A.211.211,0,0,1,380.776,307.287Z" transform="translate(-138.449 -132.593)" fill="#fff"></path></g></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">Download App</h4>
-    </div>
-  </div>
-  <div class="d-flex align-items-center common-height setting" >
-    <div class="web_logo"><svg width="36" height="35.999" viewBox="0 0 36 35.999"><defs><clipPath id="clip-path"><rect id="Rectangle_4635" data-name="Rectangle 4635" width="19.998" height="15.312" fill="#fff"></rect></clipPath></defs><g id="Component_112" data-name="Component 112" transform="translate(0 0.241)"><rect id="Rectangle_1159" data-name="Rectangle 1159" width="36" height="35.999" rx="6" transform="translate(0 -0.241)" fill="#3064f9"></rect><g id="Group_4895" data-name="Group 4895" transform="translate(8 9.76)"><g id="Group_4894" data-name="Group 4894" clip-path="url(#clip-path)"><path id="Path_8738" data-name="Path 8738" d="M18.8,10.687a.688.688,0,1,1,0-1.376H20A9.925,9.925,0,0,0,19,5.595l-.088.05-.947.547A.688.688,0,1,1,17.28,5l.946-.546.089-.051a10.069,10.069,0,0,0-2.721-2.721l-.051.089L15,2.718a.688.688,0,0,1-1.192-.688l.547-.947L14.4.994A9.932,9.932,0,0,0,10.687,0V1.195a.688.688,0,1,1-1.376,0V0A9.937,9.937,0,0,0,5.595.994l.051.087.547.948a.688.688,0,0,1-.253.939.679.679,0,0,1-.343.092A.687.687,0,0,1,5,2.718l-.546-.946L4.4,1.683A10.079,10.079,0,0,0,1.683,4.4l.088.052L2.719,5a.688.688,0,0,1-.345,1.283.679.679,0,0,1-.343-.092l-.948-.547L.994,5.594A9.937,9.937,0,0,0,0,9.311H1.195a.688.688,0,1,1,0,1.376H0a9.949,9.949,0,0,0,1.5,4.625h17A9.948,9.948,0,0,0,20,10.687ZM9.786,9.824,13.707,5.2a.348.348,0,0,1,.575.384l-2.746,5.334a1.621,1.621,0,1,1-3.158.516A1.629,1.629,0,0,1,9.786,9.824" fill="#fff"></path></g></g></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">Performance</h4>
-    </div>
-    </div>
-    
-  <div class="d-flex align-items-center common-height setting" >
-    <div class="web_logo"><svg id="Component_21" data-name="Component 21" width="36" height="35.999" viewBox="0 0 36 35.999"><rect id="Rectangle_1156" data-name="Rectangle 1156" width="36" height="35.999" rx="6" fill="#f68751"></rect><g id="Group_2906" data-name="Group 2906" transform="translate(-917.07 -513)"><path id="Path_6321" data-name="Path 6321" d="M943.679,535.145a.991.991,0,0,1-.991.991H927.061a.991.991,0,0,1,0-1.982h.157v-5.5A7.652,7.652,0,0,1,934.87,521h.015a7.643,7.643,0,0,1,7.645,7.652v5.5h.157a.992.992,0,0,1,.991.991Z" transform="translate(0)" fill="#fff"></path><path id="Path_6322" data-name="Path 6322" d="M1000.594,713.8a3.043,3.043,0,0,1-6.086,0Z" transform="translate(-62.677 -176.57)" fill="#fff"></path></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">Push Notifications</h4>
-    </div>
+            </div> -->
+        </mat-expansion-panel>
     </div>
 
-  <div class="d-flex align-items-center common-height setting" style="margin-bottom: 10px;">
-    <div class="web_logo"><svg id="Component_113" data-name="Component 113" xmlns="http://www.w3.org/2000/svg" width="36" height="35.999" viewBox="0 0 36 35.999"><path id="Path_9135" data-name="Path 9135" d="M6,0H30a6,6,0,0,1,6,6V30a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" fill="#D42EB3"></path><g id="Group_4848" data-name="Group 4848" transform="translate(7 8)"><path id="Path_8682" data-name="Path 8682" d="M483,1132v6.366" transform="translate(-472.02 -1124.637)" fill="none" stroke="#fff" stroke-width="1.5"></path><path id="Path_8683" data-name="Path 8683" d="M453,1144.776v-3.3h16.215v3.3" transform="translate(-450.02 -1131.048)" fill="none" stroke="#fff" stroke-width="1.5"></path><rect id="Rectangle_4662" data-name="Rectangle 4662" width="7.363" height="7.363" rx="1" transform="translate(7.363)" fill="#fff"></rect><rect id="Rectangle_4663" data-name="Rectangle 4663" width="5.813" height="5.813" rx="1" transform="translate(8.138 13.563)" fill="#fff"></rect><rect id="Rectangle_4664" data-name="Rectangle 4664" width="5.813" height="5.813" rx="1" transform="translate(0 13.563)" fill="#fff"></rect><rect id="Rectangle_4665" data-name="Rectangle 4665" width="5.813" height="5.813" rx="1" transform="translate(16.275 13.563)" fill="#fff"></rect></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">Multisite</h4>
-    </div>
-    </div>
- 
+
     <div class="d-flex  common-height setting">
-      <div class="web_logo"><svg id="Component_114" data-name="Component 114" width="36" height="35.999" viewBox="0 0 36 35.999"><path id="Path_9135" data-name="Path 9135" d="M6,0H30a6,6,0,0,1,6,6V30a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" fill="#f68751"></path><path id="iconfinder_us_dollar_2639941" d="M17.295,23.983V26H14.828V23.99c-2.627-.35-4.281-1.879-4.374-4.143h2.814c.134,1.127,1.272,1.85,2.91,1.85,1.513,0,2.583-.733,2.583-1.782,0-.887-.693-1.4-2.4-1.764l-1.812-.385c-2.535-.53-3.777-1.85-3.777-3.971,0-2.257,1.571-3.844,4.056-4.242V7.47h2.467V9.55c2.413.391,4.041,1.954,4.116,4.091H18.674a2.317,2.317,0,0,0-2.563-1.83c-1.456,0-2.419.675-2.419,1.734,0,.857.665,1.349,2.293,1.7l1.676.356c2.8.588,4,1.792,4,3.951C21.661,21.993,20.026,23.609,17.295,23.983Z" transform="translate(2.09 1.428)" fill="#fff"></path></svg></div>
-      <mat-expansion-panel class="list-item">
-  
-        <mat-expansion-panel-header>
-          <mat-panel-title class="ml-2 mt-2">
-            <h4 class="sec-nm">
-              App Setting</h4>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="mat-expansion-panel-body">
-          <ul class="side-list act">
-            <li [routerLink]="'/order'" matRipple>
-              <div class="item" routerLinkActive="act current">
-  
-                <span class="categ">App Monetization </span>
-              </div>
-            </li>
-          </ul>
-  
-          <ul class="side-list">
-            <li [routerLink]="'/retrospective/inventory'" matRipple>
-              <div class="item" routerLinkActive="act current">
-                <span class="categ">Launch Screen</span>
-              </div>
-            </li>
-          </ul>
-  
-          <ul class="side-list">
-            <li matRipple>
-              <div class="item" routerLinkActive="act current">
-                <span class="categ">Login & Sign Up </span>
-              </div>
-            </li>
-          </ul>
-          <ul class="side-list">
-            <li matRipple>
-              <div class="item" routerLinkActive="act current">
-                <span class="categ">Color Theme </span>
-              </div>
-            </li>
-          </ul>
-          <ul class="side-list">
-            <li matRipple>
-              <div class="item" routerLinkActive="act current">
-                <span class="categ">Home Screen </span>
-              </div>
-            </li>
-          </ul>
-  
-        </div>
-      </mat-expansion-panel>
+        <div class="web_logo"><svg id="Component_114" data-name="Component 114" width="36" height="35.999" viewBox="0 0 36 35.999"><path id="Path_9135" data-name="Path 9135" d="M6,0H30a6,6,0,0,1,6,6V30a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" fill="#f68751"></path><path id="iconfinder_us_dollar_2639941" d="M17.295,23.983V26H14.828V23.99c-2.627-.35-4.281-1.879-4.374-4.143h2.814c.134,1.127,1.272,1.85,2.91,1.85,1.513,0,2.583-.733,2.583-1.782,0-.887-.693-1.4-2.4-1.764l-1.812-.385c-2.535-.53-3.777-1.85-3.777-3.971,0-2.257,1.571-3.844,4.056-4.242V7.47h2.467V9.55c2.413.391,4.041,1.954,4.116,4.091H18.674a2.317,2.317,0,0,0-2.563-1.83c-1.456,0-2.419.675-2.419,1.734,0,.857.665,1.349,2.293,1.7l1.676.356c2.8.588,4,1.792,4,3.951C21.661,21.993,20.026,23.609,17.295,23.983Z" transform="translate(2.09 1.428)" fill="#fff"></path></svg></div>
+        <mat-expansion-panel class="list-item">
+
+            <mat-expansion-panel-header>
+                <mat-panel-title class="ml-2 mt-2">
+                    <h4 class="sec-nm">
+                        Publish </h4>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="mat-expansion-panel-body">
+                <ul class="side-list act">
+                    <li matRipple>
+                        <div class="item" routerLinkActive="act current">
+
+                            <span class="categ">Status </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="side-list">
+                    <li [routerLink]="'/retrospective/inventory'" matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">IOS</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="side-list">
+                    <li matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">Android </span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="side-list">
+                    <li matRipple>
+                        <div class="item" routerLinkActive="act current">
+                            <span class="categ">Web App </span>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </mat-expansion-panel>
     </div>
 
-    
-  <div class="d-flex align-items-center common-height setting" >
-    <div class="web_logo"><svg width="36" height="35.999" viewBox="0 0 36 35.999"><g id="Component_33_1" data-name="Component 33 – 1" transform="translate(0 0.241)"><rect id="Rectangle_1159" data-name="Rectangle 1159" width="36" height="35.999" rx="6" transform="translate(0 -0.241)" fill="#01C99B"></rect><g id="Group_2881" data-name="Group 2881" transform="translate(-155.8 -63.031)"><path id="Path_6272" data-name="Path 6272" d="M183.194,83.033a2.472,2.472,0,0,1-4.026,1.891V89.21a.974.974,0,0,1-.974.974h-4.306a2.473,2.473,0,1,0-3.809,0h-4.306a.974.974,0,0,1-.974-.974V84.9a2.473,2.473,0,1,0,0-3.808V76.79a.974.974,0,0,1,.974-.974h4.286a2.473,2.473,0,1,1,3.847,0h4.286a.974.974,0,0,1,.974.974v4.286a2.473,2.473,0,0,1,4.026,1.957Z" transform="translate(0 0)" fill="#fff"></path></g></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">App Addons</h4>
-    </div>
-    </div>
-    
-  <div class="d-flex align-items-center common-height setting" >
-    <div class="web_logo"><svg id="Component_31_1" data-name="Component 31 – 1" width="36" height="35.999" viewBox="0 0 36 35.999"><rect id="Rectangle_1158" data-name="Rectangle 1158" width="36" height="35.999" rx="6" fill="#3064f9"></rect><g id="iconfinder_group_309042" transform="translate(5.186 5.447)"><g id="Group_3518" data-name="Group 3518" transform="translate(13.778 5)"><g id="Group_3516" data-name="Group 3516" transform="translate(0 9.664)"><path id="Path_7191" data-name="Path 7191" d="M16.766,14a7.877,7.877,0,0,0-3.866.966,10.435,10.435,0,0,1,2.255,2.9l.107.215v2.362h8.59V18.3A7.881,7.881,0,0,0,16.766,14Z" transform="translate(-12.9 -14)" fill="#fff"></path></g><g id="Group_3517" data-name="Group 3517" transform="translate(0.107)"><circle id="Ellipse_2308" data-name="Ellipse 2308" cx="4" cy="4" r="4" transform="translate(-0.071 -0.447)" fill="#fff"></circle></g></g><g id="Group_3519" data-name="Group 3519" transform="translate(1 5)"><path id="Path_7192" data-name="Path 7192" d="M4.221,8.758A3.8,3.8,0,0,1,7.979,5a3.8,3.8,0,0,1,3.758,3.758,3.8,3.8,0,0,1-3.758,3.758A3.8,3.8,0,0,1,4.221,8.758Zm3.758,5.906A7.462,7.462,0,0,0,1,18.959v2.148H14.959V18.959A7.462,7.462,0,0,0,7.979,14.664Z" transform="translate(-1 -5)" fill="#fff"></path></g></g></svg></div>
-    <div class="pannel_title ml-2 mt-2">
-      <h4 class="panel-title act">Users</h4>
-    </div>
-    </div>
+
 
 </div>
