@@ -1,21 +1,27 @@
 @import '../../../scss/theme.scss';
+section.login_frm {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-header{
+header {
     .container {
         max-width: 100%;
         width: 97%;
-        &.signhead{
+        &.signhead {
             justify-content: space-between;
-    height: 80px;
-    display: flex;
-    align-items: center;
+            height: 80px;
+            display: flex;
+            align-items: center;
         }
     }
     .logo {
         width: 350px;
         margin-top: 6px;
     }
-    .back-home{
+    .back-home {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,14 +37,14 @@ header{
         background: none!important;
         border: none!important;
         color: #c8cedb;
-p{
-    margin: 0px;
-    font-size: 14px;
-}
+        p {
+            margin: 0px;
+            font-size: 14px;
+        }
     }
 }
 
-.create-account{
+.create-account {
     height: auto;
     .signup_left {
         width: 100%;
@@ -47,7 +53,7 @@ p{
         align-items: center;
         justify-content: center;
         background-color: #fcfdff;
-        .wht_bg{
+        .wht_bg {
             border: 1px solid #dce1eb;
             width: 640px;
             background-color: #fff;
@@ -55,24 +61,24 @@ p{
             padding-right: 45px;
             padding-top: 25px;
             text-align: center;
-    margin: auto;
-    h3 {
-        font-size: 24px;
-        color: #1b2952;
-        margin-bottom: 0;
-        text-align: left !important;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    h5 {
-        margin-top: 3px;
-        margin-bottom: 10px;
-        color: #7782a1;
-        font-size: 14px;
-        text-align: left;
-        line-height: 1.5;
-        font-weight: 400;
-    }
+            margin: auto;
+            h3 {
+                font-size: 24px;
+                color: #1b2952;
+                margin-bottom: 0;
+                text-align: left !important;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+            h5 {
+                margin-top: 3px;
+                margin-bottom: 10px;
+                color: #7782a1;
+                font-size: 14px;
+                text-align: left;
+                line-height: 1.5;
+                font-weight: 400;
+            }
         }
     }
 }
@@ -82,21 +88,27 @@ p{
     position: relative;
 }
 
-input,select, .loginbtn {
+input,
+select,
+.loginbtn {
     height: 50px!important;
 }
-input{ &.form-control {
-    padding: .375rem 1.25rem;
-    border: 1px solid #c8cedb;
-    outline: none!important;
-    color: #1b2952;
+
+input {
+    &.form-control {
+        padding: .375rem 1.25rem;
+        border: 1px solid #c8cedb;
+        outline: none!important;
+        color: #1b2952;
+    }
 }
-}
+
 .eye {
     position: absolute;
     top: 16px;
     right: 18px;
 }
+
 .forgot_pw {
     margin-top: 20px;
     margin-bottom: 0;
@@ -125,6 +137,7 @@ input{ &.form-control {
         }
     }
 }
+
 .checkmark {
     position: absolute;
     border: 1px solid #bcc7e6;
@@ -135,20 +148,25 @@ input{ &.form-control {
     width: 20px;
     background-color: #fff;
 }
-.container1:hover input ~ .checkmark {
+
+.container1:hover input~.checkmark {
     background-color: #ccc;
 }
-.container1 input:checked ~ .checkmark {
+
+.container1 input:checked~.checkmark {
     background-color: #fff;
 }
+
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-.container1 input:checked ~ .checkmark:after {
+
+.container1 input:checked~.checkmark:after {
     display: block;
 }
+
 .container1 .checkmark:after {
     left: 7px;
     top: 4px;
@@ -167,6 +185,7 @@ input{ &.form-control {
     font-family: "Proxima-Regular";
     font-size: 15px;
 }
+
 .loginbtn {
     background-color: #3064f9;
     border-radius: 4px;
@@ -187,11 +206,13 @@ input{ &.form-control {
     margin: 20px 0px;
     margin-bottom: 0px;
 }
-.socialoptions{
-    img{
+
+.socialoptions {
+    img {
         cursor: pointer;
     }
 }
+
 .footer {
     position: relative;
     font-size: 14px;

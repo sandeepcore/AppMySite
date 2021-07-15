@@ -1,4 +1,5 @@
 @import '../order-inventory/order-inventory.component.scss';
+@import '../../../scss/theme.scss';
 h4.lbl_nm {
     color: #1b2952;
     position: relative;
@@ -41,4 +42,44 @@ h4.lbl_nm {
 
 ::ng-deep .mat-form-field {
     display: block !important;
+}
+
+section.main-ara-cntr {
+    position: absolute;
+    width: calc(80%);
+    top: 10%;
+    background: #ffffff;
+    height: 80%;
+    box-shadow: rgb(110 110 110 / 50%) 0px 0px 15px;
+    left: 10%;
+    border-radius: 4px;
+    header {
+        display: flex;
+        padding: 20px 30px;
+        justify-content: space-between;
+        background: #42c6e1;
+        align-items: center;
+        color: #192da1;
+        font-weight: 100;
+    }
+}
+
+.no-mr {
+    margin: 30px 30px;
+    &.mx-ht {
+        max-height: 460px;
+        overflow: auto;
+    }
+}
+
+.btn_area {
+    justify-content: flex-end;
+    margin-right: 30px;
+    button {
+        margin-left: 15px;
+    }
+}
+
+::ng-deep .mat-select-panel {
+    margin-top: 0% !important;
 }

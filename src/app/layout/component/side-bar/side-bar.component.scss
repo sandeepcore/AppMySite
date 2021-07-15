@@ -136,6 +136,14 @@ span.categ {
     position: absolute;
 }
 
+::ng-deep .no-icn .mat-expansion-indicator {
+    display: none !important;
+}
+
+::ng-deep .mat-expansion-panel-header-title {
+    margin-right: 10px !important;
+}
+
 .icn_hm {
     vertical-align: middle;
     color: #2196f3;
@@ -199,7 +207,7 @@ i.icn_tgl {
         position: relative;
     }
     .web_logo {
-        margin-left: 20px;
+        margin-left: 10px;
         position: relative;
         .alert_big {
             position: absolute;
@@ -244,7 +252,7 @@ h4 {
     color: rgb(27, 41, 82);
     &.sec-nm {
         color: rgb(119, 130, 161);
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 

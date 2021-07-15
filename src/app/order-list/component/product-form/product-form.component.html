@@ -1,289 +1,260 @@
-<!-- The Modal -->
-<div class="modal" id="myModal" *ngIf="isShow">
-    <div class="modal-dialog">
-        <div class="modal-content">
+<section class="main-ara-cntr" *ngIf="isShow">
+    <header>
+        <h4 class="pg-title">Add product</h4>
+        <button mat-mini-fab color="primary" data-dismiss="modal" aria-label="Example icon button with a menu icon">
+            <mat-icon>close</mat-icon>
+        </button>
+    </header>
+    <form #productForm="ngForm">
+        <div class="row no-mr mx-ht cus_scrl">
+            <div class="col-6">
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Name</h4>
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Add product</h4>
-
-                <button mat-mini-fab color="primary" data-dismiss="modal" aria-label="Example icon button with a menu icon">
-                    <mat-icon>close</mat-icon>
-                </button>
-            </div>
-            <form #productForm="ngForm">
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Name</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="appText" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.name">
-                                </div>
-                            </div>
-
-                            <!-- <mat-form-field class="example-full-width">
-                                <mat-label>Name</mat-label>
-                                <input type="text" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.name">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Keywords</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="appText" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.keywords">
-                                </div>
-                            </div>
-                            <!-- <mat-form-field class="example-full-width">
-                                <mat-label>Keywords</mat-label>
-                                <input type="text" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.keywords">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Description</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="appText" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.description">
-                                </div>
-                            </div>
-                            <!-- <mat-form-field class="example-full-width">
-                                <mat-label>Description</mat-label>
-                                <input type="text" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.description">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Content</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.content">
-                                </div>
-                            </div>
-                            <!--                             
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Content</mat-label>
-                                <input type="tel" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.content">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Price</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.price">
-                                </div>
-                            </div>
-                            <!--                             
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Price</mat-label>
-                                <input type="tel" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.price">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Tax</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.tax">
-                                </div>
-                            </div>
-
-                            <!-- <mat-form-field class="example-full-width">
-                                <mat-label>Tax</mat-label>
-                                <input type="tel" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.tax">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-                            <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Stock</h4>
-
-                                <div class="form-group">
-                                    <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.StockQty">
-                                </div>
-                            </div>
-
-                            <!-- 
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Stock</mat-label>
-                                <input type="tel" matInput [ngModelOptions]="{standalone: true}"
-                                    [(ngModel)]="product.StockQty">
-                            </mat-form-field> -->
-                        </div>
-                        <div class="col-6" style="padding-top: 30px;">
-                            <!-- <mat-form-field class="example-full-width"> -->
-
-                            <mat-checkbox class="example-margin" value="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.IsAvailable">
-                            </mat-checkbox>
-                            <mat-label style="margin-left: 15px;">Available</mat-label>
-                            <!-- </mat-form-field> -->
-                        </div>
-                        <div class="col-6">
-                            <!-- <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Select Size
-                                </h4>
-                                <div class="form-group">
-                                    <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.sizeAttributes" class="form-control slct_inp" name="fontSize">
-                                        <option *ngFor="let size of sizeAttributes" [value]="size">{{size}}</option>
-                                    </select>
-                                </div>
-                            </div> -->
-
-
-
-                            <!-- <mat-form-field class="example-full-width">
-                                <mat-label>Select Size</mat-label>
-                                <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.sizeAttributes" multiple="true">
-                                    <mat-option *ngFor="let size of sizeAttributes" [value]="size">{{size}}</mat-option>
-                                </mat-select>
-                            </mat-form-field> -->
-                            <mat-form-field class="example-chip-list">
-                                <mat-label>Select Size</mat-label>
-                                <mat-chip-list #chipList aria-label="Fruit selection">
-                                  <mat-chip
-                                    *ngFor="let size of product.sizeAttributes"
-                                    [selectable]="selectable"
-                                    [removable]="removable"
-                                    (removed)="remoSize(size)">
-                                    {{size}}
-                                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-                                  </mat-chip>
-                                  <input
-                                    placeholder="Enter color RGB"
-                                    name="sizeText"
-                                    [(ngModel)]="sizeText"
-                                    [matChipInputFor]="chipList"
-                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                    (matChipInputTokenEnd)="addSize($event)">
-                                </mat-chip-list>
-                                <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-                                  <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
-                                    {{fruit}}
-                                  </mat-option>
-                                </mat-autocomplete> -->
-                              </mat-form-field>
-                        </div>
-                        <div class="col-6">
-
-                            <!-- <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Select Category
-                                </h4>
-                                <div class="form-group">
-                                    <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.parentCatid" class="form-control slct_inp" name="fontSize">
-                                        <option *ngFor="let cat of catList" (click)="setSelectedCat(cat)"
-                                            [value]="cat._id">{{cat.catName}}</option>
-                                    </select>
-                                </div>
-                            </div> -->
-
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Select Category</mat-label>
-                                <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.parentCatid">
-                                    <mat-option *ngFor="let cat of catList" (click)="setSelectedCat(cat)" [value]="cat._id">{{cat.catName}}</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                        <ng-container *ngIf="product.parentCatid && subCatList && subCatList.length>0">
-                            <!-- <ng-container *ngIf="true"> -->
-                            <div class="col-6">
-                                <!-- <div class="frm_style mb-4">
-                                    <h4 class="lbl_nm">Select Sub Category
-                                    </h4>
-                                    <div class="form-group">
-                                        <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.subCatid" class="form-control slct_inp" name="fontSize">
-                                            <option *ngFor="let cat of subCatList" (click)="setSelectedSubCat(cat)" [value]="cat.id"
-                                               >{{cat.subCategory}}</option>
-                                        </select>
-                                    </div>
-                                </div> -->
-
-                                <mat-form-field class="example-full-width">
-                                    <mat-label>Select Sub Category</mat-label>
-                                    <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.subCatid">
-                                        <mat-option *ngFor="let cat of subCatList" (click)="setSelectedSubCat(cat)" [value]="cat.id">{{cat.subCategory}}</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                            </div>
-                            <div class="col-6" *ngIf="product.subCatid && itemCatList && itemCatList.length>0">
-                                <mat-form-field class="example-full-width">
-                                    <mat-label>Select Item Category</mat-label>
-                                    <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.childCatId">
-                                        <mat-option *ngFor="let cat of itemCatList" [value]="cat.id">{{cat.name}}
-                                        </mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                            </div>
-                        </ng-container>
-
-                        <div class="col-6">
-                            <!-- <div class="frm_style mb-4">
-                                <h4 class="lbl_nm">Select Color
-                                </h4>
-                                <div class="form-group">
-                                    <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.colorAttributes" class="form-control slct_inp">
-                                        <option *ngFor="let color of colorAttributes" [value]="color">{{color}}</option>
-                                    </select>
-                                </div>
-                            </div> -->
-
-                            <mat-form-field class="example-chip-list">
-                                <mat-label>Color RGB</mat-label>
-                                <mat-chip-list #chipList aria-label="Fruit selection">
-                                  <mat-chip
-                                    *ngFor="let color of product.colorAttributes"
-                                    [selectable]="selectable"
-                                    [removable]="removable"
-                                    (removed)="removeColor(color)">
-                                    {{color}}
-                                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-                                  </mat-chip>
-                                  <input
-                                    placeholder="Enter color RGB"
-                                    name="colorText"
-                                    [(ngModel)]="colorText"
-                                    [matChipInputFor]="chipList"
-                                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                    (matChipInputTokenEnd)="addColor($event)">
-                                </mat-chip-list>
-                                <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-                                  <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
-                                    {{fruit}}
-                                  </mat-option>
-                                </mat-autocomplete> -->
-                              </mat-form-field>
-
-
-
-                            <!-- <mat-form-field class="example-full-width">
-                                <mat-label>Select Color</mat-label>
-                                <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.colorAttributes" multiple="true">
-                                    <mat-option *ngFor="let color of colorAttributes" [value]="color">{{color}}
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field> -->
-                        </div>
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="appText" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.name">
                     </div>
                 </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button mat-raised-button data-dismiss="modal">Close</button>
-                    <button mat-raised-button [disabled]="!productForm.valid" color="primary" (click)="saveProduct()">Save</button>
-                    <!-- <button type="button" class="btn btn-danger" >Close</button> -->
-                </div>
-            </form>
+                <!-- <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.name">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6">
 
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Keywords</h4>
+
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="appText" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.keywords">
+                    </div>
+                </div>
+                <!-- <mat-form-field class="example-full-width">
+            <mat-label>Keywords</mat-label>
+            <input type="text" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.keywords">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6">
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Description</h4>
+
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="appText" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.description">
+                    </div>
+                </div>
+                <!-- <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <input type="text" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.description">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6">
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Content</h4>
+
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.content">
+                    </div>
+                </div>
+                <!--                             
+        <mat-form-field class="example-full-width">
+            <mat-label>Content</mat-label>
+            <input type="tel" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.content">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6">
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Price</h4>
+
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.price">
+                    </div>
+                </div>
+                <!--                             
+        <mat-form-field class="example-full-width">
+            <mat-label>Price</mat-label>
+            <input type="tel" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.price">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6">
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Tax</h4>
+
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.tax">
+                    </div>
+                </div>
+
+                <!-- <mat-form-field class="example-full-width">
+            <mat-label>Tax</mat-label>
+            <input type="tel" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.tax">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6">
+                <div class="frm_style mb-4">
+                    <h4 class="lbl_nm">Stock</h4>
+
+                    <div class="form-group">
+                        <input class="form-control text_inp" name="content" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.StockQty">
+                    </div>
+                </div>
+
+                <!-- 
+        <mat-form-field class="example-full-width">
+            <mat-label>Stock</mat-label>
+            <input type="tel" matInput [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="product.StockQty">
+        </mat-form-field> -->
+            </div>
+            <div class="col-6" style="padding-top: 30px;">
+                <!-- <mat-form-field class="example-full-width"> -->
+
+                <mat-checkbox class="example-margin" value="true" [ngModelOptions]="{standalone: true}" [(ngModel)]="product.IsAvailable">
+                </mat-checkbox>
+                <mat-label style="margin-left: 15px;">Available</mat-label>
+                <!-- </mat-form-field> -->
+            </div>
+            <div class="col-6">
+                <!-- <div class="frm_style mb-4">
+            <h4 class="lbl_nm">Select Size
+            </h4>
+            <div class="form-group">
+                <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.sizeAttributes" class="form-control slct_inp" name="fontSize">
+                    <option *ngFor="let size of sizeAttributes" [value]="size">{{size}}</option>
+                </select>
+            </div>
+        </div> -->
+
+
+
+                <!-- <mat-form-field class="example-full-width">
+            <mat-label>Select Size</mat-label>
+            <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.sizeAttributes" multiple="true">
+                <mat-option *ngFor="let size of sizeAttributes" [value]="size">{{size}}</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+                <mat-form-field class="example-chip-list">
+                    <mat-label>Select Size</mat-label>
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                        <mat-chip *ngFor="let size of product.sizeAttributes" [selectable]="selectable" [removable]="removable" (removed)="remoSize(size)">
+                            {{size}}
+                            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                        </mat-chip>
+                        <input placeholder="Enter color RGB" name="sizeText" [(ngModel)]="sizeText" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="addSize($event)">
+                    </mat-chip-list>
+                    <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+              <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                {{fruit}}
+              </mat-option>
+            </mat-autocomplete> -->
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+
+                <!-- <div class="frm_style mb-4">
+            <h4 class="lbl_nm">Select Category
+            </h4>
+            <div class="form-group">
+                <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.parentCatid" class="form-control slct_inp" name="fontSize">
+                    <option *ngFor="let cat of catList" (click)="setSelectedCat(cat)"
+                        [value]="cat._id">{{cat.catName}}</option>
+                </select>
+            </div>
+        </div> -->
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Select Category</mat-label>
+                    <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.parentCatid">
+                        <mat-option *ngFor="let cat of catList" (click)="setSelectedCat(cat)" [value]="cat._id">
+                            {{cat.catName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <ng-container *ngIf="product.parentCatid && subCatList && subCatList.length>0">
+                <!-- <ng-container *ngIf="true"> -->
+                <div class="col-6">
+                    <!-- <div class="frm_style mb-4">
+                <h4 class="lbl_nm">Select Sub Category
+                </h4>
+                <div class="form-group">
+                    <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.subCatid" class="form-control slct_inp" name="fontSize">
+                        <option *ngFor="let cat of subCatList" (click)="setSelectedSubCat(cat)" [value]="cat.id"
+                           >{{cat.subCategory}}</option>
+                    </select>
+                </div>
+            </div> -->
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Select Sub Category</mat-label>
+                        <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.subCatid">
+                            <mat-option *ngFor="let cat of subCatList" (click)="setSelectedSubCat(cat)" [value]="cat.id">
+                                {{cat.subCategory}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-6" *ngIf="product.subCatid && itemCatList && itemCatList.length>0">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Select Item Category</mat-label>
+                        <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.childCatId">
+                            <mat-option *ngFor="let cat of itemCatList" [value]="cat.id">{{cat.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </ng-container>
+
+            <div class="col-6">
+                <!-- <div class="frm_style mb-4">
+            <h4 class="lbl_nm">Select Color
+            </h4>
+            <div class="form-group">
+                <select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.colorAttributes" class="form-control slct_inp">
+                    <option *ngFor="let color of colorAttributes" [value]="color">{{color}}</option>
+                </select>
+            </div>
+        </div> -->
+
+                <mat-form-field class="example-chip-list">
+                    <mat-label>Color RGB</mat-label>
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                        <mat-chip *ngFor="let color of product.colorAttributes" [selectable]="selectable" [removable]="removable" (removed)="removeColor(color)">
+                            {{color}}
+                            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                        </mat-chip>
+                        <input placeholder="Enter color RGB" name="colorText" [(ngModel)]="colorText" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="addColor($event)">
+                    </mat-chip-list>
+                    <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+              <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                {{fruit}}
+              </mat-option>
+            </mat-autocomplete> -->
+                </mat-form-field>
+
+
+
+                <!-- <mat-form-field class="example-full-width">
+            <mat-label>Select Color</mat-label>
+            <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="product.colorAttributes" multiple="true">
+                <mat-option *ngFor="let color of colorAttributes" [value]="color">{{color}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> -->
+            </div>
         </div>
-    </div>
-</div>
+
+        <div class="d-flex btn_area">
+
+
+            <button mat-raised-button>Close</button>
+            <button class="btn btn-primary" [disabled]="!productForm.valid" (click)="saveProduct()">Save</button>
+        </div>
+
+    </form>
+</section>

@@ -814,9 +814,14 @@ app-tag-fav {
 .mat-cell,
 .mat-footer-cell {
     color: rgba(0, 0, 0, 1) !important;
-    font-weight: 100 !important;
-    font-size: 12px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
     letter-spacing: .5px !important;
+}
+
+.mat-header-cell {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .mat-expansion-panel:not([class*=mat-elevation-z]) {

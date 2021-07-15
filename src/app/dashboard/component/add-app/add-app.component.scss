@@ -1,6 +1,6 @@
                 @import '../dashboard/dashboard.component.scss';
                 .forstrip {
-                    padding-top: 80px;
+                    padding-top: 60px;
                     position: absolute;
                     width: calc(100% - 60px);
                     top: 0px;
@@ -8,6 +8,7 @@
                     height: 100%;
                     box-shadow: rgb(110 110 110 / 50%) 0px 0px 2px;
                 }
+                
                 span.clss {
                     color: #fff;
                     position: absolute;
@@ -18,18 +19,17 @@
                     padding: 5px;
                     border-radius: 4px;
                 }
+                
                 #clockid {
                     word-break: break-all;
                 }
                 
                 .welcome h1 {
-                    font-family: "Proxima-Regular";
-                    font-size: 30px;
+                    font-size: 20px;
                     color: #1b2952;
                     margin-bottom: 0;
-                    padding-top: 25px;
                     padding-bottom: 20px;
-                    font-weight: 500;
+                    font-weight: 600;
                     line-height: 1.2;
                 }
                 
@@ -54,6 +54,13 @@
                         margin-bottom: 5px;
                         color: #1b2952;
                         font-size: 16px;
+                        text-transform: capitalize;
+                        &.add-text {
+                            text-align: right;
+                            font-style: italic;
+                            font-size: 12px;
+                            margin: 0px;
+                        }
                     }
                     .input-btn {
                         input {
@@ -133,4 +140,14 @@
                 .sendbtn {
                     color: #fff;
                     height: 60px!important;
+                }
+                
+                span.hldr-svg {
+                    height: 67vh;
+                    display: inline-block;
+                    width: 100%;
+                    svg {
+                        width: auto;
+                        height: 100%;
+                    }
                 }

@@ -1,1 +1,283 @@
-<p>module-screen works!</p>
+<div class="app_iconname d-md-flex justify-content-between align-items-start ">
+    <div class="d-none d-md-block" *ngIf="!layoutFlag">
+        <h3>Modules </h3>
+        <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </h5>
+    </div>
+    <div class="filter_by d-flex align-items-center" *ngIf="!layoutFlag">
+        <div class=" filter_by_child" (click)="filterSelect('all')" [ngClass]="{'filter_by_active':allFlag}">
+            <p>All</p>
+        </div>
+        <div class="filter_by_child" (click)="filterSelect('def')" [ngClass]="{'filter_by_active':defFlag}">
+            <p>Default</p>
+        </div>
+        <!-- <div class="filter_by_child" (click)="filterSelect('add')" [ngClass]="{'filter_by_active':addFlag}">
+            <p>Add On Modules</p>
+        </div> -->
+    </div>
+    <span class="link-style" *ngIf="layoutFlag" (click)="remvLayout()">View All Module</span>
+</div>
+
+<div class="right_general mt-md-4">
+    <div class=" d-md-flex alignt-items-center flex-wrap app-addons" [ngClass]="{'change30':layoutFlag}">
+        <div class="w-24 update_add_on deft" *ngIf="allFlag || defFlag " [ngClass]="{'bgsel':abtFlag}">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="appstoreoptimization"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>About us</h3>
+                        <div class="service_filter Module_" (click)="changeLayout('about')">
+                            <p> <i class=" material-icons">add</i> Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0"> Default</h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on deft" *ngIf="allFlag || defFlag " [ngClass]="{'bgsel':cntFlag}">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAYAAABUfC3PAAAABHNCSVQICAgIfAhkiAAABu5JREFUeF7tnUtsG0UYx79Ze73uNnFcO3HT1k3TpKFq6YFyQFAuQA9UCCEOqBFULRwqJCQOiKpSkBBIqBJCFCiHipdEq0ogUQmkIF4SIG4FDjykiqqPJHXipEm9dvxIY3u93l12rTpyEifeje3MrPytlNPOznz7/81/55uZ3ZjAKkc0mg7IWuEZjnBHdV3v10ELABBhtWvwXDUFdJkANwuEjGiadsFD+K937PAnV9KKVDtxczrZqyvFd4AjT4iCR/B6eN7ldoHbRYx6q16CLFZRwOjQUFR1UIsq5AqKks3LBiQyrBIyNBAOTi69dJnCoxHpCBD4qMMnettEgUe1m6PAnfl8IZXJ5XWOHBvo6RyubGURlJvRxJs66EOhgM/rdnPNiQZrXVBAKWoQS6RljuOGdoaDZ8onFqCYDtEJObcl5ONdHAJZr76jahrMSBkFiPZ0//bQD2a7JSjj46k+BZSroWA77+Hd6xUPtnNXgYJSBCkxl9cF745d3e2xEpSxCelHURQe97eLOIpT6iqpuZyazcpf9PV0Pk8ikfgeldP/3hryezGzokTEaFbXdJiKJfMCJ2wjo+PSGxtFz+t+30bMtOgxKbWcSM3LRrb8EhmLxi8H/W37BA+OJZSZQF5WIJXJ/kJGJuLx7k5f0O3CjIs2lKIxuYwl5iJkZFwqhLs34aOLNhGjfc2Y+U/fTuVMKLoBhYGQMARTgcmZJCAUxvoCQmEMCDqFQSAIBaEwqgCDYeGYglAYVIDBkNApCIVBBRgMCZ2CUBhUgMGQ0CkIhUEFGAwJnYJQGFSAwZDQKQilugIJJQPRvASTxl8zjof8eyHI+5pRdVPqpO6Ur6Z/g19n/2nKzZUrPbHzMOwWw01to5GVU4Vy+uZFuJ5d9sJ5I++vVBdCsSjppfQVOD/5k8XS9RVDKBb1e9dwyY0Kl4S9nXBf+y6LV9sr9vCmfTimWJHslatnIavKC0Xfvue4o4Szco9rLUNtTHnxv/cXxfzpva+u9R4adl3O6CRnJ4ZhcMujsN3b1bB67VaEUO4qZgI5HblYSs1FlwAneg9TA4NQDCiVQMq9miaYlodSDQhtMC0NZTUgNMG0LBQrQEwwZqp+sncQNhjjzHodLQmFZSAm+JaDwjqQloPiBCAtBcUpQBwJxdx7sbs34iQgjoNSXll+IXwIDnTstZQMOQ2Io6AsXeq3AsaJQBwDZaW9l9XAOBWII6DU2gyrBsbJQJiHcs3YBHvP2AyrdVSCcToQ5qGYAZ4ztox/N7aOax0mmP1t/QvL76uVp7F0Uiv+yvOOmNFbBWOmymbK7GQgjnBKWWCrYJwOxFFQ7DzKqoGx+sgynVbpNtN9dierdh5V1co64vFVGfhaHGMViNnOt7FL8J30x0KTT3Y9CE+FDtSrs63rHQfFrmPsAEEodb7NYsUxdoEglDqh1HLMWoAglAZAWQnMWoEglAZBWQqmHiAIpYFQymCicqzulxww+6pIFBvx2qq57lXvWycIpcFQbE0GViiMUBBK1a7hyMljIxyxUh3oFAadsnRSOtj9CBwM3t/MfrCsbmpOeWv0gvE1cHwhIHN96WBgf90DdT3q/Ts3Cuenflr0MRONT/OoQbGyTFKPwI24dgPngQ/3vNyIqmzVQQ2Kmb4OXf8MclrBVsDrWdjKGzPNiIcaFPNmzK+mzM/ZZmvsFjbjxmvVSWPJvhwTVShmEKZjfk78BdfmJ40xJkbVOeYSzXYhBAcC+6j+MwTqUGr12FY8j1AYpI5QEAqDCjAYEjoFoTCoAIMhoVMQCoMKMBgSOgWhMKgAgyGhUxAKgwowGBI6BaEwqACDIaFTEAqDCjAYEjqFYSjyts2bPIQwGGGLhaQbv7I9dTspk9EJaaY72LHZ5cbfo6fdB4qq8Xv08blpMhaN/xnwtz3g9bhpx9Ty7edlBeLJ+UtkJCKdFDcIpwJ+0dPyqlAWYDadzedy8mtkJBrbBRpc3rY54MVxhR4VXTPGk1hS5nh+d2l4H5mQhttE4ZC/Hd1CC0syk5Ozufw3/T1dz5WgjI+n+hQoXAkFOwQP76IVV8u2KxeKIM1m8m6d9PX2dk0vJMKjEemITsjnW0M+D8dhJrZePUTVNJiR0rIGZHCgp3PYbHfR7GRsIn5KBzgZCvo8PKbITeeiFDWQEpkC4cjQznDwg3KDy6aMI+PxY4Ton3S0i15jnGl6YK3awJ15GdJz8zmNcM+WHbIiFPPEjYlUP88VzxgJwWOilxe9ggdcLhe4XRxghma/G5mZVdH4U4sq5OQC5ArKPGjke5WDEwPh4LIfJlt1ceXWrUynrClHDRDHNVXvNp5/7YQQ3n5YLX9FgSNkjri4KdDhY02EL/sDgfRKqvwPkxVd365vrD4AAAAASUVORK5CYII="
+                        alt="consent"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>Contact Form</h3>
+                        <div class="service_filter Module_" (click)="changeLayout('cnt')">
+                            <p> <i class=" material-icons">add</i> Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0"> Default</h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on" *ngIf="allFlag  ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="appstoreoptimization"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>Language Support</h3>
+                        <div class="service_filter Module_">
+                            <p>Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 9.00/<span>monthly</span></h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on" *ngIf="allFlag ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="multisite_support"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>Multisite Support</h3>
+                        <div class="service_filter Module_">
+                            <p>Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 9.00/<span>monthly</span></h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on" *ngIf="allFlag  ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="appstoreoptimization"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>User Management</h3>
+                        <div class="service_filter Module_">
+                            <p>Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 9.00/<span>monthly</span></h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+
+        <div class="w-24 update_add_on" *ngIf="allFlag  ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="Ecommerce"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>Commerce </h3>
+                        <div class="service_filter">
+                            <p>Module</p>
+                        </div>
+                        <div class="addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 99.00/<span>yearly</span></h4>
+                        </div>
+                    </div>
+                    <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on" *ngIf="allFlag  ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="app_store_design"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>App Store Design</h3>
+                        <div class="service_filter">
+                            <p>Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 99.00/<span>one time</span></h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on" *ngIf="allFlag  ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="appstoreoptimization"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>Mobile App Design</h3>
+                        <div class="service_filter">
+                            <p>Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 99.00/<span>one time</span></h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+        <div class="w-24 update_add_on" *ngIf="allFlag  ">
+            <div class="app-security all-addons">
+                <div class="app-security-img"><img src="data:image/png;base64,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"
+                        alt="appstoreoptimization"></div>
+                <div class="custom-content-full">
+                    <div class="custom-add">
+                        <h3>Upload to App Stores</h3>
+                        <div class="service_filter">
+                            <p>Module</p>
+                        </div>
+                        <div class=" addonpack mt-3">
+                            <h4 class="mb-0 pb-0">$ 199.00/<span>one time</span></h4>
+                            <div class="d-flex" style="position: absolute; top: 0px; right: 0px;"></div>
+                        </div>
+                    </div>
+                </div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAABHNCSVQICAgIfAhkiAAAAJ1JREFUKFNjTM0qNWBiZOr/yfozcMGECR8YsADGtKyyA4yMjPb///+/8IvtlyM2hYwJBQUC7L/ZDwAN0MelkBFkOiGFYEWEFMIV4VOIogimkO032wVGBkZ5kBtnTesyxFCUkVWR8J/x/3yQBsb/jIkzpnUsQFGETQFYMczhuBTAFeFTAFZESAGKIpgjscYdSDAjo0JhxoyOB9gUgMQAEQJ/DxSSBj0AAAAASUVORK5CYII="
+                    alt="Arrow" class="img-fluid mr-2 d-md-none">
+            </div>
+        </div>
+    </div>
+    <div class="module_cntr" *ngIf="layoutFlag">
+        <section class="cntr abt" *ngIf="abtFlag">
+            <header>
+                <img class="hd-mgi" src="data:image/png;base64,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"
+                    alt="appstoreoptimization">
+                <h3>About Us</h3>
+                <i class="material-icons cls">close</i>
+            </header>
+            <textarea class="form-control hem-area" rows="12" cols=20 placeholder="Type Here About Content">
+
+            </textarea>
+            <div class="d-flex btn_area"><button class="btn btn-primary" type="submit"> Save </button></div>
+        </section>
+        <section class="cntr cnt" *ngIf="cntFlag">
+            <header>
+                <img class="hd-mgi" src="data:image/png;base64,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"
+                    alt="consent">
+                <h3>Contact Us</h3>
+                <i class="material-icons cls">close</i>
+            </header>
+            <article class="areaa">
+                <div class="lft">
+                    <h4>Company name (Optional)</h4>
+                </div>
+                <div class="lft rht">
+                    <form>
+                        <div class="form-group mng">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" placeholder="Comapny Name">
+                        </div>
+                        <div class="form-group mng">
+                            <label>Company Name Addon</label>
+                            <input type="text" class="form-control" placeholder="Comapny Name Addon">
+                        </div>
+                    </form>
+                    <div class="d-flex btn_area"><button class="btn btn-primary" type="submit"> Save </button></div>
+
+                </div>
+            </article>
+            <article class="areaa">
+                <div class="lft">
+                    <h4>Company Details </h4>
+                </div>
+                <div class="lft rht ">
+                    <form>
+                        <div class="form-group mng">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                            <i class="material-icons cls">close</i>
+                        </div>
+                        <div class="form-group mng">
+                            <label>Street & House Number</label>
+                            <input type="text" class="form-control" placeholder="Street & House Number">
+                            <i class="material-icons cls">close</i>
+
+                        </div>
+                        <div class="form-group mng">
+                            <label>Email</label>
+                            <input type="text" class="form-control" placeholder="Street & House Number">
+                            <i class="material-icons cls">close</i>
+
+                        </div>
+                        <div class="form-group mng">
+                            <label>URL</label>
+                            <input type="text" class="form-control" placeholder="URL ex.http://www.test.com">
+                            <i class="material-icons cls">close</i>
+
+                        </div>
+                        <div class="form-group mng">
+                            <label>Add Entry:</label>
+                            <span class="chipp"><i class="material-icons">phone</i> Telephone</span>
+                            <span class="chipp"><i class="material-icons">print</i> Fax</span>
+                            <span class="chipp"><i class="material-icons">email</i> Email</span>
+                            <span class="chipp"><i class="material-icons">location_on</i> Location</span>
+                            <span class="chipp"> Others</span>
+                        </div>
+                    </form>
+                    <div class="d-flex btn_area"><button class="btn btn-primary" type="submit"> Save </button></div>
+
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+</div>
