@@ -253,6 +253,10 @@ h4 {
     &.sec-nm {
         color: rgb(119, 130, 161);
         font-size: 12px;
+        &.categ {
+            color: rgb(48, 100, 249) !important;
+            font-weight: 900 !important;
+        }
     }
 }
 
@@ -272,5 +276,18 @@ ul.side-list {
             color: rgb(48, 100, 249);
             font-weight: 900;
         }
+    }
+}
+
+.d-flex.sgn-out {
+    position: absolute !important;
+    bottom: 60px;
+    align-items: center;
+    width: 99%;
+    border-top: solid 1px #ccc;
+    span.material-icons.logout {
+        font-size: 30px;
+        margin-left: 10px;
+        color: #ab47bc;
     }
 }
