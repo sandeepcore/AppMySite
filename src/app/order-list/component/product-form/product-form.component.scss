@@ -83,3 +83,16 @@ section.main-ara-cntr {
 ::ng-deep .mat-select-panel {
     margin-top: 0% !important;
 }
+
+.attach-img-container {
+    display: block;
+    margin: 20px 0px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    img {
+        max-width: 80px;
+        max-height: 50px;
+        vertical-align: top;
+        margin: 5px 5px;
+    }
+}

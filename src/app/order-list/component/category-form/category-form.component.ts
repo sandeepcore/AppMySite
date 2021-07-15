@@ -86,8 +86,8 @@ export class CategoryFormComponent implements OnInit {
 
   randomString(length) {
     var result = '';
-    let chars='0123456789abcdefghijklmnopqrstuvwxyz-';
-    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    //let chars='0123456789abcdefghijklmnopqrstuvwxyz-';
+    //for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
     return result;
 }
 // var rString = randomString(40, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');

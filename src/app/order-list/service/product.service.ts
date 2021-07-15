@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { ProductModel } from '../model/ProductModel';
@@ -13,6 +13,12 @@ export class ProductService {
   baseUrl:string='';
   constructor(private http:HttpClient) { 
     this.baseUrl=environment.apiUrl;
+  }
+
+  upload(obj:File):Observable<string>{
+    // const url=this.baseUrl+"/addProduct";
+    // return this.http.post(url,obj).pipe(map(res=>res as ProductModel));
+    return of("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
   }
 
   addProduct(obj:ProductModel):Observable<ProductModel>{
