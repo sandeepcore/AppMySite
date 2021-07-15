@@ -234,7 +234,7 @@
                     class="custom-file-input2" title="Select Images" /> -->
                         <div class="attach-img-container" *ngIf="product?.imageUrl && product.imageUrl.length>0">
                             <span *ngFor="let img of product.imageUrl;let i=index" class="full-wd">
-                        <i class="material-icons cls2" (click)="deleteImage(i)">
+                        <i class="material-icons cls2" (click)="removeImage(i)">
                             cancel
                         </i>
                         <img [src]="img" class="img-thumbnail" style="cursor: pointer;"

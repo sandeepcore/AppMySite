@@ -148,6 +148,7 @@ export class ProductFormComponent implements OnInit {
 
 
   removeImage(index: number) {
+    // alert(index);
     if (index > -1) this.product.imageUrl.splice(index, 1);
   }
   
